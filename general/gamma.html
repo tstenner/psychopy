@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gamma correcting a monitor &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../index.html" />
+    <link rel="up" title="General issues" href="general.html" />
+    <link rel="next" title="OpenGL and Rendering" href="rendering.html" />
+    <link rel="prev" title="Data outputs" href="dataOutputs.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="rendering.html" title="OpenGL and Rendering"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dataOutputs.html" title="Data outputs"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="general.html" accesskey="U">General issues</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Gamma correcting a monitor</a><ul>
+<li><a class="reference internal" href="#simple-gamma-correction">Simple gamma correction</a></li>
+<li><a class="reference internal" href="#full-gamma-correction">Full gamma correction</a></li>
+<li><a class="reference internal" href="#deriving-the-inverse-full-equation">Deriving the inverse full equation</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="dataOutputs.html"
+                                  title="previous chapter">Data outputs</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="rendering.html"
+                                  title="next chapter">OpenGL and Rendering</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/general/gamma.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gamma-correcting-a-monitor">
+<span id="gammacorrection"></span><h1>Gamma correcting a monitor<a class="headerlink" href="#gamma-correcting-a-monitor" title="Permalink to this headline">¶</a></h1>
+<p>Monitors typically don&#8217;t have linear outputs; when you request luminance level of 127, it is not exactly half the luminance of value 254. For experiments that require the luminance values to be linear, a correction needs to be put in place for this nonlinearity which typically involves fitting a power law or gamma (<img class="math" src="../_images/math/0ebb67342b546ca42a1c634b1ef03c893c4cdedb.png" alt="\gamma"/>) function to the monitor output values. This process is often referred to as <span class="xref std std-term">gamma correction</span>.</p>
+<p>PsychoPy can help you perform gamma correction on your monitor, especially if you have one of the supported photometers/spectroradiometers.</p>
+<p>There are various different equations with which to perform gamma correction. The simple equation <a href="#equation-simple">(1)</a> is assumed by most hardware manufacturers and gives a reasonable first approximation to a linear correction. The full gamma correction equation <a href="#equation-full">(3)</a> is more general, and likely more accurate especially where the lowest luminance value of the monitor is bright, but also requires more information. It can only be used in labs that do have access to a photometer or similar device.</p>
+<div class="section" id="simple-gamma-correction">
+<h2>Simple gamma correction<a class="headerlink" href="#simple-gamma-correction" title="Permalink to this headline">¶</a></h2>
+<p>The simple form of correction (as used by most hardware and software) is this:</p>
+<div class="math" id="equation-simple">
+<p><span class="eqno">(1)</span><img src="../_images/math/f717a69cdc02f5aa7b9421391d74323456ae6b26.png" alt="L(V) = a + kV^\gamma"/></p>
+</div><p>where <img class="math" src="../_images/math/0a5711c7a37994043b2bc3bb374adca232491762.png" alt="L"/> is the final luminance value, <img class="math" src="../_images/math/c99df7a209495334da442b1ec998abaabfa320d8.png" alt="V"/> is the requested intensity (ranging 0 to 1), <img class="math" src="../_images/math/7dd2a5ea01fbd72ad2a58dd1f3d6ecbfde6208a1.png" alt="a"/>, <img class="math" src="../_images/math/e9203da50e1059455123460d4e716c9c7f440cc3.png" alt="k"/> and <img class="math" src="../_images/math/0ebb67342b546ca42a1c634b1ef03c893c4cdedb.png" alt="\gamma"/> are constants for the monitor.</p>
+<p>This equation assumes that the luminance where the monitor is set to &#8216;black&#8217; (V=0) comes entirely from the surround and is therefore not subject to the same nonlinearity as the monitor. If the monitor itself contributes significantly to <img class="math" src="../_images/math/7dd2a5ea01fbd72ad2a58dd1f3d6ecbfde6208a1.png" alt="a"/> then the function may not fit very well and the correction will be poor.</p>
+<p>The advantage of this function is that the calibrating system (PsychoPy in this case) does not need to know anything more about the monitor than the gamma value itself (for each gun). For the full gamma equation <a href="#equation-full">(3)</a>, the system needs to know about several additional variables. The look-up table (LUT) values required to give a (roughly) linear luminance output can be generated by:</p>
+<div class="math" id="equation-simpleLUT">
+<p><span class="eqno">(2)</span><img src="../_images/math/903468207ae97e1bc528a09d2605aa27b74d4306.png" alt="LUT(V) = V^{1/\gamma}"/></p>
+</div><p>where <cite>V</cite> is the entry in the LUT, between 0 (black) and 1 (white).</p>
+</div>
+<div class="section" id="full-gamma-correction">
+<h2>Full gamma correction<a class="headerlink" href="#full-gamma-correction" title="Permalink to this headline">¶</a></h2>
+<p>For very accurate gamma correction PsychoPy uses a more general form of the equation above, which can separate the contribution of the monitor and the background to the lowest luminance level:</p>
+<div class="math" id="equation-full">
+<p><span class="eqno">(3)</span><img src="../_images/math/02709dec69b1dbbf79b20bc4130ebd939a828988.png" alt="L(V) = a + (b+kV)^\gamma"/></p>
+</div><p>This equation makes no assumption about the origin of the base luminance value, but requires that the system knows the values of <img class="math" src="../_images/math/5e87bf41a96deddf6cb485ff530f153f2590e9cc.png" alt="b"/> and <img class="math" src="../_images/math/e9203da50e1059455123460d4e716c9c7f440cc3.png" alt="k"/> as well as <img class="math" src="../_images/math/0ebb67342b546ca42a1c634b1ef03c893c4cdedb.png" alt="\gamma"/>.</p>
+<p>The inverse values, required to build the LUT are found by:</p>
+<div class="math" id="equation-fullLUT">
+<p><span class="eqno">(4)</span><img src="../_images/math/3dcb963f9607c43b82dde7af494141559bc555ca.png" alt="LUT(V) = \frac{( (1-V)b^\gamma + V(b+k)^\gamma )^{1/\gamma}-b}{k}"/></p>
+</div><p>This is derived below, for the interested reader. ;-)</p>
+<p>And the associated luminance values for each point in the LUT are given by:</p>
+<div class="math">
+<p><img src="../_images/math/503af3edc8aee6bde3c8c9fcd014f2764166262d.png" alt="L(V) = a + (1-V)b^\gamma + V(b+k)^\gamma"/></p>
+</div></div>
+<div class="section" id="deriving-the-inverse-full-equation">
+<span id="deriveinversegamma"></span><h2>Deriving the inverse full equation<a class="headerlink" href="#deriving-the-inverse-full-equation" title="Permalink to this headline">¶</a></h2>
+<p>The difficulty with the full gamma equation <a href="#equation-full">(3)</a> is that the presence of the <img class="math" src="../_images/math/5e87bf41a96deddf6cb485ff530f153f2590e9cc.png" alt="b"/> value complicates the issue of calculating the inverse values for the LUT. The simple inverse of <a href="#equation-full">(3)</a> as a function of output luminance values is:</p>
+<div class="math" id="equation-zhangPelliLUT">
+<p><span class="eqno">(5)</span><img src="../_images/math/35f116b9fe1edd35a3797204ed3cf8f8e59d31d6.png" alt="LUT(L) = \frac{((L-a)^{1/\gamma} - b )}{k}"/></p>
+</div><p>To use this equation we need to first calculate the linear set of luminance values, <img class="math" src="../_images/math/0a5711c7a37994043b2bc3bb374adca232491762.png" alt="L"/>, that we are able to produce the current monitor and lighting conditions and <em>then</em> deduce the LUT value needed to generate that luminance value.</p>
+<p>We need to insert into the LUT the values between 0 and 1 (to use the maximum range) that map onto the linear range from the minimum, <cite>m</cite>, to the maximum <cite>M</cite> possible luminance. From the parameters in <a href="#equation-full">(3)</a> it is clear that:</p>
+<div class="math" id="equation-minMax">
+<p><span class="eqno">(6)</span><img src="../_images/math/e8c11c0f039198ae7a16c9684fbddc61020a752e.png" alt="m = a+b^\gamma
+
+M = a+(b+k)^\gamma"/></p>
+</div><p>Thus, the luminance value, <cite>L</cite> at any given point in the LUT, <cite>V</cite>, is given by</p>
+<div class="math" id="equation-lumsLUT">
+<p><span class="eqno">(7)</span><img src="../_images/math/a1aa0d7a8276008cd57cdb6b5a52edc7169734d3.png" alt="L(V) &amp;= m + (M-m)V \\
+     &amp;= a+b^\gamma + (a+(b+k)^\gamma - a - b^\gamma)V \\
+     &amp;= a + b^\gamma + ((b+k)^\gamma - b^\gamma)V \\
+     &amp;= a + (1-V)b^\gamma + V(b+k)^\gamma"/></p>
+</div><p>where <img class="math" src="../_images/math/c99df7a209495334da442b1ec998abaabfa320d8.png" alt="V"/> is the position in the LUT as a fraction.</p>
+<p>Now, to generate the LUT as needed we simply take the inverse of <a href="#equation-full">(3)</a>:</p>
+<div class="math" id="equation-fullInv">
+<p><span class="eqno">(8)</span><img src="../_images/math/690ac42bf180582cc1821e4ca262c5a11e953478.png" alt="LUT(L) = \frac{(L-a)^{1/\gamma}-b}{k}"/></p>
+</div><p>and substitute our <img class="math" src="../_images/math/846fe2fab79f7e40fe27beb7ac1ef8cda2978d99.png" alt="L(V)"/> values from <a href="#equation-lumsLUT">(7)</a>:</p>
+<div class="math" id="equation-fullLUTderived">
+<p><span class="eqno">(9)</span><img src="../_images/math/d7cdcaa38dfa518669564cf8952d7f32a16f71d1.png" alt="LUT(V) &amp;= \frac{( a + (1-V)b^\gamma + V(b+k)^\gamma -a)^{1/\gamma}-b}{k}\\
+    &amp;= \frac{( (1-V)b^\gamma + V(b+k)^\gamma )^{1/\gamma}-b}{k}"/></p>
+</div></div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td>Pelli, D. G., &amp; Zhang, L. (1991) Accurate control of contrast on microcomputer displays. Vision Research 31, 1337-1350.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="rendering.html" title="OpenGL and Rendering"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dataOutputs.html" title="Data outputs"
+             >previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="general.html" >General issues</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

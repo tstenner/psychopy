@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Builder - providing feedback &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../index.html" />
+    <link rel="up" title="Recipes (“How-to”s)" href="recipes.html" />
+    <link rel="next" title="Builder - terminating a loop" href="builderTerminateLoops.html" />
+    <link rel="prev" title="Building an application from your script" href="appFromScript.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="builderTerminateLoops.html" title="Builder - terminating a loop"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="appFromScript.html" title="Building an application from your script"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="recipes.html" accesskey="U">Recipes (&#8220;How-to&#8221;s)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Builder - providing feedback</a><ul>
+<li><a class="reference internal" href="#feedback-after-a-trial">Feedback after a trial</a></li>
+<li><a class="reference internal" href="#feedback-after-a-block">Feedback after a block</a></li>
+<li><a class="reference internal" href="#draw-your-message-to-the-screen">Draw your message to the screen</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="appFromScript.html"
+                                  title="previous chapter">Building an application from your script</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="builderTerminateLoops.html"
+                                  title="next chapter">Builder - terminating a loop</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/recipes/builderFeedback.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="builder-providing-feedback">
+<span id="feedback"></span><h1>Builder - providing feedback<a class="headerlink" href="#builder-providing-feedback" title="Permalink to this headline">¶</a></h1>
+<p>If you&#8217;re using the Builder then the way to provide feedback is with a <a class="reference internal" href="../builder/components/code.html#code"><span>Code Component</span></a> to generate an appropriate message (and then a <a class="reference internal" href="../builder/components/text.html#text"><span>Text Component</span></a> to present that message). PsychoPy will be keeping track of various aspects of the stimuli and responses for you throughout the experiment and the key is knowing where to find those.</p>
+<p>The following examples assume you have a <a class="reference internal" href="../builder/flow.html#loops"><span>Loop</span></a> called <cite>trials</cite>, containing a <a class="reference internal" href="../builder/routines.html#routines"><span>Routine</span></a> with a <a class="reference internal" href="../builder/components/keyboard.html#keyboard"><span>Keyboard Component</span></a> called <cite>key_resp</cite>. Obviously these need to be adapted in the code below to fit your experiment.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The following generate strings use python &#8216;formatted strings&#8217;. These are very powerful and flexible but a little strange when you aren&#8217;t used to them (they contain odd characters like %.2f). See <a class="reference internal" href="formattedStrings.html#formattedstrings"><span>Generating formatted strings</span></a> for more info.</p>
+</div>
+<div class="section" id="feedback-after-a-trial">
+<h2>Feedback after a trial<a class="headerlink" href="#feedback-after-a-trial" title="Permalink to this headline">¶</a></h2>
+<p>This is actually demonstrated in the demo, <cite>ExtendedStroop</cite> (in the Builder&gt;demos menu, unpack the demos and then look in the menu again. tada!)</p>
+<p>If you have a Keyboard Component called <cite>key_resp</cite> then, after every trial you will have the following variables:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">key_resp</span><span class="o">.</span><span class="n">keys</span> <span class="c">#a python list of keys pressed</span>
+<span class="n">key_resp</span><span class="o">.</span><span class="n">rt</span> <span class="c">#the time to the first key press</span>
+<span class="n">key_resp</span><span class="o">.</span><span class="n">corr</span> <span class="c">#None, 0 or 1, if you are using &#39;store correct&#39;</span>
+</pre></div>
+</div>
+<p>To create your <cite>msg</cite>, insert the following into the &#8216;start experiment` section of the <a class="reference internal" href="../builder/components/code.html#code"><span>Code Component</span></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">msg</span><span class="o">=</span><span class="s">&#39;doh!&#39;</span><span class="c">#if this comes up we forgot to update the msg!</span>
+</pre></div>
+</div>
+<p>and then insert the following into the <cite>Begin Routine</cite> section (this will get run every repeat of the routine):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">key_resp</span><span class="o">.</span><span class="n">keys</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">msg</span><span class="o">=</span><span class="s">&quot;Failed to respond&quot;</span>
+<span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">corr</span><span class="p">:</span><span class="c">#stored on last run routine</span>
+    <span class="n">msg</span><span class="o">=</span><span class="s">&quot;Correct! RT=</span><span class="si">%.3f</span><span class="s">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">rt</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">msg</span><span class="o">=</span><span class="s">&quot;Oops! That was wrong&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feedback-after-a-block">
+<h2>Feedback after a block<a class="headerlink" href="#feedback-after-a-block" title="Permalink to this headline">¶</a></h2>
+<p>In this case the feedback routine would need to come after the loop (the block of trials) and the message needs to use the stored data from the loop rather than the <cite>key_resp</cite> directly. Accessing the data from a loop is not well documented but totally possible.</p>
+<p>In this case, to get all the keys pressed in a <a class="reference external" href="http://www.numpy.org">numpy</a> array:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">trials</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;key_resp.keys&#39;</span><span class="p">]</span> <span class="c">#numpy array with size=[ntrials,ntypes]</span>
+</pre></div>
+</div>
+<p>If you used the &#8216;Store Correct&#8217; feature of the Keyboard Component (and told psychopy what the correct answer was) you will also have a variable:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#numpy array storing whether each response was correct (1) or not (0)</span>
+<span class="n">trials</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;resp.corr&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>So, to create your <cite>msg</cite>, insert the following into the &#8216;start experiment` section of the <a class="reference internal" href="../builder/components/code.html#code"><span>Code Component</span></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">msg</span><span class="o">=</span><span class="s">&#39;doh!&#39;</span><span class="c">#if this comes up we forgot to update the msg!</span>
+</pre></div>
+</div>
+<p>and then insert the following into the <cite>Begin Routine</cite> section (this will get run every repeat of the routine):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">nCorr</span> <span class="o">=</span> <span class="n">trials</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;key_resp.corr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="c">#.std(), .mean() also available</span>
+<span class="n">meanRt</span> <span class="o">=</span> <span class="n">trials</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;key_resp.rt&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;You got </span><span class="si">%i</span><span class="s"> trials correct (rt=</span><span class="si">%.2f</span><span class="s">)&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">nCorr</span><span class="p">,</span><span class="n">meanRt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="draw-your-message-to-the-screen">
+<h2>Draw your message to the screen<a class="headerlink" href="#draw-your-message-to-the-screen" title="Permalink to this headline">¶</a></h2>
+<p>Using one of the above methods to generate your <cite>msg</cite> in a <a class="reference internal" href="../builder/components/code.html#code"><span>Code Component</span></a>, you then need to present it to the participant by adding a <a class="reference internal" href="../builder/components/text.html#text"><span>Text Component</span></a> to your <cite>feedback</cite> Routine and setting its text to <cite>$msg</cite>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The Text Component needs to be below the Code Component in the Routine (because it needs to be updated after the code has been run) and it needs to <cite>set every repeat</cite>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="builderTerminateLoops.html" title="Builder - terminating a loop"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="appFromScript.html" title="Building an application from your script"
+             >previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="recipes.html" >Recipes (&#8220;How-to&#8221;s)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Reference Manual (API) &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../index.html" />
+    <link rel="next" title="psychopy.core - basic functions (clocks etc.)" href="core.html" />
+    <link rel="prev" title="PsychoPy Experiment file format (.psyexp)" href="../psyexp.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="core.html" title="psychopy.core - basic functions (clocks etc.)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../psyexp.html" title="PsychoPy Experiment file format (.psyexp)"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Reference Manual (API)</a><ul>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="../psyexp.html"
+                                  title="previous chapter">PsychoPy Experiment file format (.psyexp)</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="core.html"
+                                  title="next chapter"><code class="docutils literal"><span class="pre">psychopy.core</span></code> - basic functions (clocks etc.)</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/api/api.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="reference-manual-api">
+<span id="api"></span><h1>Reference Manual (API)<a class="headerlink" href="#reference-manual-api" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="core.html"><code class="docutils literal"><span class="pre">psychopy.core</span></code> - basic functions (clocks etc.)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visual.html"><code class="docutils literal"><span class="pre">psychopy.visual</span></code> - many visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html"><code class="docutils literal"><span class="pre">psychopy.data</span></code> - functions for storing/saving/analysing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="encryption.html">Encryption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="event.html"><code class="docutils literal"><span class="pre">psychopy.event</span></code> - for keypresses and mouse clicks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html"><code class="docutils literal"><span class="pre">psychopy.filters</span></code> - helper functions for creating filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html"><code class="docutils literal"><span class="pre">psychopy.gui</span></code> - create dialogue boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html"><code class="docutils literal"><span class="pre">psychopy.hardware</span></code> - hardware interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html"><code class="docutils literal"><span class="pre">psychopy.info</span></code> - functions for getting information about the system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iohub.html"><code class="docutils literal"><span class="pre">psychopy.iohub</span></code> - ioHub event monitoring framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html"><code class="docutils literal"><span class="pre">psychopy.logging</span></code> - control what gets logged</a></li>
+<li class="toctree-l1"><a class="reference internal" href="microphone.html"><code class="docutils literal"><span class="pre">psychopy.microphone</span></code> - Capture and analyze sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc.html"><code class="docutils literal"><span class="pre">psychopy.misc</span></code> - miscellaneous routines for converting units etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitors.html"><code class="docutils literal"><span class="pre">psychopy.monitors</span></code> - for those that don&#8217;t like Monitor Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel.html"><code class="docutils literal"><span class="pre">psychopy.parallel</span></code> - functions for interacting with the parallel port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html"><code class="docutils literal"><span class="pre">psychopy.preferences</span></code> - getting and setting preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serial.html"><code class="docutils literal"><span class="pre">psychopy.serial</span></code> - functions for interacting with the serial port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sound.html"><code class="docutils literal"><span class="pre">psychopy.sound</span></code> - play various forms of sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html"><code class="docutils literal"><span class="pre">psychopy.tools</span></code> - miscellaneous tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voicekey.html"><code class="docutils literal"><span class="pre">psychopy.voicekey</span></code> - Real-time sound processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html"><code class="docutils literal"><span class="pre">psychopy.web</span></code> - Web methods</a></li>
+</ul>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="../genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="../py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="../search.html"><span>Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="core.html" title="psychopy.core - basic functions (clocks etc.)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../psyexp.html" title="PsychoPy Experiment file format (.psyexp)"
+             >previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

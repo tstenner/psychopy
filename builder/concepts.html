@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Builder concepts &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../index.html" />
+    <link rel="up" title="Builder" href="builder.html" />
+    <link rel="next" title="Routines" href="routines.html" />
+    <link rel="prev" title="Builder" href="builder.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="routines.html" title="Routines"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="builder.html" title="Builder"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="builder.html" accesskey="U">Builder</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Builder concepts</a><ul>
+<li><a class="reference internal" href="#routines-and-flow">Routines and Flow</a></li>
+<li><a class="reference internal" href="#example-1-a-reaction-time-experiment">Example 1 - a reaction time experiment</a></li>
+<li><a class="reference internal" href="#example-2-an-fmri-block-design">Example 2 - an fMRI block design</a></li>
+<li><a class="reference internal" href="#demos">Demos</a><ul>
+<li><a class="reference internal" href="#stroop-demo">Stroop demo</a></li>
+<li><a class="reference internal" href="#psychophysics-staircase-demo">Psychophysics Staircase demo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="builder.html"
+                                  title="previous chapter">Builder</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="routines.html"
+                                  title="next chapter">Routines</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/builder/concepts.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="builder-concepts">
+<h1>Builder concepts<a class="headerlink" href="#builder-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="routines-and-flow">
+<h2>Routines and Flow<a class="headerlink" href="#routines-and-flow" title="Permalink to this headline">¶</a></h2>
+<p>The Builder view of the PsychoPy application is designed to allow the rapid development of a wide range of experiments for experimental psychology and cognitive neuroscience experiments.</p>
+<p>The Builder view comprises two main panels for viewing the experiment&#8217;s <a class="reference internal" href="routines.html#routines"><span>Routines</span></a> (upper left) and another for viewing the <a class="reference internal" href="flow.html#flow"><span>Flow</span></a> (lower part of the window).</p>
+<p>An experiment can have any number of <a class="reference internal" href="routines.html#routines"><span>Routines</span></a>, describing the timing of stimuli, instructions and responses. These are portrayed in a simple track-based view, similar to that of video-editing software, which allows stimuli to come on go off repeatedly and to overlap with each other.</p>
+<p>The way in which these <a class="reference internal" href="routines.html#routines"><span>Routines</span></a> are combined and/or repeated is controlled by the <a class="reference internal" href="flow.html#flow"><span>Flow</span></a> panel. All experiments have exactly one <a class="reference internal" href="flow.html#flow"><span>Flow</span></a>. This takes the form of a standard flowchart allowing a sequence of routines to occur one after another, and for loops to be inserted around one or more of the <a class="reference internal" href="routines.html#routines"><span>Routines</span></a>. The loop also controls variables that change between repetitions, such as stimulus attributes.</p>
+</div>
+<div class="section" id="example-1-a-reaction-time-experiment">
+<h2>Example 1 - a reaction time experiment<a class="headerlink" href="#example-1-a-reaction-time-experiment" title="Permalink to this headline">¶</a></h2>
+<p>For a simple reaction time experiment there might be 3 <a class="reference internal" href="routines.html#routines"><span>Routines</span></a>, one that presents instructions and waits for a keypress, one that controls the trial timing, and one that thanks the participant at the end. These could then be combined in the <a class="reference internal" href="flow.html#flow"><span>Flow</span></a> so that the instructions come first, followed by <cite>trial</cite>, followed by the <cite>thanks</cite> <a class="reference internal" href="routines.html#routines"><span>Routine</span></a>, and a loop could be inserted so that the <a class="reference internal" href="routines.html#routines"><span>Routine</span></a> repeated 4 times for each of 6 stimulus intensities.</p>
+</div>
+<div class="section" id="example-2-an-fmri-block-design">
+<h2>Example 2 - an fMRI block design<a class="headerlink" href="#example-2-an-fmri-block-design" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Many fMRI experiments present a sequence of stimuli in a <cite>block</cite>. For this there are multiple ways to create the experiment:</dt>
+<dd><ul class="first last simple">
+<li>We could create a single <a class="reference internal" href="routines.html#routines"><span>Routine</span></a> that contained a number of stimuli and presented them sequentially, followed by a long blank period to give the inter-epoch interval, and surround this single <a class="reference internal" href="routines.html#routines"><span>Routine</span></a> by a loop to control the blocks.</li>
+<li>Alternatively we could create a pair of <a class="reference internal" href="routines.html#routines"><span>Routines</span></a> to allow presentation of a) a single stimulus (for 1 sec) and b) a blank screen, for the prolonged period. With these <a class="reference internal" href="routines.html#routines"><span>Routines</span></a> we could insert  pair of loops, one to repeat the stimulus <a class="reference internal" href="routines.html#routines"><span>Routine</span></a> with different images, followed by the blank <a class="reference internal" href="routines.html#routines"><span>Routine</span></a>, and another to surround this whole set and control the blocks.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="demos">
+<h2>Demos<a class="headerlink" href="#demos" title="Permalink to this headline">¶</a></h2>
+<p>There are a couple of demos included with the package, that you can find in their own special menu. When you load these the first thing to do is make sure the experiment settings specify the same resolution as your monitor, otherwise the screen can appear off-centred and strangely scaled.</p>
+<div class="section" id="stroop-demo">
+<h3>Stroop demo<a class="headerlink" href="#stroop-demo" title="Permalink to this headline">¶</a></h3>
+<p>This runs a digital demonstration of the Stroop effect <a class="footnote-reference" href="#id2" id="id1">[1]</a>. The experiment presents a series of coloured words written in coloured &#8216;inks&#8217;. Subjects have to report the colour of the letters for each word, but find it harder to do so when the letters are spelling out a different (incongruous) colour. Reaction times for the congruent trials (where letter colour matches the written word) are faster than for the incongruent trials.</p>
+<dl class="docutils">
+<dt>From this demo you should note:</dt>
+<dd><ul class="first last simple">
+<li>How to setup a trial list in a .csv or .xlsx file</li>
+<li>How to record key presses and reaction times (using the <cite>resp</cite> Component in <cite>trial</cite> <a class="reference internal" href="routines.html"><em>Routine</em></a>)</li>
+<li>How to change a stimulus parameter on each repetition of the loop. The text and rgb values of the <cite>word</cite> Component are based on <cite>thisTrial</cite>, which represents a single iteration of the <cite>trials</cite> loop. They have been set to change every repeat (don&#8217;t forget that step!)</li>
+<li>How to present instructions: just have a long-lasting <cite>TextStim</cite> and then force end of the <a class="reference internal" href="routines.html#routines"><span>Routine</span></a> when a key is pressed (but don&#8217;t bother storing the key press).</li>
+</ul>
+</dd>
+</dl>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Stroop, J.R. (1935). &#8220;Studies of interference in serial verbal reactions&#8221;. Journal of Experimental Psychology 18: 643-662.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="psychophysics-staircase-demo">
+<h3>Psychophysics Staircase demo<a class="headerlink" href="#psychophysics-staircase-demo" title="Permalink to this headline">¶</a></h3>
+<p>This is a mini psychophysics experiment, designed to find the contrast detection threshold of a gabor i.e. find the contrast where the observer can just see the stimulus.</p>
+<dl class="docutils">
+<dt>From this demo you should note:</dt>
+<dd><ul class="first last simple">
+<li>The opening dialog box requires the participant to enter the orientation of the stimulus, the required fields here are determined by &#8216;Experiment Info&#8217; in &#8216;Preferences&#8217; which is a python dictionary. This information is then entered into the  stimulus parameters using &#8216;$expInfo[&#8216;ori&#8217;]&#8217;</li>
+<li>The phase of the stimulus is set to change every frame and its value is determined by the value of <cite>trialClock.getTime()*2</cite>. Every <a class="reference internal" href="routines.html"><em>Routine</em></a> has a clock associated with it that gets reset at the beginning of the iteration through the <cite>Routine</cite>. There is also a <cite>globalClock</cite> that can be used in the same way. The phase of a <cite>Patch</cite> <cite>Component</cite> ranges 0-1 (and wraps to that range if beyond it). The result in this case is that the grating drifts at a rate of 2Hz.</li>
+<li>The contrast of the stimulus is determined using an <a class="reference internal" href="../general/glossary.html#term-adaptive-staircase"><span class="xref std std-term">adaptive staircase</span></a>. The <a class="reference internal" href="flow.html#staircasemethods"><span>Staircase methods</span></a> are different to those used for a loop which uses predetermined values. An important thing to note is that you must define the correct answer.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="routines.html" title="Routines"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="builder.html" title="Builder"
+             >previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="builder.html" >Builder</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

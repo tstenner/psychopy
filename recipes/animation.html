@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Animation &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../index.html" />
+    <link rel="up" title="Recipes (“How-to”s)" href="recipes.html" />
+    <link rel="next" title="Building an application from your script" href="appFromScript.html" />
+    <link rel="prev" title="Adding external modules to Standalone PsychoPy" href="addCustomModules.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="appFromScript.html" title="Building an application from your script"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="addCustomModules.html" title="Adding external modules to Standalone PsychoPy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="recipes.html" accesskey="U">Recipes (&#8220;How-to&#8221;s)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Animation</a></li>
+<li><a class="reference internal" href="#scrolling-text">Scrolling text</a></li>
+<li><a class="reference internal" href="#fade-in-fade-out-effects">Fade-in / fade-out effects</a></li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="addCustomModules.html"
+                                  title="previous chapter">Adding external modules to Standalone PsychoPy</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="appFromScript.html"
+                                  title="next chapter">Building an application from your script</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/recipes/animation.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="animation">
+<h1>Animation<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h1>
+<p>General question: How can I animate something?</p>
+<p>Conceptually, animation just means that you vary some aspect of the stimulus over time. So the key idea is to draw something slightly different on each frame. This is how movies work, and the same principle can be used to create scrolling text, or fade-in / fade-out effects, and the like.</p>
+<p>(copied &amp; pasted from the email list; see the list for people&#8217;s names and a working script.)</p>
+</div>
+<div class="section" id="scrolling-text">
+<h1>Scrolling text<a class="headerlink" href="#scrolling-text" title="Permalink to this headline">¶</a></h1>
+<p>Key idea: Vary the <strong>position</strong> of the stimulus across frames.</p>
+<p>Question: How can I produce scrolling text (like html&#8217;s &lt;marquee behavior = &#8220;scroll&#8221; &gt; directive)?</p>
+<p>Answer: PsychoPy has animation capabilities built-in (it can even produce and export movies itself (e.g. if you want to show your stimuli in presentations)). But here you just want to animate stimuli directly.</p>
+<p>e.g. create a text stimulus.  In the &#8216;pos&#8217; (position) field, type:</p>
+<blockquote>
+<div>[frameN, 0]</div></blockquote>
+<p>and select &#8220;set every frame&#8221; in the popup button next to that field.</p>
+<p>Push the Run button and your text will move from left to right, at one pixel per screen refresh, but stay at a fixed y-coordinate.  In essence, you can enter an arbitrary formula in the position field and the stimulus will be-redrawn at a new position on each frame. frameN here refers to the number of frames shown so far, and you can extend the formula to produce what you need.</p>
+<p>You might find performance issues (jittering motion) if you try to render a lot of text in one go, in which case you may have to switch to using images of text.</p>
+<p>I wanted my text to scroll from right to left.  So if you keep your eyes in the middle of the screen
+the next word to read would come from the right (as if you were actually reading text).  The original formula posted above scrolls the
+other way.  So, you have to put a negative sign in front of the formula for it to scroll the other way.  You have to change the units to pixel.  Also, you have to make sure you have an end time set, otherwise it just flickers.  I also set my letter height to 100
+pixels.  The other problem I had was that I wanted the text to start blank and scroll into the screen.  So, I wrote</p>
+<blockquote>
+<div>[2000-frameN, 0]</div></blockquote>
+<p>and this worked really well.</p>
+</div>
+<div class="section" id="fade-in-fade-out-effects">
+<h1>Fade-in / fade-out effects<a class="headerlink" href="#fade-in-fade-out-effects" title="Permalink to this headline">¶</a></h1>
+<p>Key idea: vary the <strong>opacity</strong> of the stimulus over frames.</p>
+<p>Question: I&#8217;d like to present an image with the image appearing progressively and disappearing progressively too. How to do that?</p>
+<p>Answer: The Patch stimulus has an opacity field.  Set the button next to it to be &#8220;set every frame&#8221; so that its value can be changed progressively, and enter an equation in the box that does what you want.</p>
+<p>e.g. if your screen refresh rate is 60 Hz, then entering:</p>
+<blockquote>
+<div>frameN/120</div></blockquote>
+<p>would cycle the opacity linearly from 0 to 1.0 over 2s (it will then continue incrementing but it doesn&#8217;t seem to matter if the value exceeds 1.0).</p>
+<p>Using a code component might allow you to do more sophisticated things (e.g. fade in for a while, hold it, then fade out). Or more simply, you just create multiple successive Patch stimulus components, each with a different equation or value in the opacity field depending on their place in the timeline.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="appFromScript.html" title="Building an application from your script"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="addCustomModules.html" title="Adding external modules to Standalone PsychoPy"
+             >previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="recipes.html" >Recipes (&#8220;How-to&#8221;s)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

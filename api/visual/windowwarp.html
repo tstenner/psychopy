@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>psychopy.visual.windowwarp - warping to spherical, cylindrical, or other projections &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../../index.html" />
+    <link rel="up" title="psychopy.visual - many visual stimuli" href="../visual.html" />
+    <link rel="next" title="psychopy.data - functions for storing/saving/analysing data" href="../data.html" />
+    <link rel="prev" title="psychopy.visual.windowframepack - Pack multiple monochrome images into RGB frame" href="windowframepack.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../data.html" title="psychopy.data - functions for storing/saving/analysing data"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="windowframepack.html" title="psychopy.visual.windowframepack - Pack multiple monochrome images into RGB frame"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../api.html" >Reference Manual (API)</a> &raquo;</li>
+          <li><a href="../visual.html" accesskey="U"><code class="docutils literal"><span class="pre">psychopy.visual</span></code> - many visual stimuli</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">psychopy.visual.windowwarp</span></code> - warping to spherical, cylindrical, or other projections</a><ul>
+<li><a class="reference internal" href="#warper"><code class="docutils literal"><span class="pre">Warper</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="windowframepack.html"
+                                  title="previous chapter"><code class="docutils literal"><span class="pre">psychopy.visual.windowframepack</span></code> - Pack multiple monochrome images into RGB frame</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="../data.html"
+                                  title="next chapter"><code class="docutils literal"><span class="pre">psychopy.data</span></code> - functions for storing/saving/analysing data</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../../_sources/api/visual/windowwarp.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-psychopy.visual.windowwarp">
+<span id="psychopy-visual-windowwarp-warping-to-spherical-cylindrical-or-other-projections"></span><h1><a class="reference internal" href="#module-psychopy.visual.windowwarp" title="psychopy.visual.windowwarp"><code class="xref py py-mod docutils literal"><span class="pre">psychopy.visual.windowwarp</span></code></a> - warping to spherical, cylindrical, or other projections<a class="headerlink" href="#module-psychopy.visual.windowwarp" title="Permalink to this headline">¶</a></h1>
+<p>Copyright (C) 2014 Allen Institute for Brain Science</p>
+<p>This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License Version 3
+as published by the Free Software Foundation on 29 June 2007.
+This program is distributed WITHOUT WARRANTY OF MERCHANTABILITY OR FITNESS
+FOR A PARTICULAR PURPOSE OR ANY OTHER WARRANTY, EXPRESSED OR IMPLIED.
+See the GNU General Public License Version 3 for more details.
+You should have received a copy of the GNU General Public License along
+with this program. If not, see <a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a></p>
+<div class="section" id="warper">
+<h2><a class="reference internal" href="#psychopy.visual.windowwarp.Warper" title="psychopy.visual.windowwarp.Warper"><code class="xref py py-class docutils literal"><span class="pre">Warper</span></code></a><a class="headerlink" href="#warper" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="psychopy.visual.windowwarp.Warper">
+<em class="property">class </em><code class="descclassname">psychopy.visual.windowwarp.</code><code class="descname">Warper</code><span class="sig-paren">(</span><em>win</em>, <em>warp=None</em>, <em>warpfile=None</em>, <em>warpGridsize=300</em>, <em>eyepoint=(0.5</em>, <em>0.5)</em>, <em>flipHorizontal=False</em>, <em>flipVertical=False</em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy.visual.windowwarp.Warper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to perform warps.</p>
+<p>Supports spherical, cylindrical, warpfile, or None (disabled) warps</p>
+<p>Warping is a final operation which can be optionally performed on
+each frame just before transmission to the display. It is useful
+for perspective correction when the eye to monitor distance is
+small (say, under 50 cm), or when projecting to domes or other
+non-planar surfaces.</p>
+<p>These attributes define the projection and can be altered
+dynamically using the changeProjection() method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first">win : Handle to the window.</p>
+<dl class="docutils">
+<dt>warp <span class="classifier-delimiter">:</span> <span class="classifier">&#8216;spherical&#8217;, &#8216;cylindrical, &#8216;warpfile&#8217; or <em>None</em></span></dt>
+<dd><p class="first">This table gives the main properties of each projection</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="16%" />
+<col width="22%" />
+<col width="16%" />
+<col width="17%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Warp</th>
+<th class="head">eyepoint
+modifies warp</th>
+<th class="head">verticals
+parallel</th>
+<th class="head">horizontals
+parallel</th>
+<th class="head">perspective correct</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>spherical</td>
+<td>y</td>
+<td>n</td>
+<td>n</td>
+<td>y</td>
+</tr>
+<tr class="row-odd"><td>cylindrical</td>
+<td>y</td>
+<td>y</td>
+<td>n</td>
+<td>n</td>
+</tr>
+<tr class="row-even"><td>warpfile</td>
+<td>n</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr class="row-odd"><td>None</td>
+<td>n</td>
+<td>y</td>
+<td>y</td>
+<td>n</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>warpfile <span class="classifier-delimiter">:</span> <span class="classifier"><em>None</em> or filename containing Blender and Paul Bourke</span></dt>
+<dd><p class="first last">compatible warp definition.
+(see <a class="reference external" href="http://paulbourke.net/dome/warpingfisheye/">http://paulbourke.net/dome/warpingfisheye/</a>)</p>
+</dd>
+<dt>warpGridsize <span class="classifier-delimiter">:</span> <span class="classifier">300</span></dt>
+<dd><p class="first last">Defines the resolution of the warp in both X and Y when
+not using a warpfile. Typical values would be 64-300
+trading off tolerance for jaggies for speed.</p>
+</dd>
+<dt>eyepoint <span class="classifier-delimiter">:</span> <span class="classifier">[0.5, 0.5] center of the screen</span></dt>
+<dd><p class="first last">Position of the eye in X and Y as a fraction of the
+normalized screen width and height.
+[0,0] is the bottom left of the screen.
+[1,1] is the top right of the screen.</p>
+</dd>
+<dt>flipHorizontal: True or <em>False</em></dt>
+<dd><p class="first last">Flip the entire output horizontally.  Useful for back
+projection scenarious.</p>
+</dd>
+<dt>flipVertical: True or <em>False</em></dt>
+<dd><p class="first last">Flip the entire output vertically. useful if projector is
+flipped upside down.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Notes:</th><td class="field-body"><ol class="first last arabic">
+<li><dl class="first docutils">
+<dt>The eye distance from the screen is initialized from the</dt>
+<dd><p class="first last">monitor definition.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>The eye distance can be altered dynamically by changing</dt>
+<dd><p class="first last">&#8216;warper.dist_cm&#8217; and then calling changeProjection().</p>
+</dd>
+</dl>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example usage to create a spherical projection:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">psychopy.visual.windowwarp</span> <span class="kn">import</span> <span class="n">Warper</span>
+<span class="n">win</span> <span class="o">=</span> <span class="n">Window</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s">&#39;testMonitor&#39;</span><span class="p">,</span> <span class="n">screen</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+             <span class="n">fullscr</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">useFBO</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">warper</span> <span class="o">=</span> <span class="n">Warper</span><span class="p">(</span><span class="n">win</span><span class="p">,</span>
+                <span class="n">warp</span><span class="o">=</span><span class="s">&#39;spherical&#39;</span><span class="p">,</span>
+                <span class="n">warpfile</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+                <span class="n">warpGridsize</span> <span class="o">=</span> <span class="mi">128</span><span class="p">,</span>
+                <span class="n">eyepoint</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+                <span class="n">flipHorizontal</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                <span class="n">flipVertical</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="psychopy.visual.windowwarp.Warper.changeProjection">
+<code class="descname">changeProjection</code><span class="sig-paren">(</span><em>warp</em>, <em>warpfile=None</em>, <em>eyepoint=(0.5</em>, <em>0.5)</em>, <em>flipHorizontal=False</em>, <em>flipVertical=False</em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy.visual.windowwarp.Warper.changeProjection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows changing the warp method on the fly.  Uses the same
+parameter definitions as constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../data.html" title="psychopy.data - functions for storing/saving/analysing data"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="windowframepack.html" title="psychopy.visual.windowframepack - Pack multiple monochrome images into RGB frame"
+             >previous</a> |</li>
+        <li><a href="../../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../api.html" >Reference Manual (API)</a> &raquo;</li>
+          <li><a href="../visual.html" ><code class="docutils literal"><span class="pre">psychopy.visual</span></code> - many visual stimuli</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

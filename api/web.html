@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>psychopy.web - Web methods &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../index.html" />
+    <link rel="up" title="Reference Manual (API)" href="api.html" />
+    <link rel="next" title="Changelog" href="../changelog.html" />
+    <link rel="prev" title="psychopy.voicekey - Real-time sound processing" href="voicekey.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../changelog.html" title="Changelog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="voicekey.html" title="psychopy.voicekey - Real-time sound processing"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="api.html" accesskey="U">Reference Manual (API)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">psychopy.web</span></code> - Web methods</a><ul>
+<li><a class="reference internal" href="#test-for-access">Test for access</a></li>
+<li><a class="reference internal" href="#upload-a-file-over-http">Upload a file over http</a></li>
+<li><a class="reference internal" href="#proxy-set-up-and-testing">Proxy set-up and testing</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="voicekey.html"
+                                  title="previous chapter"><code class="docutils literal"><span class="pre">psychopy.voicekey</span></code> - Real-time sound processing</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="../changelog.html"
+                                  title="next chapter">Changelog</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/api/web.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="psychopy-web-web-methods">
+<h1><code class="xref py py-mod docutils literal"><span class="pre">psychopy.web</span></code> - Web methods<a class="headerlink" href="#psychopy-web-web-methods" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="test-for-access">
+<h2>Test for access<a class="headerlink" href="#test-for-access" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="psychopy.web.haveInternetAccess">
+<code class="descclassname">psychopy.web.</code><code class="descname">haveInternetAccess</code><span class="sig-paren">(</span><em>forceCheck=False</em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy.web.haveInternetAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect active internet connection or fail quickly.</p>
+<p>If forceCheck is False, will rely on a cached value if possible.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="psychopy.web.requireInternetAccess">
+<code class="descclassname">psychopy.web.</code><code class="descname">requireInternetAccess</code><span class="sig-paren">(</span><em>forceCheck=False</em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy.web.requireInternetAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks for access to the internet, raise error if no access.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="upload-a-file-over-http">
+<h2>Upload a file over http<a class="headerlink" href="#upload-a-file-over-http" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="psychopy.web.upload">
+<code class="descclassname">psychopy.web.</code><code class="descname">upload</code><span class="sig-paren">(</span><em>selector</em>, <em>filename</em>, <em>basicAuth=None</em>, <em>host=None</em>, <em>https=False</em>, <em>log=True</em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy.web.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED: Upload a local file over the internet to a
+configured http server.
+Use the requests package instead. See <a class="reference external" href="http://www.python-requests.org/">http://www.python-requests.org/</a></p>
+<p>This method handshakes with a php script on a remote server to transfer
+a local file to another machine via http (using POST).</p>
+<p>Returns &#8220;success&#8221; plus a sha256 digest of the file on the server and
+a byte count. If the upload was not successful, an error code is
+returned (eg, &#8220;too_large&#8221; if the file size exceeds the limit specified
+server-side in up.php, or &#8220;no_file&#8221; if there was no POST attachment).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The server that receives the files needs to be configured before
+uploading will work. php files and notes for a sys-admin are
+included in <cite>psychopy/contrib/http/</cite>. In particular, the php script
+<cite>up.php</cite> needs to be copied to the server&#8217;s web-space, with
+appropriate permissions and directories, including apache basic
+auth and https (if desired). The maximum size for an upload can
+be configured within up.php</p>
+</div>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="docutils">
+<dt><cite>selector</cite> <span class="classifier-delimiter">:</span> <span class="classifier">(required, string)</span></dt>
+<dd><p class="first">a standard URL of the form <cite>http://host/path/to/up.php</cite>,
+e.g., <cite>http://upload.psychopy.org/test/up.php</cite></p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Limited https support is provided (see below).</p>
+</div>
+</dd>
+<dt><cite>filename</cite> <span class="classifier-delimiter">:</span> <span class="classifier">(required, string)</span></dt>
+<dd><p class="first">the path to the local file to be transferred. The file can be
+any format: text, utf-8, binary. All files are hex encoded while
+in transit (increasing the effective file size).</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Encryption (<em>beta</em>) is available as a separate step. That is,
+first <code class="xref py py-mod docutils literal"><span class="pre">encrypt()</span></code> the file,
+then <a class="reference internal" href="#psychopy.web.upload" title="psychopy.web.upload"><code class="xref py py-mod docutils literal"><span class="pre">upload()</span></code></a> the encrypted file in the
+same way that you would any other file.</p>
+</div>
+</dd>
+<dt><cite>basicAuth</cite> <span class="classifier-delimiter">:</span> <span class="classifier">(optional)</span></dt>
+<dd>apache &#8216;user:password&#8217; string for basic authentication. If a <cite>basicAuth</cite>
+value is supplied, it will be sent as the auth credentials (in cleartext);
+using https will encrypt the credentials.</dd>
+<dt><cite>host</cite> <span class="classifier-delimiter">:</span> <span class="classifier">(optional)</span></dt>
+<dd>The default process is to extract host information from the <cite>selector</cite>. The <cite>host</cite> option
+allows you to specify a host explicitly (i.e., if it differs from the <cite>selector</cite>).</dd>
+<dt><cite>https</cite> <span class="classifier-delimiter">:</span> <span class="classifier">(optional)</span></dt>
+<dd><p class="first">If the remote server is configured to use https, passing the parameter
+<cite>https=True</cite> will encrypt the transmission including all data and <cite>basicAuth</cite>
+credentials. It is approximately as secure as using a self-signed X.509 certificate.</p>
+<p class="last">An important caveat is that the authenticity of the certificate returned from the
+server is not checked, and so the certificate could potentially be spoofed
+(see the warning under HTTPSConnection <a class="reference external" href="http://docs.python.org/library/httplib.html">http://docs.python.org/library/httplib.html</a>).
+Overall, using https can still be much more secure than not using it.
+The encryption is good, but that of itself does not eliminate all risk.
+Importantly, it is not as secure as one might expect, given that all major web browsers
+do check certificate authenticity. The idea behind this parameter is to require people
+to explicitly indicate that they want to proceed anyway, in effect saying
+&#8220;I know what I am doing and accept the risks (of using un-verified certificates)&#8221;.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Author: Jeremy R. Gray, 2012</p>
+</dd></dl>
+
+</div>
+<div class="section" id="proxy-set-up-and-testing">
+<h2>Proxy set-up and testing<a class="headerlink" href="#proxy-set-up-and-testing" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="psychopy.web.setupProxy">
+<code class="descclassname">psychopy.web.</code><code class="descname">setupProxy</code><span class="sig-paren">(</span><em>log=True</em><span class="sig-paren">)</span><a class="headerlink" href="#psychopy.web.setupProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the urllib proxy if possible.</p>
+<blockquote>
+<div><p>The function will use the following methods in order to try and
+determine proxies:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>standard urllib.request.urlopen (which will use any
+statically-defined http-proxy settings)</li>
+<li>previous stored proxy address (in prefs)</li>
+<li>proxy.pac files if these have been added to system settings</li>
+<li>auto-detect proxy settings (WPAD technology)</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True (success) or False (failure)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../changelog.html" title="Changelog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="voicekey.html" title="psychopy.voicekey - Real-time sound processing"
+             >previous</a> |</li>
+        <li><a href="../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="api.html" >Reference Manual (API)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,954 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>labjack (USB I/O devices) &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../../index.html" />
+    <link rel="up" title="psychopy.hardware - hardware interfaces" href="../hardware.html" />
+    <link rel="next" title="Minolta" href="minolta.html" />
+    <link rel="prev" title="joystick (pyglet and pygame)" href="joystick.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="minolta.html" title="Minolta"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="joystick.html" title="joystick (pyglet and pygame)"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../api.html" >Reference Manual (API)</a> &raquo;</li>
+          <li><a href="../hardware.html" accesskey="U"><code class="docutils literal"><span class="pre">psychopy.hardware</span></code> - hardware interfaces</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="joystick.html"
+                                  title="previous chapter">joystick (pyglet and pygame)</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="minolta.html"
+                                  title="next chapter">Minolta</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../../_sources/api/hardware/labjack.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="labjack-usb-i-o-devices">
+<span id="labjack"></span><h1>labjack (USB I/O devices)<a class="headerlink" href="#labjack-usb-i-o-devices" title="Permalink to this headline">¶</a></h1>
+<p>The labjack package is included in the Standalone PsychoPy distributions.
+It differs slightly from the standard version distributed by labjack
+(www.labjack.com) in the import. For the custom distribution use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">labjack</span> <span class="kn">import</span> <span class="n">u3</span>
+</pre></div>
+</div>
+<p>NOT:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">u3</span>
+</pre></div>
+</div>
+<p>In all other respects the library is the same and instructions on how to
+use it can be found here:</p>
+<p><a class="reference external" href="http://labjack.com/support/labjackpython">http://labjack.com/support/labjackpython</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To use labjack devices you do need also to install the driver software
+described on the page above</p>
+</div>
+<dl class="class">
+<dt id="labjack.u3.U3">
+<em class="property">class </em><code class="descclassname">labjack.u3.</code><code class="descname">U3</code><span class="sig-paren">(</span><em>debug=False</em>, <em>autoOpen=True</em>, <em>**kargs</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3" title="Permalink to this definition">¶</a></dt>
+<dd><p>U3 Class for all U3 specific low-level commands.</p>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.configU3()
+{&#8216;SerialNumber&#8217;: 320032102, ... , &#8216;FirmwareVersion&#8217;: &#8216;1.26&#8217;}</p>
+<p>Name: U3.__init__(debug = False, autoOpen = True, <a href="#id1"><span class="problematic" id="id2">**</span></a>openArgs)</p>
+<dl class="docutils">
+<dt>Args: debug, enables debug output</dt>
+<dd>autoOpen, if true, the class will try to open a U3 using openArgs
+<a href="#id3"><span class="problematic" id="id4">**</span></a>openArgs, the arguments to pass to the open call. See U3.open()</dd>
+<dt>Desc: Instantiates a new U3 object. If autoOpen == True, then it will</dt>
+<dd>also open a U3.</dd>
+</dl>
+<p>Examples:
+Simplest:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()</p>
+<p>For debug output:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3(debug = True)</p>
+<p>To open a U3 with Local ID = 2:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3(localId = 2)</p>
+<dl class="method">
+<dt id="labjack.u3.U3.asynchConfig">
+<code class="descname">asynchConfig</code><span class="sig-paren">(</span><em>Update=True</em>, <em>UARTEnable=True</em>, <em>DesiredBaud=9600</em>, <em>olderHardware=False</em>, <em>configurePins=True</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.asynchConfig" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.asynchConfig(Update = True, UARTEnable = True, </dt>
+<dd>DesiredBaud = 9600, olderHardware = False,
+configurePins = True)</dd>
+<dt>Args: See section 5.2.16 of the User&#8217;s Guide.</dt>
+<dd><dl class="first docutils">
+<dt>olderHardware, If using hardware 1.21, please set olderHardware </dt>
+<dd>to True and read the timer configuration first.</dd>
+</dl>
+<p class="last">configurePins, Will call the configIO to set up pins for you.</p>
+</dd>
+</dl>
+<p>Desc: Configures the U3 UART for asynchronous communication.</p>
+<p>returns a dictionary:
+{</p>
+<blockquote>
+<div>&#8216;Update&#8217; : True means new parameters were written
+&#8216;UARTEnable&#8217; : True means the UART is enabled
+&#8216;BaudFactor&#8217; : The baud factor being used</div></blockquote>
+<p>}</p>
+<p>Note: Requires U3 hardware version 1.21+.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.asynchRX">
+<code class="descname">asynchRX</code><span class="sig-paren">(</span><em>Flush=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.asynchRX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.asynchRX(Flush = False)</p>
+<p>Args: Flush, Set to True to flush</p>
+<dl class="docutils">
+<dt>Desc: Reads the oldest 32 bytes from the U3 UART RX buffer</dt>
+<dd>(received on receive terminal). The buffer holds 256 bytes. See
+section 5.2.18 of the User&#8217;s Guide.</dd>
+</dl>
+<p>returns a dictonary:
+{</p>
+<blockquote>
+<div><p>&#8216;AsynchBytes&#8217; : List of received bytes
+&#8216;NumAsynchBytesInRXBuffer&#8217; : Number of AsynchBytes are in the RX</p>
+<blockquote>
+<div>Buffer.</div></blockquote>
+</div></blockquote>
+<p>}</p>
+<p>Note: Requres U3 hardware version 1.21 or greater.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.asynchTX">
+<code class="descname">asynchTX</code><span class="sig-paren">(</span><em>AsynchBytes</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.asynchTX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.asynchTX(AsynchBytes)</p>
+<p>Args: AsynchBytes, must be a list of bytes to transfer.</p>
+<dl class="docutils">
+<dt>Desc: Sends bytes to the U3 UART which will be sent asynchronously on</dt>
+<dd>the transmit line. See section 5.2.17 of the user&#8217;s guide.</dd>
+</dl>
+<p>returns a dictionary:
+{</p>
+<blockquote>
+<div><p>&#8216;NumAsynchBytesSent&#8217; : Number of Asynch Bytes Sent
+&#8216;NumAsynchBytesInRXBuffer&#8217; : How many bytes are currently in the</p>
+<blockquote>
+<div>RX buffer.</div></blockquote>
+</div></blockquote>
+<p>}</p>
+<p>Note: Requres U3 hardware version 1.21 or greater.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.binaryToCalibratedAnalogVoltage">
+<code class="descname">binaryToCalibratedAnalogVoltage</code><span class="sig-paren">(</span><em>bits</em>, <em>isLowVoltage=True</em>, <em>isSingleEnded=True</em>, <em>isSpecialSetting=False</em>, <em>channelNumber=0</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.binaryToCalibratedAnalogVoltage" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.binaryToCalibratedAnalogVoltage(bits, isLowVoltage = True,</dt>
+<dd>isSingleEnded = True,
+isSpecialSetting = False,
+channelNumber = 0)</dd>
+<dt>Args: bits, the binary value of the reading.</dt>
+<dd>isLowVoltage, True if the reading came from a low-voltage channel
+isSingleEnded, True if the reading is not differential
+isSpecialSetting, True if the reading came from special range
+channelNumber, used to apply the correct calibration for HV</dd>
+<dt>Desc: Converts the bits returned from AIN functions into a calibrated</dt>
+<dd>voltage.</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; bits = d.getFeedback( u3.AIN(0, 31))[0]
+&gt;&gt;&gt; print bits
+1248
+&gt;&gt;&gt; print d.binaryToCalibratedAnalogVoltage(bits)
+0.046464288000000006</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.configAnalog">
+<code class="descname">configAnalog</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.configAnalog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method to configIO() that adds the given input numbers
+in the range FIO0-EIO7 (0-15) to the analog team. That is, it adds
+the given bit positions to those already set in the FIOAnalog
+and EIOAnalog bitfields.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">u3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">u3</span><span class="o">.</span><span class="n">U3</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">configIO</span><span class="p">()</span>
+<span class="go">Sent:  [0x47, 0xf8, 0x3, 0xb, 0x40, 0x0, 0x0, 0x0, 0x40, 0x0, 0x0, 0x0]</span>
+<span class="go">Result:  [0x56, 0xf8, 0x3, 0xb, 0x4f, 0x0, 0x0, 0x0, 0x40, 0x0, 0xf, 0x0]</span>
+<span class="go">{&#39;NumberOfTimersEnabled&#39;: 0, &#39;TimerCounterPinOffset&#39;: 4, &#39;DAC1Enable&#39;: 0, &#39;FIOAnalog&#39;: 15, &#39;EIOAnalog&#39;: 0, &#39;TimerCounterConfig&#39;: 64, &#39;EnableCounter1&#39;: False, &#39;EnableCounter0&#39;: False}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">configAnalog</span><span class="p">(</span><span class="n">u3</span><span class="o">.</span><span class="n">FIO4</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">FIO5</span><span class="p">)</span>
+<span class="go">Sent:  [0x47, 0xf8, 0x3, 0xb, 0x40, 0x0, 0x0, 0x0, 0x40, 0x0, 0x0, 0x0]</span>
+<span class="go">Result:  [0x56, 0xf8, 0x3, 0xb, 0x4f, 0x0, 0x0, 0x0, 0x40, 0x0, 0xf, 0x0]</span>
+<span class="go">Sent:  [0x93, 0xf8, 0x3, 0xb, 0x8c, 0x0, 0xd, 0x0, 0x40, 0x0, 0x3f, 0x0]</span>
+<span class="go">Result:  [0x86, 0xf8, 0x3, 0xb, 0x7f, 0x0, 0x0, 0x0, 0x40, 0x0, 0x3f, 0x0]</span>
+<span class="go">{&#39;NumberOfTimersEnabled&#39;: 0, &#39;TimerCounterPinOffset&#39;: 4, &#39;DAC1Enable&#39;: 0, &#39;FIOAnalog&#39;: 63, &#39;EIOAnalog&#39;: 0, &#39;TimerCounterConfig&#39;: 64, &#39;EnableCounter1&#39;: False, &#39;EnableCounter0&#39;: False}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.configDigital">
+<code class="descname">configDigital</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.configDigital" title="Permalink to this definition">¶</a></dt>
+<dd><p>The converse of configAnalog(). The convenience method to configIO,
+adds the given input numbers in the range FIO0-EIO7 (0-15) to the
+digital team. That is, it removes the given bit positions from those
+already set in the FIOAnalog and EIOAnalog bitfields.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">u3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">u3</span><span class="o">.</span><span class="n">U3</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">configIO</span><span class="p">()</span>
+<span class="go">Sent:  [0x47, 0xf8, 0x3, 0xb, 0x40, 0x0, 0x0, 0x0, 0x40, 0x0, 0x0, 0x0]</span>
+<span class="go">Result:  [0x56, 0xf8, 0x3, 0xb, 0x4f, 0x0, 0x0, 0x0, 0x40, 0x0, 0xf, 0x0]</span>
+<span class="go">{&#39;NumberOfTimersEnabled&#39;: 0, &#39;TimerCounterPinOffset&#39;: 4, &#39;DAC1Enable&#39;: 0, &#39;FIOAnalog&#39;: 15, &#39;EIOAnalog&#39;: 0, &#39;TimerCounterConfig&#39;: 64, &#39;EnableCounter1&#39;: False, &#39;EnableCounter0&#39;: False}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">configAnalog</span><span class="p">(</span><span class="n">u3</span><span class="o">.</span><span class="n">FIO4</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">FIO5</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">EIO0</span><span class="p">)</span>
+<span class="go">Sent:  [0x47, 0xf8, 0x3, 0xb, 0x40, 0x0, 0x0, 0x0, 0x40, 0x0, 0x0, 0x0]</span>
+<span class="go">Result:  [0x56, 0xf8, 0x3, 0xb, 0x4f, 0x0, 0x0, 0x0, 0x40, 0x0, 0xf, 0x0]</span>
+<span class="go">Sent:  [0x94, 0xf8, 0x3, 0xb, 0x8d, 0x0, 0xd, 0x0, 0x40, 0x0, 0x3f, 0x1]</span>
+<span class="go">Result:  [0x87, 0xf8, 0x3, 0xb, 0x80, 0x0, 0x0, 0x0, 0x40, 0x0, 0x3f, 0x1]</span>
+<span class="go">{&#39;NumberOfTimersEnabled&#39;: 0, &#39;TimerCounterPinOffset&#39;: 4, &#39;DAC1Enable&#39;: 0, &#39;FIOAnalog&#39;: 63, &#39;EIOAnalog&#39;: 1, &#39;TimerCounterConfig&#39;: 64, &#39;EnableCounter1&#39;: False, &#39;EnableCounter0&#39;: False}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">configDigital</span><span class="p">(</span><span class="n">u3</span><span class="o">.</span><span class="n">FIO4</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">FIO5</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">EIO0</span><span class="p">)</span>
+<span class="go">Sent:  [0x47, 0xf8, 0x3, 0xb, 0x40, 0x0, 0x0, 0x0, 0x40, 0x0, 0x0, 0x0]</span>
+<span class="go">Result:  [0x87, 0xf8, 0x3, 0xb, 0x80, 0x0, 0x0, 0x0, 0x40, 0x0, 0x3f, 0x1]</span>
+<span class="go">Sent:  [0x63, 0xf8, 0x3, 0xb, 0x5c, 0x0, 0xd, 0x0, 0x40, 0x0, 0xf, 0x0]</span>
+<span class="go">Result:  [0x56, 0xf8, 0x3, 0xb, 0x4f, 0x0, 0x0, 0x0, 0x40, 0x0, 0xf, 0x0]</span>
+<span class="go">{&#39;NumberOfTimersEnabled&#39;: 0, &#39;TimerCounterPinOffset&#39;: 4, &#39;DAC1Enable&#39;: 0, &#39;FIOAnalog&#39;: 15, &#39;EIOAnalog&#39;: 0, &#39;TimerCounterConfig&#39;: 64, &#39;EnableCounter1&#39;: False, &#39;EnableCounter0&#39;: False}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.configIO">
+<code class="descname">configIO</code><span class="sig-paren">(</span><em>TimerCounterPinOffset=None</em>, <em>EnableCounter1=None</em>, <em>EnableCounter0=None</em>, <em>NumberOfTimersEnabled=None</em>, <em>FIOAnalog=None</em>, <em>EIOAnalog=None</em>, <em>EnableUART=None</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.configIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.configIO(TimerCounterPinOffset = 4, EnableCounter1 = None, EnableCounter0 = None, NumberOfTimersEnabled = None, FIOAnalog = None, EIOAnalog = None, EnableUART = None)</p>
+<p>Args: See section 5.2.3 of the user&#8217;s guide.</p>
+<p>Desc: The configIO command.</p>
+<p>Examples:
+Simplest:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.configIO()
+{</p>
+<blockquote>
+<div>&#8216;NumberOfTimersEnabled&#8217;: 0,
+&#8216;TimerCounterPinOffset&#8217;: 4,
+&#8216;DAC1Enable&#8217;: 0,
+&#8216;FIOAnalog&#8217;: 239,
+&#8216;EIOAnalog&#8217;: 0,
+&#8216;TimerCounterConfig&#8217;: 64,
+&#8216;EnableCounter1&#8217;: False,
+&#8216;EnableCounter0&#8217;: False</div></blockquote>
+<p>}</p>
+<p>Set all FIOs and EIOs to digital (until power cycle):
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.configIO(FIOAnalog = 0, EIOAnalog = 0)
+{</p>
+<blockquote>
+<div>&#8216;NumberOfTimersEnabled&#8217;: 0,
+&#8216;TimerCounterPinOffset&#8217;: 4,
+&#8216;DAC1Enable&#8217;: 0,
+&#8216;FIOAnalog&#8217;: 0,
+&#8216;EIOAnalog&#8217;: 0,
+&#8216;TimerCounterConfig&#8217;: 64,
+&#8216;EnableCounter1&#8217;: False,
+&#8216;EnableCounter0&#8217;: False</div></blockquote>
+<p>}</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.configTimerClock">
+<code class="descname">configTimerClock</code><span class="sig-paren">(</span><em>TimerClockBase=None</em>, <em>TimerClockDivisor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.configTimerClock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.configTimerClock(TimerClockBase = None, TimerClockDivisor = None)
+Args: TimeClockBase, the base for the timer clock.</p>
+<blockquote>
+<div>TimerClockDivisor, the divisor for the clock.</div></blockquote>
+<dl class="docutils">
+<dt>Desc: Writes and reads the time clock configuration. See section 5.2.4</dt>
+<dd>of the user&#8217;s guide.</dd>
+</dl>
+<p>Note: TimerClockBase and TimerClockDivisor must be set at the same time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.configU3">
+<code class="descname">configU3</code><span class="sig-paren">(</span><em>LocalID=None</em>, <em>TimerCounterConfig=None</em>, <em>FIOAnalog=None</em>, <em>FIODirection=None</em>, <em>FIOState=None</em>, <em>EIOAnalog=None</em>, <em>EIODirection=None</em>, <em>EIOState=None</em>, <em>CIODirection=None</em>, <em>CIOState=None</em>, <em>DAC1Enable=None</em>, <em>DAC0=None</em>, <em>DAC1=None</em>, <em>TimerClockConfig=None</em>, <em>TimerClockDivisor=None</em>, <em>CompatibilityOptions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.configU3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.configU3(LocalID = None, TimerCounterConfig = None, FIOAnalog = None, FIODirection = None, FIOState = None, EIOAnalog = None, EIODirection = None, EIOState = None, CIODirection = None, CIOState = None, DAC1Enable = None, DAC0 = None, DAC1 = None, TimerClockConfig = None, TimerClockDivisor = None, CompatibilityOptions = None)</p>
+<p>Args: See section 5.2.2 of the users guide.</p>
+<dl class="docutils">
+<dt>Desc: Sends the low-level configU3 command. Also saves relevant </dt>
+<dd>information to the U3 object for later use.</dd>
+</dl>
+<p>Example:
+Simplest:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.configU3()
+{</p>
+<blockquote>
+<div>&#8216;LocalID&#8217;: 1, 
+&#8216;SerialNumber&#8217;: 320035782, 
+&#8216;DeviceName&#8217;: &#8216;U3-LV&#8217;, 
+&#8216;FIODirection&#8217;: 0, 
+&#8216;FirmwareVersion&#8217;: &#8216;1.24&#8217;, 
+... , 
+&#8216;ProductID&#8217;: 3</div></blockquote>
+<p>}</p>
+<p>Configure all FIOs and EI0s to analog on boot:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.configU3( FIOAnalog = 255, EIOAnalog = 255)
+{</p>
+<blockquote>
+<div>&#8216;FIOAnalog&#8217;: 255,
+&#8216;EIOAnalog&#8217;: 255,
+... , 
+&#8216;ProductID&#8217;: 3</div></blockquote>
+<p>}</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.eraseCal">
+<code class="descname">eraseCal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.eraseCal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.eraseCal()</p>
+<p>Args: None</p>
+<dl class="docutils">
+<dt>Desc: See the description of writeMem and section 5.2.8 of the user&#8217;s</dt>
+<dd>guide.</dd>
+</dl>
+<p>Note: Do not call this function while streaming.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.eraseMem">
+<code class="descname">eraseMem</code><span class="sig-paren">(</span><em>eraseCal=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.eraseMem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.eraseMem(eraseCal=False)</p>
+<p>Args: eraseCal, set to True to erase the calibration memory instead</p>
+<dl class="docutils">
+<dt>Desc: The U3 uses flash memory that must be erased before writing.</dt>
+<dd>Please read section 5.2.8 of the user&#8217;s guide before you do
+something you may regret.</dd>
+</dl>
+<p>Note: Do not call this function while streaming.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.exportConfig">
+<code class="descname">exportConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.exportConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.exportConfig( ) 
+Args: None
+Desc: Takes the current configuration and puts it into a ConfigParser</p>
+<blockquote>
+<div>object. Useful for saving the setup of your U3.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.getAIN">
+<code class="descname">getAIN</code><span class="sig-paren">(</span><em>posChannel</em>, <em>negChannel=31</em>, <em>longSettle=False</em>, <em>quickSample=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.getAIN" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.getAIN(posChannel, negChannel = 31, longSettle=False,</dt>
+<dd>quickSample=False)</dd>
+<dt>Args: posChannel, the positive channel to read from.</dt>
+<dd>negChannel, the negitive channel to read from.
+longSettle, set to True for longSettle
+quickSample, set to True for quickSample</dd>
+</dl>
+<p>Desc: A convenience function to read an AIN.</p>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.getAIN( 0 )
+0.0501680038869</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.getCalibrationData">
+<code class="descname">getCalibrationData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.getCalibrationData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.getCalibrationData()</p>
+<p>Args: None</p>
+<dl class="docutils">
+<dt>Desc: Reads in the U3&#8217;s calibrations, so they can be applied to</dt>
+<dd>readings. Section 2.6.2 of the User&#8217;s Guide is helpful. Sets up
+an internal calData dict for any future calls that need 
+calibration.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.getDIOState">
+<code class="descname">getDIOState</code><span class="sig-paren">(</span><em>ioNum</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.getDIOState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.getDIOState(ioNum)
+Args: ioNum, which digital I/O to read</p>
+<blockquote>
+<div>0 - 7   = FIO0 - FIO7
+8 - 15  = EIO0 - EIO7
+16 - 19 = CIO0 - CIO3</div></blockquote>
+<dl class="docutils">
+<dt>Desc: A convenience function to read the state of a digital I/O.  Will</dt>
+<dd>not change the direction.</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.getDIOState(4)
+1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.getDIState">
+<code class="descname">getDIState</code><span class="sig-paren">(</span><em>ioNum</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.getDIState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.getDIState(ioNum)
+Args: ioNum, which digital I/O to read</p>
+<blockquote>
+<div>0 - 7   = FIO0 - FIO7
+8 - 15  = EIO0 - EIO7
+16 - 19 = CIO0 - CIO3</div></blockquote>
+<dl class="docutils">
+<dt>Desc: A convenience function to read the state of a digital I/O.  Will</dt>
+<dd>also set the direction to input.</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.getDIState(4)
+1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.getFIOState">
+<code class="descname">getFIOState</code><span class="sig-paren">(</span><em>fioNum</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.getFIOState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.getFIOState(fioNum)</p>
+<p>Args: fioNum, which FIO to read</p>
+<dl class="docutils">
+<dt>Desc: A convenience function to read the state of an FIO.  Note that</dt>
+<dd>this function can read all digital I/O lines (FIO0 - CIO3), and
+is equivalent to using the getDIOState method.</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; print d.getFIOState(4)
+1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.getFeedback">
+<code class="descname">getFeedback</code><span class="sig-paren">(</span><em>*commandlist</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.getFeedback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.getFeedback(commandlist)</p>
+<p>Args: the FeedbackCommands to run</p>
+<p>Desc: Forms the commandlist into a packet, sends it to the U3, and reads the response.</p>
+<p>Examples:
+&gt;&gt;&gt; myU3 = u3.U3()
+&gt;&gt;&gt; ledCommand = u3.LED(False)
+&gt;&gt;&gt; ain0Command = u3.AIN(0, 31, True)
+&gt;&gt;&gt; myU3.getFeedback(ledCommand, ain0Command)
+[None, 9376]</p>
+<p>OR if you like the list version better:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">myU3</span> <span class="o">=</span> <span class="n">U3</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ledCommand</span> <span class="o">=</span> <span class="n">u3</span><span class="o">.</span><span class="n">LED</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ain0Command</span> <span class="o">=</span> <span class="n">u3</span><span class="o">.</span><span class="n">AIN</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">commandList</span> <span class="o">=</span> <span class="p">[</span> <span class="n">ledCommand</span><span class="p">,</span> <span class="n">ain0Command</span> <span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myU3</span><span class="o">.</span><span class="n">getFeedback</span><span class="p">(</span><span class="n">commandList</span><span class="p">)</span>
+<span class="go">[None, 9376]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.getTemperature">
+<code class="descname">getTemperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.getTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.getTemperature()</p>
+<p>Args: None</p>
+<dl class="docutils">
+<dt>Desc: Reads the internal temperature sensor on the U3. Returns the</dt>
+<dd>temperature in Kelvin.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.i2c">
+<code class="descname">i2c</code><span class="sig-paren">(</span><em>Address</em>, <em>I2CBytes</em>, <em>EnableClockStretching=False</em>, <em>NoStopWhenRestarting=False</em>, <em>ResetAtStart=False</em>, <em>SpeedAdjust=0</em>, <em>SDAPinNum=6</em>, <em>SCLPinNum=7</em>, <em>NumI2CBytesToReceive=0</em>, <em>AddressByte=None</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.i2c" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.i2c(Address, I2CBytes, ResetAtStart = False, </dt>
+<dd>EnableClockStretching = False, SpeedAdjust = 0,
+SDAPinNum = 6, SCLPinNum = 7, NumI2CBytesToReceive = 0,
+AddressByte = None)</dd>
+<dt>Args: Address, the address (not shifted over)</dt>
+<dd><p class="first">I2CBytes, must be a list of bytes to send.
+See section 5.2.19 of the user&#8217;s guide.
+AddressByte, use this if you don&#8217;t want a shift applied.</p>
+<blockquote class="last">
+<div>This address will be put it in the low-level 
+packet directly and overrides Address. Optional.</div></blockquote>
+</dd>
+<dt>Desc: Sends and receives serial data using I2C synchronous</dt>
+<dd>communication.</dd>
+</dl>
+<p>Note: Requires hardware version 1.21 or greater.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.loadConfig">
+<code class="descname">loadConfig</code><span class="sig-paren">(</span><em>configParserObj</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.loadConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.loadConfig( configParserObj ) 
+Args: configParserObj, A Config Parser object to load in
+Desc: Takes a configuration and updates the U3 to match it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>firstFound=True</em>, <em>serial=None</em>, <em>localId=None</em>, <em>devNumber=None</em>, <em>handleOnly=False</em>, <em>LJSocket=None</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.open" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.open(firstFound = True, localId = None, devNumber = None,</dt>
+<dd>handleOnly = False, LJSocket = None)</dd>
+<dt>Args: firstFound, If True, use the first found U3</dt>
+<dd>serial, open a U3 with the given serial number
+localId, open a U3 with the given local id.
+devNumber, open a U3 with the given devNumber
+handleOnly, if True, LabJackPython will only open a handle
+LJSocket, set to &#8220;&lt;ip&gt;:&lt;port&gt;&#8221; to connect to LJSocket</dd>
+<dt>Desc: Use to open a U3. If handleOnly is false, it will call configU3</dt>
+<dd>and save the resulting information to the object. This allows the
+use of d.serialNumber, d.firmwareVersion, etc.</dd>
+</dl>
+<p>Examples:
+Simplest:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3(autoOpen = False)
+&gt;&gt;&gt; d.open()</p>
+<p>Handle-only, with a serial number = 320095789:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3(autoOpen = False)
+&gt;&gt;&gt; d.open(handleOnly = True, serial = 320095789)</p>
+<p>Using LJSocket:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3(autoOpen = False)
+&gt;&gt;&gt; d.open(LJSocket = &#8220;localhost:6000&#8221;)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.processStreamData">
+<code class="descname">processStreamData</code><span class="sig-paren">(</span><em>result</em>, <em>numBytes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.processStreamData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.processStreamData(result, numBytes = None)
+Args: result, the string returned from streamData()</p>
+<blockquote>
+<div>numBytes, the number of bytes per packet.</div></blockquote>
+<dl class="docutils">
+<dt>Desc: Breaks stream data into individual channels and applies</dt>
+<dd>calibrations.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">reading</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">streamData</span><span class="p">(</span><span class="n">convert</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">proccessStreamData</span><span class="p">(</span><span class="n">reading</span><span class="p">[</span><span class="s">&#39;result&#39;</span><span class="p">])</span>
+<span class="go">defaultDict(list, {&#39;AIN0&#39; : [3.123, 3.231, 3.232, ...]})</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.readCal">
+<code class="descname">readCal</code><span class="sig-paren">(</span><em>blockNum</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.readCal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.readCal(blockNum)</p>
+<p>Args: blockNum, which block to read</p>
+<dl class="docutils">
+<dt>Desc: See the description of readMem and section 5.2.6 of the user&#8217;s</dt>
+<dd>guide.</dd>
+</dl>
+<p>Note: Do not call this function while streaming.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.readDefaultsConfig">
+<code class="descname">readDefaultsConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.readDefaultsConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.readDefaultsConfig( ) 
+Args: None
+Desc: Reads the power-up defaults stored in flash.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.readMem">
+<code class="descname">readMem</code><span class="sig-paren">(</span><em>blockNum</em>, <em>readCal=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.readMem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.readMem(blockNum, readCal=False)</p>
+<dl class="docutils">
+<dt>Args: blockNum, which block to read from</dt>
+<dd>readCal, set to True to read from calibration instead.</dd>
+<dt>Desc: Reads 1 block (32 bytes) from the non-volatile user or</dt>
+<dd>calibration memory. Please read section 5.2.6 of the user&#8217;s guide
+before you do something you may regret.</dd>
+</dl>
+<p>NOTE: Do not call this function while streaming.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><em>hardReset=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.reset(hardReset = False)</p>
+<p>Args: hardReset, set to True for a hard reset.</p>
+<dl class="docutils">
+<dt>Desc: Causes a soft or hard reset.  A soft reset consists of </dt>
+<dd>re-initializing most variables without re-enumeration. A hard
+reset is a reboot of the processor and does cause re-enumeration.
+See section 5.2.9 of the User&#8217;s guide.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.setDOState">
+<code class="descname">setDOState</code><span class="sig-paren">(</span><em>ioNum</em>, <em>state=1</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.setDOState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.setDOState(ioNum, state = 1)
+Args: ioNum, which digital I/O to change</p>
+<blockquote>
+<div><blockquote>
+<div>0 - 7   = FIO0 - FIO7
+8 - 15  = EIO0 - EIO7
+16 - 19 = CIO0 - CIO3</div></blockquote>
+<p>state, 1 = High, 0 = Low</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Desc: A convenience function to set the state of a digital I/O. Will</dt>
+<dd>also set the direction to output.</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; d.setDOState(4, state = 1)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.setFIOState">
+<code class="descname">setFIOState</code><span class="sig-paren">(</span><em>fioNum</em>, <em>state=1</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.setFIOState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.setFIOState(fioNum, state = 1)
+Args: fioNum, which FIO to change</p>
+<blockquote>
+<div>state, 1 = High, 0 = Low</div></blockquote>
+<dl class="docutils">
+<dt>Desc: A convenience function to set the state of an FIO. Will also</dt>
+<dd>set the direction to output.  Note that this function can set
+all digital I/O lines (FIO0 - CIO3), and is equivalent to using
+the setDOState method.</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; d.setFIOState(4, state = 1)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.sht1x">
+<code class="descname">sht1x</code><span class="sig-paren">(</span><em>DataPinNum=4</em>, <em>ClockPinNum=5</em>, <em>SHTOptions=192</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.sht1x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.sht1x(DataPinNum = 4, ClockPinNum = 5, SHTOptions = 0xc0)</p>
+<dl class="docutils">
+<dt>Args: See section 5.2.20 of the user&#8217;s guide.</dt>
+<dd>SHTOptions, see below.</dd>
+<dt>Desc: Reads temperature and humidity from a Sensirion SHT1X sensor</dt>
+<dd>(which is used by the EI-1050).</dd>
+</dl>
+<p>Returns a dictonary:
+{</p>
+<blockquote>
+<div>&#8216;StatusReg&#8217; : SHT1X status register
+&#8216;StatusRegCRC&#8217; : SHT1X status register CRC value
+&#8216;Temperature&#8217; : The temperature in C
+&#8216;TemperatureCRC&#8217; : The CRC value for the temperature
+&#8216;Humidity&#8217; : The humidity
+&#8216;HumidityCRC&#8217; : The CRC value for the humidity</div></blockquote>
+<p>}</p>
+<p>Note: Requires hardware version 1.21 or greater.</p>
+<dl class="docutils">
+<dt>SHTOptions (and proof people read documentation):</dt>
+<dd>bit 7 = Read Temperature
+bit 6 = Read Realtive Humidity
+bit 2 = Heater. 1 = on, 0 = off
+bit 1 = Reserved at 0
+bit 0 = Resolution. 1 = 8 bit RH, 12 bit T; 0 = 12 RH, 14 bit T</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.spi">
+<code class="descname">spi</code><span class="sig-paren">(</span><em>SPIBytes</em>, <em>AutoCS=True</em>, <em>DisableDirConfig=False</em>, <em>SPIMode='A'</em>, <em>SPIClockFactor=0</em>, <em>CSPINNum=4</em>, <em>CLKPinNum=5</em>, <em>MISOPinNum=6</em>, <em>MOSIPinNum=7</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.spi" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.spi(SPIBytes, AutoCS=True, DisableDirConfig = False,</dt>
+<dd>SPIMode = &#8216;A&#8217;, SPIClockFactor = 0, CSPINNum = 4,
+CLKPinNum = 5, MISOPinNum = 6, MOSIPinNum = 7)</dd>
+<dt>Args: SPIBytes, a list of bytes to be transferred.</dt>
+<dd>See Section 5.2.15 of the user&#8217;s guide.</dd>
+<dt>Desc: Sends and receives serial data using SPI synchronous</dt>
+<dd>communication.</dd>
+<dt>NOTE: Requires U3 hardware version 1.21 or greater.  Also,</dt>
+<dd>the return has been changed to a dictionary with
+NumSPIBytesTransferred and SPIBytes.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.streamConfig">
+<code class="descname">streamConfig</code><span class="sig-paren">(</span><em>NumChannels=1, SamplesPerPacket=25, InternalStreamClockFrequency=0, DivideClockBy256=False, Resolution=3, ScanInterval=1, PChannels=[30], NChannels=[31], ScanFrequency=None, SampleFrequency=None</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.streamConfig" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.streamConfig(NumChannels = 1, SamplesPerPacket = 25,</dt>
+<dd>InternalStreamClockFrequency = 0, DivideClockBy256 = False,
+Resolution = 3, ScanInterval = 1,
+PChannels = [30], NChannels = [31],
+ScanFrequency = None, SampleFrequency = None)</dd>
+<dt>Args: NumChannels, the number of channels to stream</dt>
+<dd><p class="first">Resolution, the resolution of the samples (0 - 3)
+PChannels, a list of channel numbers to stream
+NChannels, a list of channel options bytes</p>
+<p>Set Either:</p>
+<dl class="docutils">
+<dt>ScanFrequency, the frequency in Hz to scan the channel list (PChannels).</dt>
+<dd>sample rate (Hz) = ScanFrequency * NumChannels</dd>
+</dl>
+<p>&#8211; OR &#8211;</p>
+<p>SamplesPerPacket, how many samples make one packet
+InternalStreamClockFrequency, 0 = 4 MHz, 1 = 48 MHz
+DivideClockBy256, True = divide the clock by 256
+ScanInterval, clock/ScanInterval = frequency.</p>
+<p>See Section 5.2.10 of the User&#8217;s Guide for more details.</p>
+<p>Deprecated:</p>
+<dl class="last docutils">
+<dt>SampleFrequency, the frequency in Hz to sample.  Use ScanFrequency</dt>
+<dd>since SampleFrequency has always set the scan
+frequency and the name is confusing.</dd>
+</dl>
+</dd>
+<dt>Desc: Stream mode operates on a table of channels that are scanned</dt>
+<dd>at the specified scan rate. Before starting a stream, you need 
+to call this function to configure the table and scan clock.</dd>
+</dl>
+<p>Note: Requires U3 hardware version 1.21 or greater.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.toggleLED">
+<code class="descname">toggleLED</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.toggleLED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.toggleLED()</p>
+<p>Args: None</p>
+<p>Desc: Toggles the state LED on and off.</p>
+<p>Example:
+&gt;&gt;&gt; import u3
+&gt;&gt;&gt; d = u3.U3()
+&gt;&gt;&gt; d.toggleLED()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.voltageToDACBits">
+<code class="descname">voltageToDACBits</code><span class="sig-paren">(</span><em>volts</em>, <em>dacNumber=0</em>, <em>is16Bits=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.voltageToDACBits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.voltageToDACBits(volts, dacNumber = 0, is16Bits = False)</p>
+<dl class="docutils">
+<dt>Args: volts, the voltage you would like to set the DAC to.</dt>
+<dd>dacNumber, 0 or 1, helps apply the correct calibration
+is16Bits, True if you are going to use the 16-bit DAC command</dd>
+<dt>Desc: Takes a voltage, and turns it into the bits needed for the DAC </dt>
+<dd>Feedback commands.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.watchdog">
+<code class="descname">watchdog</code><span class="sig-paren">(</span><em>ResetOnTimeout=False</em>, <em>SetDIOStateOnTimeout=False</em>, <em>TimeoutPeriod=60</em>, <em>DIOState=0</em>, <em>DIONumber=0</em>, <em>onlyRead=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.watchdog" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Name: U3.watchdog(ResetOnTimeout = False, SetDIOStateOnTimeout = False,</dt>
+<dd>TimeoutPeriod = 60, DIOState = 0, DIONumber = 0,
+onlyRead = False)</dd>
+<dt>Args: Check out section 5.2.14 of the user&#8217;s guide.</dt>
+<dd>Set onlyRead to True to perform only a read</dd>
+<dt>Desc: This function will write the configuration of the watchdog,</dt>
+<dd>unless onlyRead is set to True.</dd>
+</dl>
+<p>Returns a dictionary:
+{</p>
+<blockquote>
+<div>&#8216;WatchDogEnabled&#8217; : True if the watchdog is enabled, otherwise False
+&#8216;ResetOnTimeout&#8217; : If True, the device will reset on timeout.
+&#8216;SetDIOStateOnTimeout&#8217; : If True, the state of a DIO will be set
+&#8216;TimeoutPeriod&#8217; : Timeout Period in seconds
+&#8216;DIOState&#8217; : The state the DIO will be set to on timeout
+&#8216;DIONumber&#8217; : Which DIO will be set on timeout</div></blockquote>
+<p>}</p>
+<p>NOTE: Requires U3 hardware version 1.21 or greater.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.writeCal">
+<code class="descname">writeCal</code><span class="sig-paren">(</span><em>blockNum</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.writeCal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.writeCal(blockNum, data)</p>
+<dl class="docutils">
+<dt>Args: blockNum, which block to write</dt>
+<dd>data, a list of bytes</dd>
+<dt>Desc: See the description of writeMem and section 5.2.7 of the user&#8217;s</dt>
+<dd>guide.</dd>
+</dl>
+<p>Note: Do not call this function while streaming.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="labjack.u3.U3.writeMem">
+<code class="descname">writeMem</code><span class="sig-paren">(</span><em>blockNum</em>, <em>data</em>, <em>writeCal=False</em><span class="sig-paren">)</span><a class="headerlink" href="#labjack.u3.U3.writeMem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name: U3.writeMem(blockNum, data, writeCal=False)</p>
+<dl class="docutils">
+<dt>Args: blockNum, which block to write</dt>
+<dd>data, a list of bytes to write.
+writeCal, set to True to write to calibration instead</dd>
+<dt>Desc: Writes 1 block (32 bytes) from the non-volatile user or</dt>
+<dd>calibration memory. Please read section 5.2.7 of the user&#8217;s guide
+before you do something you may regret. Memory must be erased
+before writing.</dd>
+</dl>
+<p>Note: Do not call this function while streaming.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="minolta.html" title="Minolta"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="joystick.html" title="joystick (pyglet and pygame)"
+             >previous</a> |</li>
+        <li><a href="../../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../api.html" >Reference Manual (API)</a> &raquo;</li>
+          <li><a href="../hardware.html" ><code class="docutils literal"><span class="pre">psychopy.hardware</span></code> - hardware interfaces</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

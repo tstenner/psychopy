@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Grating Component &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="../../index.html" />
+    <link rel="up" title="Components" href="../components.html" />
+    <link rel="next" title="Image Component" href="image.html" />
+    <link rel="prev" title="Dots (RDK) Component" href="dots.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="../../_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="../../_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="image.html" title="Image Component"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dots.html" title="Dots (RDK) Component"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="../builder.html" >Builder</a> &raquo;</li>
+          <li><a href="../components.html" accesskey="U">Components</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Grating Component</a><ul>
+<li><a class="reference internal" href="#parameters">Parameters</a><ul>
+<li><a class="reference internal" href="#advanced-settings">Advanced Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="dots.html"
+                                  title="previous chapter">Dots (RDK) Component</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="image.html"
+                                  title="next chapter">Image Component</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../../_sources/builder/components/grating.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="../../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="grating-component">
+<span id="grating"></span><h1>Grating Component<a class="headerlink" href="#grating-component" title="Permalink to this headline">¶</a></h1>
+<p>The Grating stimulus allows a texture to be wrapped/cycled in 2 dimensions, optionally in conjunction with a mask (e.g. Gaussian window). The texture can be a bitmap image from a variety of standard file formats, or a synthetic texture such as a sinusoidal grating. The mask can also be derived from either an image, or mathematical form such as a Gaussian.</p>
+<p>When using gratings, if you want to use the <cite>spatial frequency</cite> setting then create just a single cycle of your texture and allow PsychoPy to handle the repetition of that texture (do not create the cycles you&#8217;re expecting within the texture).</p>
+<p>Gratings can have their position, orientation, size and other settings manipulated on a frame-by-frame basis. There is a performance advantage (in terms of milliseconds) to using images which are square and powers of two (32, 64, 128, etc.), however this is slight and would not be noticed in the majority of experiments.</p>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Name <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Everything in a PsychoPy experiment needs a unique name. The name should contain only letters, numbers and underscores (no punctuation marks or spaces).</dd>
+<dt>Start :</dt>
+<dd>The time that the stimulus should first appear. See <a class="reference internal" href="../startStop.html#startstop"><span>Defining the onset/duration of components</span></a> for details.</dd>
+<dt>Stop :</dt>
+<dd>Governs the duration for which the stimulus is presented. See <a class="reference internal" href="../startStop.html#startstop"><span>Defining the onset/duration of components</span></a> for details.</dd>
+<dt>Color :</dt>
+<dd>See <a class="reference internal" href="../../general/colours.html"><em>Color spaces</em></a></dd>
+<dt>Color space <span class="classifier-delimiter">:</span> <span class="classifier">rgb, dkl or lms</span></dt>
+<dd>See <a class="reference internal" href="../../general/colours.html"><em>Color spaces</em></a></dd>
+<dt>Opacity <span class="classifier-delimiter">:</span> <span class="classifier">0-1</span></dt>
+<dd>Can be used to create semi-transparent gratings</dd>
+<dt>Orientation <span class="classifier-delimiter">:</span> <span class="classifier">degrees</span></dt>
+<dd>The orientation of the entire patch (texture and mask) in degrees.</dd>
+<dt>Position <span class="classifier-delimiter">:</span> <span class="classifier">[X,Y]</span></dt>
+<dd>The position of the centre of the stimulus, in the units specified by the stimulus or window</dd>
+<dt>Size <span class="classifier-delimiter">:</span> <span class="classifier">[sizex, sizey] or a single value (applied to x and y)</span></dt>
+<dd>The size of the stimulus in the given units of the stimulus/window. If the mask is a Gaussian then the size refers to width at 3 standard deviations on either side of the mean (i.e. sd=size/6)</dd>
+<dt>Units <span class="classifier-delimiter">:</span> <span class="classifier">deg, cm, pix, norm, or inherit from window</span></dt>
+<dd>See <a class="reference internal" href="../../general/units.html"><em>Units for the window and stimuli</em></a></dd>
+</dl>
+<div class="section" id="advanced-settings">
+<h3>Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Texture: a filename, a standard name (sin, sqr) or a variable giving a numpy array</dt>
+<dd>This specifies the image that will be used as the <em>texture</em> for the visual patch.
+The image can be repeated on the patch (in either x or y or both) by setting the spatial
+frequency to be high (or can be stretched so that only a subset of the image appears by setting
+the spatial frequency to be low).
+Filenames can be relative or absolute paths and can refer to most image formats (e.g. tif,
+jpg, bmp, png, etc.).
+If this is set to none, the patch will be a flat colour.</dd>
+<dt>Mask <span class="classifier-delimiter">:</span> <span class="classifier">a filename, a standard name (gauss, circle, raisedCos) or a numpy array of dimensions NxNx1</span></dt>
+<dd>The mask can define the shape (e.g. circle will make the patch circular) or something which overlays the patch e.g. noise.</dd>
+<dt>Interpolate :</dt>
+<dd>If <cite>linear</cite> is selected then linear interpolation will be applied when the image is rescaled to the appropriate size for the screen. <cite>Nearest</cite> will use a nearest-neighbour rule.</dd>
+<dt>Phase <span class="classifier-delimiter">:</span> <span class="classifier">single float or pair of values [X,Y]</span></dt>
+<dd>The position of the texture within the mask, in both X and Y. If a single value is given it will be applied to both dimensions. The phase has units of cycles (rather than degrees or radians), wrapping at 1. As a result, setting the phase to 0,1,2... is equivalent, causing the texture to be centered on the mask. A phase of 0.25 will cause the image to shift by half a cycle (equivalent to pi radians). The advantage of this is that is if you set the phase according to time it is automatically in Hz.</dd>
+<dt>Spatial Frequency <span class="classifier-delimiter">:</span> <span class="classifier">[SFx, SFy] or a single value (applied to x and y)</span></dt>
+<dd>The spatial frequency of the texture on the patch. The units are dependent on the specified units for the stimulus/window; if the units are <em>deg</em> then the SF units will be <em>cycles/deg</em>, if units are <em>norm</em> then the SF units will be cycles per stimulus. If this is set to none then only one cycle will be displayed.</dd>
+<dt>Texture Resolution <span class="classifier-delimiter">:</span> <span class="classifier">an integer (power of two)</span></dt>
+<dd>Defines the size of the resolution of the texture for standard textures such as <em>sin</em>, <em>sqr</em> etc. For most cases a value of 256 pixels will suffice, but if stimuli are going to be very small then a lower resolution will use less memory.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">API reference for <a class="reference internal" href="../../api/visual/gratingstim.html#psychopy.visual.GratingStim" title="psychopy.visual.GratingStim"><code class="xref py py-class docutils literal"><span class="pre">GratingStim</span></code></a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="image.html" title="Image Component"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dots.html" title="Dots (RDK) Component"
+             >previous</a> |</li>
+        <li><a href="../../index.html">PsychoPy</a> &raquo;</li>
+          <li><a href="../../documentation.html" >Documentation</a> &raquo;</li>
+          <li><a href="../builder.html" >Builder</a> &raquo;</li>
+          <li><a href="../components.html" >Components</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>

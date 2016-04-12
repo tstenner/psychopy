@@ -1,0 +1,2988 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Changelog &mdash; PsychoPy v1.8</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.84.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="PsychoPy v1.8" href="index.html" />
+    <link rel="next" title="Resources (e.g. for teaching)" href="resources/resources.html" />
+    <link rel="prev" title="psychopy.web - Web methods" href="api/web.html" /> 
+  </head>
+  <body>
+
+
+<div id="header"  style="background-color: white">
+<table width="100%" cellpadding="10">
+<tr><td style="text-align:left;vertical-align:middle">
+<a href='http://www.psychopy.org'><img src="_static/psychopyDocBanner2.gif" alt="PsychoPy logo" /></a>
+</td><td style="text-align:right;vertical-align:middle">
+<a href='http://www.nottingham.ac.uk'><img src="_static/nott_logo.png" alt="University of Nottingham" /></a>
+</td></table>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="resources/resources.html" title="Resources (e.g. for teaching)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="api/web.html" title="psychopy.web - Web methods"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PsychoPy</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#psychopy-1-84">PsychoPy 1.84</a><ul>
+<li><a class="reference internal" href="#psychopy-1-84-0">PsychoPy 1.84.0</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-83">PsychoPy 1.83</a><ul>
+<li><a class="reference internal" href="#psychopy-1-83-04">PsychoPy 1.83.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-83-03">PsychoPy 1.83.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-83-01">PsychoPy 1.83.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-83-00">PsychoPy 1.83.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-82">PsychoPy 1.82</a><ul>
+<li><a class="reference internal" href="#psychopy-1-82-02">PsychoPy 1.82.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-82-01">PsychoPy 1.82.01</a></li>
+<li><a class="reference internal" href="#id33">PsychoPy 1.82.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-82-00">PsychoPy 1.82.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-81">PsychoPy 1.81</a><ul>
+<li><a class="reference internal" href="#psychopy-1-81-03">PsychoPy 1.81.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-81-02">PsychoPy 1.81.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-81-01">PsychoPy 1.81.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-81-00">PsychoPy 1.81.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-80">PsychoPy 1.80</a><ul>
+<li><a class="reference internal" href="#psychopy-1-80-08">PsychoPy 1.80.08</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-07">PsychoPy 1.80.07</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-06">PsychoPy 1.80.06</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-05">PsychoPy 1.80.05</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-04">PsychoPy 1.80.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-03">PsychoPy 1.80.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-02">PsychoPy 1.80.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-01">PsychoPy 1.80.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-80-00">PsychoPy 1.80.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-79">PsychoPy 1.79</a><ul>
+<li><a class="reference internal" href="#psychopy-1-79-01">PsychoPy 1.79.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-79-00">PsychoPy 1.79.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-78">PsychoPy 1.78</a><ul>
+<li><a class="reference internal" href="#psychopy-1-78-01">PsychoPy 1.78.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-78-00">PsychoPy 1.78.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-77">PsychoPy 1.77</a><ul>
+<li><a class="reference internal" href="#psychopy-1-77-02">PsychoPy 1.77.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-77-01">PsychoPy 1.77.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-77-00">PsychoPy 1.77.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-76">PsychoPy 1.76</a><ul>
+<li><a class="reference internal" href="#psychopy-1-76-00">PsychoPy 1.76.00</a></li>
+<li><a class="reference internal" href="#psychopy-1-75-01">PsychoPy 1.75.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-75-00">PsychoPy 1.75.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-74">PsychoPy 1.74</a><ul>
+<li><a class="reference internal" href="#psychopy-1-74-04">PsychoPy 1.74.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-74-03">PsychoPy 1.74.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-74-02">PsychoPy 1.74.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-74-01">PsychoPy 1.74.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-74-00">PsychoPy 1.74.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-73">PsychoPy 1.73</a><ul>
+<li><a class="reference internal" href="#psychopy-1-73-06">PsychoPy 1.73.06</a></li>
+<li><a class="reference internal" href="#psychopy-1-73-05">PsychoPy 1.73.05</a></li>
+<li><a class="reference internal" href="#psychopy-1-73-04">PsychoPy 1.73.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-73-03">PsychoPy 1.73.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-73-02">PsychoPy 1.73.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-73-00">PsychoPy 1.73.00</a></li>
+<li><a class="reference internal" href="#psychopy-1-72-00">PsychoPy 1.72.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-71">PsychoPy 1.71</a><ul>
+<li><a class="reference internal" href="#psychopy-1-71-01">PsychoPy 1.71.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-71-00">PsychoPy 1.71.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-70">PsychoPy 1.70</a><ul>
+<li><a class="reference internal" href="#psychopy-1-70-01">PsychoPy 1.70.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-70-00">PsychoPy 1.70.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-65">PsychoPy 1.65</a><ul>
+<li><a class="reference internal" href="#psychopy-1-65-02">PsychoPy 1.65.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-65-01">PsychoPy 1.65.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-65-00">PsychoPy 1.65.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-64">PsychoPy 1.64</a><ul>
+<li><a class="reference internal" href="#psychopy-1-64-00">PsychoPy 1.64.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-63">PsychoPy 1.63</a><ul>
+<li><a class="reference internal" href="#psychopy-1-63-04">PsychoPy 1.63.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-63-03">PsychoPy 1.63.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-63-02">PsychoPy 1.63.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-63-01">PsychoPy 1.63.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-63-00">PsychoPy 1.63.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-62">PsychoPy 1.62</a><ul>
+<li><a class="reference internal" href="#psychopy-1-62-02">PsychoPy 1.62.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-62-01">PsychoPy 1.62.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-62-00">PsychoPy 1.62.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-61">PsychoPy 1.61</a><ul>
+<li><a class="reference internal" href="#psychopy-1-61-03">PsychoPy 1.61.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-61-02">PsychoPy 1.61.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-61-01">PsychoPy 1.61.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-61-00">PsychoPy 1.61.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-60">PsychoPy 1.60</a><ul>
+<li><a class="reference internal" href="#psychopy-1-60-04">PsychoPy 1.60.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-60-03">PsychoPy 1.60.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-60-02">PsychoPy 1.60.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-60-01">PsychoPy 1.60.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-60-00">PsychoPy 1.60.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-51-00">PsychoPy 1.51.00</a></li>
+<li><a class="reference internal" href="#psychopy-1-50">PsychoPy 1.50</a><ul>
+<li><a class="reference internal" href="#psychopy-1-50-04">PsychoPy 1.50.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-50-02">PsychoPy 1.50.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-50-01">PsychoPy 1.50.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-50-00">PsychoPy 1.50.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-1-00">PsychoPy 1.00</a><ul>
+<li><a class="reference internal" href="#psychopy-1-00-04">PsychoPy 1.00.04</a></li>
+<li><a class="reference internal" href="#psychopy-1-00-03">PsychoPy 1.00.03</a></li>
+<li><a class="reference internal" href="#psychopy-1-00-02">PsychoPy 1.00.02</a></li>
+<li><a class="reference internal" href="#psychopy-1-00-01">PsychoPy 1.00.01</a></li>
+<li><a class="reference internal" href="#psychopy-1-00-00">PsychoPy 1.00.00</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-0-97">PsychoPy 0.97:</a><ul>
+<li><a class="reference internal" href="#psychopy-0-97-01">PsychoPy 0.97.01:</a></li>
+<li><a class="reference internal" href="#psychop-0-97-00">PsychoP 0.97.00:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-0-96">PsychoPy 0.96:</a><ul>
+<li><a class="reference internal" href="#psychopy-0-96-02">PsychoPy 0.96.02:</a></li>
+<li><a class="reference internal" href="#psychopy-0-96-01">PsychoPy 0.96.01:</a></li>
+<li><a class="reference internal" href="#psychopy-0-96-00">PsychoPy 0.96.00:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#psychopy-0-95">PsychoPy 0.95:</a><ul>
+<li><a class="reference internal" href="#psychopy-0-95-11">PsychoPy 0.95.11:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-9">PsychoPy 0.95.9:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-8">PsychoPy 0.95.8:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-7">PsychoPy 0.95.7:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-6">PsychoPy 0.95.6:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-5">PsychoPy 0.95.5:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-4">PsychoPy 0.95.4:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-3">PsychoPy 0.95.3:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-2">PsychoPy 0.95.2:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-1">PsychoPy 0.95.1:</a></li>
+<li><a class="reference internal" href="#psychopy-0-95-0">PsychoPy 0.95.0:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#older">Older</a><ul>
+<li><a class="reference internal" href="#psychopy-0-94-0">PsychoPy 0.94.0:</a></li>
+<li><a class="reference internal" href="#psychopy-0-93-6">PsychoPy 0.93.6:</a></li>
+<li><a class="reference internal" href="#psychopy-0-93-5">PsychoPy 0.93.5:</a></li>
+<li><a class="reference internal" href="#psychopy-0-93-3">PsychoPy 0.93.3:</a></li>
+<li><a class="reference internal" href="#psychopy-0-93-2">PsychoPy 0.93.2:</a></li>
+<li><a class="reference internal" href="#psychopy-0-93-1">PsychoPy 0.93.1:</a></li>
+<li><a class="reference internal" href="#psychopy-0-93-0">PsychoPy 0.93.0:</a></li>
+<li><a class="reference internal" href="#psychopy-0-92-5">PsychoPy 0.92.5:</a></li>
+<li><a class="reference internal" href="#psychopy-0-92-4">PsychoPy 0.92.4:</a></li>
+<li><a class="reference internal" href="#psychopy-0-92-3">PsychoPy 0.92.3:</a></li>
+<li><a class="reference internal" href="#psychopy-0-92-2">PsychoPy 0.92.2:</a></li>
+<li><a class="reference internal" href="#psychopy-0-92-1">PsychoPy 0.92.1</a></li>
+<li><a class="reference internal" href="#psychopy-0-92-0">PsychoPy 0.92.0:</a></li>
+<li><a class="reference internal" href="#psychopy-0-91-5">PsychoPy 0.91.5:</a></li>
+<li><a class="reference internal" href="#psychopy-0-91-4">PsychoPy 0.91.4</a></li>
+<li><a class="reference internal" href="#psychopy-0-91-3">PsychoPy 0.91.3</a></li>
+<li><a class="reference internal" href="#psychopy-0-91-2">PsychoPy 0.91.2</a></li>
+<li><a class="reference internal" href="#psychopy-0-91-1">PsychoPy 0.91.1</a></li>
+<li><a class="reference internal" href="#psychopy-0-91-0">PsychoPy 0.91.0</a></li>
+<li><a class="reference internal" href="#psychopy-0-90-4">PsychoPy 0.90.4</a></li>
+<li><a class="reference internal" href="#psychopy-0-90-3">PsychoPy 0.90.3</a></li>
+<li><a class="reference internal" href="#psychopy-0-90-2">PsychoPy 0.90.2</a></li>
+<li><a class="reference internal" href="#psychopy-0-90-1">PsychoPy 0.90.1</a></li>
+<li><a class="reference internal" href="#psychopy-0-90">PsychoPy 0.90</a></li>
+<li><a class="reference internal" href="#psychopy-0-89-1">Psychopy 0.89.1</a></li>
+<li><a class="reference internal" href="#psychopy-0-89">Psychopy 0.89</a></li>
+<li><a class="reference internal" href="#psychopy-0-88">Psychopy 0.88</a></li>
+<li><a class="reference internal" href="#psychopy-0-87">Psychopy 0.87</a></li>
+<li><a class="reference internal" href="#psychopy-0-86">Psychopy 0.86</a></li>
+<li><a class="reference internal" href="#psychopy-0-85">Psychopy 0.85</a></li>
+<li><a class="reference internal" href="#psychopy-0-84">Psychopy 0.84</a></li>
+<li><a class="reference internal" href="#psychopy-0-83">Psychopy 0.83</a></li>
+<li><a class="reference internal" href="#psychopy-0-82">Psychopy 0.82</a></li>
+<li><a class="reference internal" href="#psychopy-0-81">Psychopy 0.81</a></li>
+<li><a class="reference internal" href="#psychopy-0-80">Psychopy 0.80</a></li>
+<li><a class="reference internal" href="#psychopy-0-72">PsychoPy 0.72</a></li>
+<li><a class="reference internal" href="#psychopy-0-71">PsychoPy 0.71</a></li>
+<li><a class="reference internal" href="#psychopy-0-70">PsychoPy 0.70</a></li>
+<li><a class="reference internal" href="#psychopy-0-69">PsychoPy 0.69</a></li>
+<li><a class="reference internal" href="#psychopy-0-68">PsychoPy 0.68</a></li>
+<li><a class="reference internal" href="#psychopy-0-67">PsychoPy 0.67</a></li>
+<li><a class="reference internal" href="#psychopy-0-66">PsychoPy 0.66</a></li>
+<li><a class="reference internal" href="#psychopy-0-65">PsychoPy 0.65</a></li>
+<li><a class="reference internal" href="#psychopy-0-64">PsychoPy 0.64</a></li>
+<li><a class="reference internal" href="#psychopy-0-63">PsychoPy 0.63</a></li>
+<li><a class="reference internal" href="#psychopy-0-62">PsychoPy 0.62</a></li>
+<li><a class="reference internal" href="#psychopy-0-61">PsychoPy 0.61</a></li>
+<li><a class="reference internal" href="#psychopy-0-60">PsychoPy 0.60</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="api/web.html"
+                                  title="previous chapter"><code class="docutils literal"><span class="pre">psychopy.web</span></code> - Web methods</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="resources/resources.html"
+                                  title="next chapter">Resources (e.g. for teaching)</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/changelog.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+
+            <h3>Quick links</h3>
+            <ul>
+            <li><a href="https://github.com/psychopy/psychopy/releases"><strong>Download</strong></a></li>
+            <li><a href="http://groups.google.com/group/psychopy-users">Mailing list (users)</a></li>
+            <li><a href="http://twitter.com/psychopy">Twitter</a></li>
+            </ul>
+
+            <!-- facebook like -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=122767831154831&amp;xfbml=1"></script>
+            <fb:like href="http://www.facebook.com/pages/PsychoPy/140222406067597" send="false" layout="button_count" width="300" show_faces="false" action="like" font=""></fb:like>
+
+            <!-- google +1 -->
+            <!-- Place this tag where you want the +1 button to render -->
+            <g:plusone count="false" href="http://www.psychopy.org"></g:plusone>
+            <!-- Place this tag after the last plusone tag -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'en-GB'};
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+          <div id="searchbox" style="display: none">
+            <h3>Searches</h3>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-0861691574026297:eyw5n7-ugep" />
+                <input type="hidden" name="ie" value="ISO-8859-1" />
+                <input type="text" name="q" size="20" />
+                <input type="submit" name="sa" value="Go" />
+            </form>
+              <p class="searchtip" style="font-size: 90%">
+              General
+              </p>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Docs only
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<style> .blue {color:blue} </style><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Version numbers</p>
+<p class="last">In general, when a new feature is added the second number is incremented (e.g. 1.00.05 -&gt; 1.01.00). Those releases might break previous code you&#8217;ve written because new features often need slight changes to other things.
+Changes to the final digit (1.00.05 -&gt; 1.00.06) indicate a bug-fixing release or very minor new features that shouldn&#8217;t require code changes from the user.</p>
+</div>
+<p><span class="blue">Changes in blue typically indicate things that alter the PsychoPy behaviour in a way that could break compatibility. Be especially wary of those!</span></p>
+<div class="section" id="psychopy-1-84">
+<h2>PsychoPy 1.84<a class="headerlink" href="#psychopy-1-84" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-84-0">
+<h3>PsychoPy 1.84.0<a class="headerlink" href="#psychopy-1-84-0" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">ADDED: <a class="reference internal" href="general/projects.html#projects"><span>Projects menu</span></a>, which can sync files with Open Science Framework</p>
+</li>
+<li><p class="first">ADDED: new Builder experiment setting to specify the version of PsychoPy to be used when running the experiment <a class="reference external" href="https://github.com/psychopy/psychopy/issues/1137">#1137</a></p>
+</li>
+<li><p class="first">ADDED: Movies in Builder can now avoid loading audio (i.e. mute). As well as meaning your movie is genuinely silent this saves pocessing for the computer, so do it unless you need the sound!</p>
+</li>
+<li><p class="first">ADDED: menu item to create a .csv (data) file from a .psydat file; see Coder &gt; Tools menu (also: Coder &gt; Demo menu)</p>
+</li>
+<li><p class="first">ADDED: Builder experiments force a save before the end of the study so pressing the red stop button is less likely to lose data for you</p>
+</li>
+<li><p class="first">IMPROVED: ShapeStim can properly fill arbitrary shapes (using tesselation); see new shapes.py Coder demo for examples.</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: setting ShapeStim vertices dynamically now requires an explicit assignment of the new vertex list to shape.vertices; this can be slow for filled shapes with many vertices. See shapes.py, selfx example.</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: minor: Aperture, Polygon, and Rect now depend on BaseShapeStim (i.e., their base class has a new name, no change in function)</span></p>
+</li>
+<li><p class="first">FIXED: window viewScale and viewPos combine correctly; viewScale handles negative values, mirror-image flips the window correctly (except for Text)</p>
+</li>
+<li><dl class="first docutils">
+<dt><span class="blue">CHANGED: Some file names and locations have changed. To update, replace OLD form in your scripts with NEW form:</span></dt>
+<dd><p class="first last">OLD form &#8211;&gt; NEW form
+Deprecated since 2012, must now update:
+<cite>from psychopy import calib</cite> &#8211;&gt; <cite>from psychopy import monitors as calib</cite> (or just use <cite>monitors</cite>)
+<cite>from psychopy import bits</cite> &#8211;&gt; <cite>from psychopy.hardware.crs import bits</cite>
+<cite>from psychopy import log</cite> &#8211;&gt; <cite>from psychopy import logging</cite>
+Newly deprecated (the old way still works but logs a warning):
+<cite>from psychopy import _shadersPyglet</cite> &#8211;&gt; <cite>from psychopy.visual import shaders</cite>
+<cite>from psychopy import gamma</cite> &#8211;&gt; <cite>from psychopy.visual import gamma</cite>
+<cite>from psychopy import filters</cite> &#8211;&gt; <cite>from psychopy.visual import filters</cite>
+API change (only affects people who write their own Builder components):
+<cite>from psychopy.app.builder.components._visual import VisualComponent</cite> &#8211;&gt; <cite>from psychopy.app.builder.components._base import BaseVisualComponent</cite></p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><span class="blue">CHANGED: PyQt is now default over wx for dialog boxes (if either PyQt4 or PyQt5 are installed). Also fixed bug to support PyQt5</span></p>
+</li>
+<li><p class="first">FIXED: Builder experiments can&#8217;t be saved without their extension (to stop people overwriting them with the python script of the same experiment)</p>
+</li>
+<li><p class="first">FIXED: faster writing of multiple lines (bits) to the LabJack</p>
+</li>
+<li><p class="first">FIXED: sampling rate when using binocular mode in eyelink 1000 <a class="reference external" href="https://github.com/psychopy/psychopy/issues/1146">#1146</a></p>
+</li>
+<li><p class="first">FIXED: Aperture now supports infinite durations in Builder <a class="reference external" href="https://github.com/psychopy/psychopy/issues/1122">#1122</a></p>
+</li>
+<li><p class="first">MAJOR REFACTOR: A lot of code has been refactored to be more in line with a thing called PEP8. If that doesn&#8217;t mean anything to you don&#8217;t worry, it shouldn&#8217;t affect you. If you like that sort of thing, sorry we didn&#8217;t got further and get rid of camelCase. ;-)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-83">
+<h2>PsychoPy 1.83<a class="headerlink" href="#psychopy-1-83" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-83-04">
+<h3>PsychoPy 1.83.04<a class="headerlink" href="#psychopy-1-83-04" title="Permalink to this headline">¶</a></h3>
+<p>released Feb 2016</p>
+<ul class="simple">
+<li>FIXED: Mac Standalone was (still) not launching on some versions of OSX</li>
+<li>FIXED: MovieStim3 not working on all graphics cards (glPopAttrib). Thanks Bryan Cort for finding the fix</li>
+<li>FIXED: MovieStim3 bug with movies that had no audio stream</li>
+<li>ADDED: Option to turn off audio in Movies from Builder when not needed (better performance and fewer shutdown-probs)</li>
+<li>FIXED: Data saving is forced at the end of Builder Experiments even if script fails to exit properly (red stop button less likely to lose data)</li>
+<li>FIXED: Setting gamma on OSX 10.11 wasn&#8217;t working (Apple moved the lib to a new location). <a class="reference external" href="https://github.com/psychopy/psychopy/issues/1089">#1089</a></li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-83-03">
+<h3>PsychoPy 1.83.03<a class="headerlink" href="#psychopy-1-83-03" title="Permalink to this headline">¶</a></h3>
+<p>released Dec 2015 (NB 1.83.02 was never publicly released)</p>
+<ul class="simple">
+<li>FIXED: problems with the Mac Standalone failing to launch on some OSX versions</li>
+<li>FIXED: reduced impact of pyglet text memory leaks (make fewer updates). (NB There is still a leak in Pyglet&#8217;s code that we can&#8217;t fix)</li>
+<li>FIXED: several fixes to RatingScale</li>
+<li>FIXED: window viewScale and viewPos combine correctly; viewScale handles negative values, mirror-image flips the window correctly (except for Text) <a class="reference external" href="https://github.com/psychopy/psychopy/issues/1011">#1011</a></li>
+<li>FIXED: fixed memory leak in sounds on 64bit Mac installation (error in pyo)</li>
+<li>FIXED: MovieStim3 was interacting badly with ShapeStim <a class="reference external" href="https://github.com/psychopy/psychopy/issues/981">#981</a></li>
+<li>FIXED: MovieStim3 was failing if no audio stream was present in the file <a class="reference external" href="https://github.com/psychopy/psychopy/issues/984">#984</a></li>
+<li>FIXED: PsychoPy app now gives a warning message if it can&#8217;t start due to permissions error <a class="reference external" href="https://github.com/psychopy/psychopy/issues/1055">#1055</a></li>
+<li>FIXED: Faster rendering of MovieStim2 and Moviestim3 due to removal of mipmapping code</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-83-01">
+<h3>PsychoPy 1.83.01<a class="headerlink" href="#psychopy-1-83-01" title="Permalink to this headline">¶</a></h3>
+<p>released Oct 2015</p>
+<ul class="simple">
+<li>FIXED: new bug with pygame sounds giving fileName not defined</li>
+<li>FIXED: several RatingScale bugs; reduce the memory leak (due to pyglet as used in TextStim)</li>
+<li>ADDED: voice-key capability, e.g., for word-naming studies; includes a demo, auxillary functions (smoothing, zero-crossing, etc), and file-format options (all those supported by pyo)</li>
+<li><span class="blue">CHANGED: remove support for google&#8217;s speech to text (the new google API is for chrome / chromium developers only)</span></li>
+<li><span class="blue">CHANGED: deprecate psychopy.web.upload(); use the requests package instead: requests.post()</span></li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-83-00">
+<h3>PsychoPy 1.83.00<a class="headerlink" href="#psychopy-1-83-00" title="Permalink to this headline">¶</a></h3>
+<p>released Oct 2015</p>
+<ul class="simple">
+<li>ADDED: MovieStim3 using an alternative backend that doesn’t require avbin, vlc or streamer. It just uses a couple of python libs and FFMPEG, which are relatively easy to package. Seems to have good performance too but this needs more testing</li>
+<li>IMPROVED: speed to load psychopy.visual (“lazy loading” only the stimuli you use are loaded)</li>
+<li>ADDED: RatingScale precision=60 allows display of time-based values (min:sec or hours:min). Values from .getRating() are decimal proportions (1 min: 59 seconds -&gt; 1.9833 minutes).</li>
+<li>ADDED: Coder view can now be set to read-only mode to prevent subjects accidentally altering study <a class="reference external" href="https://github.com/psychopy/psychopy/issues/945">#945</a></li>
+<li>ADDED: TextStim now has property <cite>boundingBox</cite> telling you the maximum area of the letters (defined by the font, not by the actual rendered letters) #35c168f1</li>
+<li>ADDED: Aperture can now be created using images (anything that worked with ImageStim) <a class="reference external" href="https://github.com/psychopy/psychopy/issues/923">#923</a> and can also be inverted so that opaque becomes transparent and vice versa <a class="reference external" href="https://github.com/psychopy/psychopy/issues/922">#922</a> Thanks Thomas Emerling for both</li>
+<li>ADDED: New visual stimulus EnvelopeGrating for contrast-modulated gratings. Thanks Andrew Schofield</li>
+<li>ADDED: option to set mouse_exclusive mode (mouse locked to the window boundary and invisible) Thanks Suddha Sourav <a class="reference external" href="https://github.com/psychopy/psychopy/issues/898">#898</a></li>
+<li>FIXED: DotStim can now change field size on the fly</li>
+<li>FIXED: several (but probably not all) annoying error messages that were unimportant</li>
+<li>FIXED: Condition file in Builder no longer abbreviated. Thanks Mike <a class="reference external" href="https://github.com/psychopy/psychopy/issues/913">#913</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-82">
+<h2>PsychoPy 1.82<a class="headerlink" href="#psychopy-1-82" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-82-02">
+<h3>PsychoPy 1.82.02<a class="headerlink" href="#psychopy-1-82-02" title="Permalink to this headline">¶</a></h3>
+<p>released Aug 2015</p>
+<blockquote>
+<div><ul class="simple">
+<li>FIXED: TrialHandler wasn&#8217;t saving extraInfo (was overwritten during trials) <a class="reference external" href="https://github.com/psychopy/psychopy/issues/815">#815</a></li>
+<li>FIXED: don&#8217;t have pickle file re-saving itself when it comes back from pickling <a class="reference external" href="https://github.com/psychopy/psychopy/issues/833">#833</a></li>
+<li>FIXED: Mouse Component could crash data saving if no response was made <a class="reference external" href="https://github.com/psychopy/psychopy/issues/839">#839</a></li>
+<li>FIXED: memory leaks in MovieStim2 (opencv backend) <a class="reference external" href="https://github.com/psychopy/psychopy/issues/838">#838</a> and <a class="reference external" href="https://github.com/psychopy/psychopy/issues/919">#919</a></li>
+<li>FIXED: checked that window positions are integers <a class="reference external" href="https://github.com/psychopy/psychopy/issues/854">#854</a></li>
+<li>FIXED: OSX &#8220;10.10&#8221; incorrectly looked older than &#8220;10.9&#8221; <a class="reference external" href="https://github.com/psychopy/psychopy/issues/866">#866</a></li>
+<li>FIXED: RatingScale would show &#8220;False&#8221; for scale description in some cases <a class="reference external" href="https://github.com/psychopy/psychopy/issues/870">#870</a></li>
+<li>FIXED: problem with microphone saving files that end with w, a or v <a class="reference external" href="https://github.com/psychopy/psychopy/issues/875">#875</a></li>
+<li>FIXED: MonitorCenter failing to create new monitor <a class="reference external" href="https://github.com/psychopy/psychopy/issues/887">#887</a></li>
+<li>FIXED: universal line endings in csv outputs files <a class="reference external" href="https://github.com/psychopy/psychopy/issues/889">#889</a></li>
+<li>FIXED: unicode in conditions files <a class="reference external" href="https://github.com/psychopy/psychopy/issues/892">#892</a></li>
+<li>FIXED: <cite>iohub</cite> not detecting Linux mouse events <a class="reference external" href="https://github.com/psychopy/psychopy/issues/894">#894</a></li>
+<li>FIXED: if output file is set to be <cite>stdout</cite> this should then be closed <a class="reference external" href="https://github.com/psychopy/psychopy/issues/902">#902</a></li>
+<li>FIXED: don&#8217;t abbreviate the path name of conditions files <a class="reference external" href="https://github.com/psychopy/psychopy/issues/913">#913</a></li>
+<li>FIXED: minor error in logging for <cite>rush()</cite> under win32 <a class="reference external" href="https://github.com/psychopy/psychopy/issues/914">#914</a></li>
+<li>FIXED: unicode issues in user preferences panel <a class="reference external" href="https://github.com/psychopy/psychopy/issues/930">#930</a> <a class="reference external" href="https://github.com/psychopy/psychopy/issues/932">#932</a></li>
+<li>FIXED: MonitorCenter won&#8217;t lock you out if given an invalid screen number <a class="reference external" href="https://github.com/psychopy/psychopy/issues/937">#937</a></li>
+<li>FIXED: mono++ mode in CRS Bits++/#/Display++ is now using full dynamic range (previously 8bit blue gun overlay was overriding the 16bit screen buffer)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="psychopy-1-82-01">
+<h3>PsychoPy 1.82.01<a class="headerlink" href="#psychopy-1-82-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2015</p>
+</div>
+<div class="section" id="id33">
+<h3>PsychoPy 1.82.01<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2015</p>
+<ul class="simple">
+<li>FIXED: problem with MovieStim2 showing black box instead of movie on certain systems</li>
+<li>FIXED: problem with Tobii eye tracker not closing calibration window (Sol)</li>
+<li>FIXED: better timing for non-slip routines that follow dynamic routines (Jeremy) <a class="reference external" href="https://github.com/psychopy/psychopy/issues/822">#822</a></li>
+<li>FIXED: problem with stimuli (e.g. shapes) not appearing if a texture had just been created and not yet drawn</li>
+<li>FIXED: pygame sound engine complained about &#8220;global variable loops not defined&#8221;</li>
+<li>ENHANCED: Filename collision handling for ExperimentHandler (Richard Höchenberger)</li>
+<li><span class="blue">:blue:`CHANGED: for text data outputs that give delim=&#8217;t&#8217; the file extension &#8216;.tsv&#8217; is added instead of &#8216;.dlm&#8217; (Richard Höchenberger)&#8217;</span></li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-82-00">
+<h3>PsychoPy 1.82.00<a class="headerlink" href="#psychopy-1-82-00" title="Permalink to this headline">¶</a></h3>
+<p>Released Jan 2015</p>
+<ul>
+<li><p class="first">ENHANCED: slightly faster rendering of movies for high-rate HD stimuli</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: &#8216;pandas&#8217; is now a strict requirement for the &#8216;psychopy.data&#8217; module</span></p>
+</li>
+<li><p class="first">FIXED: Builder sounds from file no longer loop indefinitely</p>
+</li>
+<li><p class="first">FIXED: Builder: microphone recordings are explicitly stopped at the end of every trial</p>
+</li>
+<li><p class="first">FIXED: Static Components could become hidden by having unknown durations and then couldn&#8217;t be changed. Now they are always shown even when times are unknown (Jeremy)</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: improved support for Cambridge Research Systems Display++ and Bits# devices:</dt>
+<dd><ul class="first last simple">
+<li>Color++ and Mono++ modes now supported using shaders</li>
+<li>fixed some bugs with search for identityLUT in Display++</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: Psi adaptive staircase method (thanks Joseph Glavan for writing this)</p>
+</li>
+<li><p class="first">ADDED: <cite>bidi</cite> and <cite>xlwt</cite> packages to the Standalone distribution</p>
+</li>
+<li><p class="first">ADDED: support for Mouse.setPos() under pyglet back end (Jeremy)</p>
+</li>
+<li><p class="first">ADDED: support for PST response box (Richard Höchenberger)</p>
+</li>
+<li><p class="first">FIXED: extraInfo was not being saved in wide-text format</p>
+</li>
+<li><p class="first">FIXED: Builder was not respecting order for drawing polygon - it was always drawn first</p>
+</li>
+<li><p class="first">ADDED: Builder now supports &#8216;degFlat and &#8216;degFlatPos&#8217; units and documentation has been added for these</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-81">
+<h2>PsychoPy 1.81<a class="headerlink" href="#psychopy-1-81" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-81-03">
+<h3>PsychoPy 1.81.03<a class="headerlink" href="#psychopy-1-81-03" title="Permalink to this headline">¶</a></h3>
+<p>Released Dec 2014</p>
+<ul class="simple">
+<li>ADDED: Sounds in Builder can now have a duration set by a variable (changing each repeat). The work on this may cause some systems to have a periodic &#8216;tick&#8217; in the sound if they last longer than 10s (probably dependent on sound card and driver)</li>
+<li>IMPROVED: RatingScale will always display a custom description (&#8216;scale&#8217;) if provided by the user</li>
+<li>ADDED: Monitor Center can now calibrate non-primary monitors</li>
+<li>FIXED: components in Builder can now be &#8216;stopped&#8217; at the same time as they are started and never show up (previously at least one frame was always required)</li>
+<li>FIXED: several issues with Bits++ causing a rendering glitch and not being able to calibrate from Monitor Centre</li>
+<li>FIXED: choice selection boxes stopped working in monitor centre (caused by hardware.crs.bits importing pyglet.gl)</li>
+<li>FIXED: Bits# can be set to do gamma correction in the PsychoPy LUT (&#8216;software&#8217;) rather than using the on-board gamma table file (&#8216;hardware&#8217;)</li>
+<li>FIXED: bug with monitor calib files not returning their linearization method correctly</li>
+<li>ADDED: psychopy.qtgui as alternative to gui which doesn&#8217;t duffer from problem with choice boxes and pyglet clashing (thanks Sol)</li>
+<li>FIXED: data files now correctly include the originPath (the path to the script that created them). Thanks Alex Holcombe for the fix</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-81-02">
+<h3>PsychoPy 1.81.02<a class="headerlink" href="#psychopy-1-81-02" title="Permalink to this headline">¶</a></h3>
+<p>Released Oct 2014</p>
+<ul class="simple">
+<li>FIXED: bug with gamma not being set from the Monitor file</li>
+<li>FIXED: MovieStim2 warnings about dropped frames were crippling the output window</li>
+<li>FIXED: new issue (in 1.81.01) with several drop-down menus in Builder not allowing to select that option</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-81-01">
+<h3>PsychoPy 1.81.01<a class="headerlink" href="#psychopy-1-81-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Oct 2014</p>
+<ul class="simple">
+<li>FIXED: bug with rendering of Movies from Builder (autoDraw() not working)</li>
+<li>ADDED: option to use new movie backend from Builder (there is now an option to select <cite>opencv</cite> or <cite>avbin</cite> for movie rendering)</li>
+<li>FIXED: if MovieStim2 couldn&#8217;t load frames fast enough it ran slow (should drop frames but stay synchronised). (Sol)</li>
+<li>FIXED: fix spurious warnings about GratingStim.__del__</li>
+<li>FIXED: pyo audio crashed on windows if no mic/input was found (Sogo Hiroyuki)</li>
+<li>ADDED: serial port device in iohub (Sol)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-81-00">
+<h3>PsychoPy 1.81.00<a class="headerlink" href="#psychopy-1-81-00" title="Permalink to this headline">¶</a></h3>
+<p>Released Sept 2014</p>
+<ul>
+<li><dl class="first docutils">
+<dt>IMPROVED: cross-version compatibility:</dt>
+<dd><ul class="first last simple">
+<li>In Builder experiments from &#8216;future&#8217; versions can be opened and unknown objects will be ignored (but kept)</li>
+<li>In Code you can now do <cite>import psychopy; psychopy.useVersion(&#8216;X.XX.XX&#8217;)</cite> to switch to any version greater than 1.76.00 (including versions not installed and future versions). This only affects the lib, not the application. (Thanks Erik Kastman for most of the work on this)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">IMPROVED: better unit tests for visual stimuli to prevent future bugs</p>
+</li>
+<li><p class="first"><span class="blue">FIXED: MovieStim was right-left flipping movies and this has been corrected. If you had been working around that by setting flipVertical=True then you&#8217;ll need to undo that correction</span></p>
+</li>
+<li><p class="first">IMPROVED: Can now select a subset of conditions in Builder loops and in <cite>data.importConditions()</cite> function (thanks Mike MacAskill for help)</p>
+</li>
+<li><p class="first">IMPROVED: In Builder, loops that don&#8217;t reflect trials (e.g. stimuli within a trial or blocks of trials) can be flagged as such, resulting in neater data files</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: support for additional hardware:</dt>
+<dd><ul class="first last">
+<li><p class="first">basic support for interacting with BlackBoxToolkit v2 psychopy.hardware.bbtk</p>
+</li>
+<li><p class="first"><span class="blue">added basic support for CRS Bits# in psychopy.hardware.crs. New way to interface with Bits++ as well, using a class rather than a Window argument. See demo in demos&gt;hardware</span></p>
+</li>
+<li><p class="first">labjack digital outputs can be used as a Parallel Port Component in Builder</p>
+</li>
+<li><p class="first">the screen rendering can now include a warping step to simulate spherical, cylindrical or custom warping (Jay Borseth)</p>
+</li>
+<li><p class="first">the screen now supports &#8216;frame packing&#8217; whereby sequential frames can be packed into one, as the red, green and blue channels for monochrome high-rate projectors (Jay Borseth)</p>
+</li>
+<li><p class="first">ioHub eye tracker interface for GazePoint GP3 (Martin Guest)</p>
+</li>
+<li><dl class="first docutils">
+<dt>ioHub Serial device:</dt>
+<dd><ul class="first last simple">
+<li>Support for simple fixed width or marker delimited serial rx stream -&gt; device event parsing.</li>
+<li>Demo created showing usage with PST Response box added (Richard Höchenberger)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ioHub ioSync device:</dt>
+<dd><ul class="first last simple">
+<li>Use Teensy 3.0 / 3.1 MCU. Connect via USB 2.0.</li>
+<li>8 / 8 digital inputs / outputs</li>
+<li>8 analog inputs (~12 - 13 bit effective resolution)</li>
+<li>1000 Hz sampling rate for analog and digital inputs.</li>
+<li>Keyboard Host support (useful for testing keyboard delay variability from software alone)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>IMPROVED packaging:</dt>
+<dd><ul class="first last simple">
+<li>can now install on OSX using miniconda/anaconda distribution (Erik Kastman)</li>
+<li>pyopencv (cv2) added to Standalone as an alternative to avbin</li>
+<li>PySoundCard and PySoundFile added to Standalone</li>
+<li>psutil added to Standalone</li>
+<li>application is now compatible with wxPython 2.8, 2.9 and 3.0</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: MovieStim2 stimulus type. Compared to MovieStim, improved performance and wider range of media encoding support has been reported from testing feedback on all OS&#8217;s.</p>
+</li>
+<li><dl class="first docutils">
+<dt>IMPROVED: stimulus attributes:</dt>
+<dd><ul class="first last simple">
+<li>Nearly all stimulus attributes now support new syntax, e.g. <cite>stim.pos = [0,0]</cite> as well as the previous <cite>stim.setPos([0,0])</cite>. All docs are update to reflect this change.</li>
+<li>All numeric stimulus attributes now support operations. Use e.g. <cite>stim.pos += [0,0.5]</cite>. Read more in <a class="reference internal" href="coder/codeStimuli.html#attrib-operations"><span>Operations</span></a>.</li>
+<li>Many more stimulus attributes can now be set after initialization. They have the same name as the init parameters. E.g. <cite>stim.win = mySecondWindow</cite> changes which Window the stimulus is drawn to</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>IMPROVED: logging</dt>
+<dd><ul class="first last simple">
+<li><span class="blue">CHANGED: &#8216;log=None&#8217; and &#8216;autoLog=None&#8217; inherits from parents, with &#8216;visual.Window&#8217; at the top of the hierarchy. None is now default for all stimuli and setter methods.</span></li>
+<li>FIXED: removed unneccessary (e.g. duplicate) logging.</li>
+<li>IMPROVED: unnamed stimuli are now given a default name in the logs for easier identification, e.g. &#8220;unnamed ShapeStim&#8221;.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">IMPROVED: you can now specify the standard deviation (default=3) for gaussian mask in various stimuli by setting e.g. <cite>maskParams={&#8216;sd&#8217;:5}</cite> during init or after init.</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: language localization (Builder and Coder)</dt>
+<dd><ul class="first last simple">
+<li>Can now display the app menus, tooltips, and so on in a language other than US English (selectable via prefs -&gt; app -&gt; locale)</li>
+<li>Almost all displayed text can be translated (Jeremy Gray, Hiroyuki Sogo)</li>
+<li>A Japanese translation is available (Hiroyuki Sogo)</li>
+<li>Other translations will be easy to add; see online developer notes on using Poedit</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>IMPROVED: psychopy.ioHub</dt>
+<dd><ul class="first last simple">
+<li><span class="blue">CHANGED: Keyboard device and events are more user-friendly.</span>
+Note: This release is not backwards compatible with earlier versions of the ioHub Keyboard device or event data file.
+Please see documentation for details.</li>
+<li>Backend integration between iohub and psychopy continues to improve.</li>
+<li>ioHub can now be used in OS X 10.9 with PsychoPy2 Coder. NOTE: Must add Coder app to accessibility list.</li>
+<li>Several bug fixes.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED: several other minor bugs (that would have given exceptions if encountered). Thanks particularly to Philip Wiesemann for finding several of these</p>
+</li>
+<li><p class="first">FIXED: machines that didn&#8217;t support shaders or framebuffer objects were raising an error on win.flip() if the useFBO argument was not manually set to False. Machines that don&#8217;t support the new rendering methods are now handled more gracefully</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-80">
+<h2>PsychoPy 1.80<a class="headerlink" href="#psychopy-1-80" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-80-08">
+<h3>PsychoPy 1.80.08<a class="headerlink" href="#psychopy-1-80-08" title="Permalink to this headline">¶</a></h3>
+<p>Released Aug 2014</p>
+<p>FIXED: bug with using numpy arrays as masks; they were being interpreted as floats but should have been bytes</p>
+</div>
+<div class="section" id="psychopy-1-80-07">
+<h3>PsychoPy 1.80.07<a class="headerlink" href="#psychopy-1-80-07" title="Permalink to this headline">¶</a></h3>
+<p>Released Aug 2014</p>
+<p>FIXED: bug with timing of keys when using the <cite>timestamped</cite> argument</p>
+</div>
+<div class="section" id="psychopy-1-80-06">
+<h3>PsychoPy 1.80.06<a class="headerlink" href="#psychopy-1-80-06" title="Permalink to this headline">¶</a></h3>
+<p>Released June 2014</p>
+<ul class="simple">
+<li>FIXED: problem with using the framebuffer object (nothing was rendered at all)</li>
+<li>ENH: added support for using a stencil when the framebuffer object is turned on</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-80-05">
+<h3>PsychoPy 1.80.05<a class="headerlink" href="#psychopy-1-80-05" title="Permalink to this headline">¶</a></h3>
+<p>Released June 2014</p>
+<ul class="simple">
+<li>IMPROVED: better unit tests for visual stimuli to prevent further regressions of the issues below</li>
+<li>FIXED: machines that didn&#8217;t support shaders or framebuffer objects were raising an error on win.flip() if the useFBO argument was not manually set to False. Machines that don&#8217;t support the new rendering methods are now handled more gracefully.</li>
+<li>FIXED: further fixes to greyscale coloring (some images were not correctly detected as greyscale by PIL so tests weren&#8217;t working)</li>
+<li>FIXED: machines that didn&#8217;t support shaders or framebuffer objects were raising an error on win.flip() if the useFBO argument was not manually set to False. Machines that don&#8217;t support the new rendering methods are now handled more gracefully</li>
+<li>FIXED: named colors were not interpreted correctly by the visual.Window (but worked fine for stimuli)</li>
+<li>FIXED: the error message about TextBox/FontManager not working doesn&#8217;t show up any more</li>
+<li>FIXED: reinstated the requirement that wx is version 2.8.x only until we get time to check 3.0 compatibility more deeply</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-80-04">
+<h3>PsychoPy 1.80.04<a class="headerlink" href="#psychopy-1-80-04" title="Permalink to this headline">¶</a></h3>
+<p>Released April 2014</p>
+<ul class="simple">
+<li>FIXED: buglets in logging. Logging wasn&#8217;t encoding unicode correctly for console targets (but file targets were OK) and some duplicate messages were occurring for stimulus autologs</li>
+<li>FIXED: buglet with GratingStim/PatchStim when texture was not a square power of two (was crashing due to incorrect global variable)</li>
+<li>FIXED: ElementArrayStim was not updating its position using .setFieldPos()</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-80-03">
+<h3>PsychoPy 1.80.03<a class="headerlink" href="#psychopy-1-80-03" title="Permalink to this headline">¶</a></h3>
+<p>Released April 2014</p>
+<ul class="simple">
+<li>FIXED: Shader code was ignoring opacity setting for ImageStim</li>
+<li>FIXED: Mouse clock was not the same as PsychoPy&#8217;s general events clock (so out of sync) (Sol &amp; Jeremy)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-80-02">
+<h3>PsychoPy 1.80.02<a class="headerlink" href="#psychopy-1-80-02" title="Permalink to this headline">¶</a></h3>
+<p>Released April 2014</p>
+<ul class="simple">
+<li>FIXED: ImageStim did not use its mask on some machines (nVidia and ATI?) or did not render at all on others (intel graphics?)</li>
+<li><span class="blue">CHANGED: Sound object now checks if the sound is a note name before checking for file names (only affects cases where the file name was something like A.wav)</span></li>
+<li>ADDED: Aperture now supports contains() and overlaps() methods</li>
+<li>ADDED: Image/Grating masks can now also be &#8216;cross&#8217; (Suddha Sourav)</li>
+<li>FIXED: Unicode problem for microphone on non-English installs of win32</li>
+<li>FIXED: StairHandler first reversal now changes step size correctly and added option not to use the initial 1-up,1-down regime (Jon maintains that you should though!) (thanks Nathanael Larigaldie)</li>
+<li>FIXED: emulator LaunchScan uses new RatingScale syntax</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-80-01">
+<h3>PsychoPy 1.80.01<a class="headerlink" href="#psychopy-1-80-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Mar 2014</p>
+<ul class="simple">
+<li>FIXED: buglet with movie glPopAttrib() on Intel gfx cards (thanks Bryan Cort)</li>
+<li>FIXED: problem trying to use FrameBufferObject (FBO) on Intel GMA graphics cards</li>
+<li>FIXED: problem with ImageStim not respecting setColor() and setContrast()</li>
+<li>FIXED: some stimuli were failing to switch to a second window when requested</li>
+<li>FIXED: some rendering glitches with ShapeStim caused by interpolation settings (thanks to Soyogu Matsushita for finding this fix)</li>
+<li>FIXED: automated import of gamma for known monitors, which was failing on some monitor calibration files</li>
+<li>FIXED: a single-line conditions file is now imported correctly by Builder (Jeremy Gray)</li>
+<li>IMPROVED: a Routine not included in a loop now saves its data to a default &#8216;loop&#8217; (Jeremy Gray)</li>
+<li>IMPROVED: Coder checks for consistency of end-of-line options (thanks Wilbert van Ham)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-80-00">
+<h3>PsychoPy 1.80.00<a class="headerlink" href="#psychopy-1-80-00" title="Permalink to this headline">¶</a></h3>
+<p>Released Mar 2014</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Improvements to user interface:</dt>
+<dd><ul class="first last simple">
+<li>the glitch that prevented scrolling the Routine view is gone (win32)</li>
+<li>dialog boxes in the Builder now have tabs for categories of controls</li>
+<li>Code Components have much more space for each piece of code (again due to tabs)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: In Builder you can now customise the data filename/path in the Experiment Settings. Any variables in the <cite>expInfo</cite> dialog box can be used to create this path. See <span class="xref std std-ref">dataFileName</span> for further info</p>
+</li>
+<li><p class="first">ADDED: support for advanced rendering modes. Can now &#8216;add&#8217; rather than average when using transparency. This is better for visual compound stimuli like plaids, and essential for colored anaglyph stimuli where the resulting image needs to be the sum of the left and right eye images.</p>
+</li>
+<li><p class="first">ADDED: new visual unit options: &#8216;degFlatPos&#8217; and &#8216;degFlat&#8217; provide more accurate conversions from degrees to pixels for drawing stimuli (although they&#8217;re more accurate, accounting for the flat screen, they may look strange because 1 degree gets larger with greater eccentricity on a flat screen). The previous unit &#8216;deg&#8217; still exists and remains default as, for many studies, these are expected</p>
+</li>
+<li><p class="first">ADDED: wider support for the functions <cite>contains</cite> and <cite>overlaps</cite>. Most stimuli now have these methods. Also they can now be used irrespective of whether the stimulus and other object have the same units (they used only to work for units of pix)</p>
+</li>
+<li><p class="first">ADDED: support for other shapes in the Aperture stimulus (and its Builder Component). You can either specify the number of vertices <cite>nVert</cite> and a <cite>size</cite> to get a regular polygon aperture, or you can provide a set of arbitrary vertices as your <cite>shape</cite> argument</p>
+</li>
+<li><p class="first"><span class="blue">:blue:`CHANGED: Size of &#8216;square&#8217; or &#8216;triangle&#8217; apertures used to represent the radius of the circle on which their vertices lay. It is now a height/width as you would more likely expect. This means aperture code in scripts may need rewriting to be smaller.&#8217;</span></p>
+</li>
+<li><p class="first">IMPROVED: stimulus duration is now more precise when using <cite>duration (s)</cite> or <cite>time (s)</cite> although using <cite>nFrames</cite> option is still advised for brief stimuli</p>
+</li>
+<li><p class="first">IMPROVED: there are now fewer irrelevant lines in the log file as stimuli are initially created</p>
+</li>
+<li><p class="first">IMPROVED: Staircase loops in Builder now initialise just before the staircase is run, rather than at the start of the experiment. This means they can be controlled by an outer loop and, effectively, restarted</p>
+</li>
+<li><p class="first">FIXED: ElementArrayStim can take Nx3 or 1x3 values for colors again</p>
+</li>
+<li><p class="first">FIXED: variable names in Builder are now case-sensitive again (they were being forced to lower case when importing csv files)</p>
+</li>
+<li><p class="first">FIXED: incorrect equation for the Cumulative Normal fitting function</p>
+</li>
+<li><p class="first">FIXED: If your variable had a new line character in it this was causing a new line to be started in the csv data file. These are now handled correctly</p>
+</li>
+<li><p class="first">ADDED: RatingScale markerStart position can be arbitrary, e.g., can start between items or beyond the end of scale</p>
+</li>
+<li><p class="first">ADDED: RatingScale tickHeight can be used to control the height of tickMarks, including no tick marks (tickHeight=0)</p>
+</li>
+<li><p class="first">ADDED: RatingScale marker=&#8217;hover&#8217; is similar to HTML-style hovering over clickable elements</p>
+</li>
+</ul>
+<p><em>psychopy.visual.RatingScale Changes</em> :</p>
+<ul class="simple">
+<li><span class="blue">:blue:`CHANGED: Builder: remove option: choiceLabelsAboveLine; change lowAnchorText, highAnchorText -&gt; labels&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: skipping a rating now adds None as the final element in the history&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: the default minTime is shorter, now 0.4s&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: more info in the log when creating a rating scale object&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: removed showAnchors: now use labels=None (instead of showAnchors=False)&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: removed lowAnchorText &amp; highAnchorText: now use labels=[&#8216;leftAnchor&#8217;, &#8216;rightAnchor&#8217;] or with optional 3rd midpoint label&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: renamed several parameters: stretchHoriz -&gt; stretch, textSizeFactor -&gt; textSize, ticksAboveLine -&gt; tickHeight, displaySizeFactor -&gt; size, markerStyle -&gt; marker, customMarker -&gt; marker&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: removed showScale: now use scale=None (instead of showScale=False)&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: removed allowSkip: now use skipKeys=None (instead of allowSkip=False)&#8217;</span></li>
+<li><span class="blue">:blue:`CHANGED: removed escapeKeys; no longer supported but it&#8217;s easy to implement (as now done in the coder demo)&#8217;</span></li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-79">
+<h2>PsychoPy 1.79<a class="headerlink" href="#psychopy-1-79" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-79-01">
+<h3>PsychoPy 1.79.01<a class="headerlink" href="#psychopy-1-79-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Dec 2013</p>
+<ul class="simple">
+<li>FIXED: startup crash in 1.79.00</li>
+<li>FIXED: long-standing memory leak in MovieStim</li>
+<li>FIXED: fixed problem with MovieStim not displaying the image but playing the audio</li>
+<li>ADDED: volume attribute to MovieStim (Frank Papenmeier)</li>
+<li>FIXED: experiments were crashing if first line of a conditions file contained a float but the rest were integers</li>
+<li>FIXED: QuestHandler.addResponse() should not try to replace existing intensity on first trial (Richard Höchenberger)</li>
+<li>FIXED: Window&#8217;s viewPos and viewScale attributes could not be changed</li>
+<li>FIXED: Builder code generation for Cedrus Box when user provided a limited set of available buttons</li>
+<li>FIXED: multiple issues causing fatal errors when setting stimulus parameters (Pieter Moors and Damien Mannion)</li>
+<li>FIXED: Builder experiments would crash under certain conditions when there was no &#8216;participant&#8217; in the info dialog box (Philipp Wiesemann)</li>
+<li>FIXED: bug toggling readme file window in Builder (Philipp Wiesemann)</li>
+<li>FIXED: further fix to the Coder raising excessive &#8216;this file has changed&#8217; warnings</li>
+<li>FIXED: Component names now update on the Routine panel after being changed in a dialog (Philipp Wiesemann)</li>
+<li>FIXED: bug importing conditions if the first row of numbers was the only float. (importFromConditions now uses numpy instead of matplotlib)</li>
+<li>FIXED: further fix to the extra &#8220;file close&#8221; queries during shut-down</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-79-00">
+<h3>PsychoPy 1.79.00<a class="headerlink" href="#psychopy-1-79-00" title="Permalink to this headline">¶</a></h3>
+<p>Released Dec 2013</p>
+<ul>
+<li><p class="first">ADDED: attributes for some stimuli can now be updated using e.g. <cite>stim.pos = newPos</cite> rather than using <cite>stim.setPos(newPos)</cite> to make things more like standard Python (thanks Jonas Lindeløv). This version also involved some major restructuring behind the scenes that should not be visible to users (thanks Todd Jennings)</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: Builder Components for</dt>
+<dd><ul class="first last simple">
+<li>ioLab Systems button-box; refactor PsychoPy&#8217;s ioLabs code (Jeremy)</li>
+<li>Cedrus button-box (tested on RB730)</li>
+<li>parallel port output component</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: option for sounds to <cite>loop</cite></p>
+</li>
+<li><p class="first">ADDED: volume argument for MovieStim so that sound can be muted (Frank Papenmeier)</p>
+</li>
+<li><p class="first">ADDED: window now prevents system from sleep/screensaver on windows and OS X</p>
+</li>
+<li><p class="first">ADDED: builder demo for mental rotation task</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: Alternative Text stimulus, psychopy.visual.TextBox (Sol Simpson)</dt>
+<dd><ul class="first last simple">
+<li>Two demos in psychopy.coder.visual.textbox</li>
+<li>Requires: freetype lib (included in Standalone)</li>
+<li>Advantages: Very fast update following text change; very precise character placement.</li>
+<li>Disadvantages: Supports monospace fonts only.</li>
+<li>IMPORTANT: TextBox is still being finalized and completed; expect to find (and please report) issues. API changes guaranteed.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED: misaligned responses in csv output for QuestHandler (Zhili Zheng)</p>
+</li>
+<li><p class="first">FIXED: bug when using ElementArrayStim with numpy 1.7.1. Most elements were receiving SF=0</p>
+</li>
+<li><p class="first">FIXED: &#8216;semi-automatic&#8217; calibration (thanks Flip Phillips)</p>
+</li>
+<li><p class="first">FIXED: shut-down issues. Builder now remembers its last experiment and you don&#8217;t get multiple messages about the scripts that have changed</p>
+</li>
+<li><p class="first">FIXED: bugs with MultiStairHandler that were making it unusable (in code and Builder)</p>
+</li>
+<li><p class="first">FIXED: lists of key presses can now be considered <cite>correct</cite> (Ian Hussey)</p>
+</li>
+<li><p class="first">FIXED: certain further cases of bitmap images appearing desaturated</p>
+</li>
+<li><p class="first">FIXED: mono sounds now duplicate to both channels correctly</p>
+</li>
+<li><dl class="first docutils">
+<dt>changes to Standalone packages (require fetching the installer):</dt>
+<dd><ul class="first last simple">
+<li>pyFileSec for uploading files to server using encryption (this is Jeremy&#8217;s module)</li>
+<li>pandas on win32 is now v1.3 (was already this version on OS X)</li>
+<li>pyxid now includes Jared&#8217;s upstream bug-fix</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED: many user interface tweaks, documentation and help string corrections (Philip Wiesemann)</p>
+</li>
+<li><p class="first">FIXED: PsychoPy Coder view now closes the iohub process when the experiment script is terminated using &#8216;Stop&#8217;. (Sol Simpson)</p>
+</li>
+<li><p class="first">FIXED: Builder use of single staircase loops now respects the min/max values</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: data curve fitting functions are now using scipy.optimise.curve_fit and should hopefully be more robust to local minima(?)</span></p>
+</li>
+</ul>
+<p><em>psychopy.iohub Changes</em> :</p>
+<ul>
+<li><dl class="first docutils">
+<dt>ADDED: Initial release of the new Touch device:</dt>
+<dd><ul class="first last simple">
+<li>currently supporting Elo brand Touch Screens.</li>
+<li>any Elo model supporting the SmartSet protocol should work (Elo 2700 model used for testing to date)</li>
+<li>Touch Events (TouchPress, TouchRelease, TouchMovement) are provided in a separate event stream</li>
+<li>Touch and Mouse device events are independent of each other, so both devices can be used in parallel without interference</li>
+<li>Touch screen calibration routine provided; calibration state can be saved to device hardware for persistence</li>
+<li>See the demos.coder.iohub_extended Touch script for example of calibration graphics front end.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: Keyboard and Mouse events can be restricted to those events targeted at a PsychoPy Window. Currently supported on Windows and Linux only.</p>
+</li>
+<li><p class="first">NEW: PsychoPy TrialHandler can now be used to feed experiment condition variables to the ioDataStore.</p>
+</li>
+<li><p class="first">NEW: Device configuration file can now be specified to the launchHubServer() function when starting the ioHub Process.</p>
+</li>
+<li><p class="first">NEW: Simple examples of how to use iohub within a Builder project using a Custom Code Component.</p>
+</li>
+<li><p class="first">FIXED: Analog Input Event delay calculation error that was causing incorrect time correction to be applied to this event type.</p>
+</li>
+<li><p class="first">NEW: LabJack AnalogInput interface now handles dropped samples and sampling rates that cause multichannel samples to be split between USB packets.</p>
+</li>
+<li><p class="first">FIXED: Gaze position calculation fix for the SMI eye tracker interface during binocular tracking.</p>
+</li>
+<li><dl class="first docutils">
+<dt>NEW: Enhanced Tobii eye tracker setup and calibration graphics:</dt>
+<dd><ul class="first last simple">
+<li>Head position within the 3D eye tracking head box can be visualized before and after calibration</li>
+<li>Animated fixation target support added during calibration routine</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: Following EXPERIMENTAL stage implementation (Use at Own Risk):</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>ioDataStore -&gt; Pandas Data Frame based post processing API:</dt>
+<dd><ul class="first last">
+<li><p class="first">Creates a set of Pandas Data Frames for device events, experiment messages, and experiment condition variables.</p>
+</li>
+<li><p class="first">Filter, Group, Join data using the Pandas API.</p>
+</li>
+<li><p class="first">Access event information with associated condition variable states.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Define Interest Periods (IP):</dt>
+<dd><ul class="first last simple">
+<li>filter event temporally based on start and end time criteria.</li>
+<li>define an IP&#8217;s start and end time criteria using experiment message events, or experiment condition variable columns.</li>
+<li>re-occurring IP&#8217;s supported.</li>
+<li>overlapping IP&#8217;s supported.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Define Regions of Interest (ROI),</dt>
+<dd><ul class="first last simple">
+<li>filter Mouse, Eye Tracker, and Touch device events based on screen location.</li>
+<li>circle, ellipse, rectangle, and general polygon ROI shapes supported. (ROI functionality is dependent on the shapely python package)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">IMPORTANT: The ioDataStore-&gt;DataFrame API is still being designed and developed. Expect to find issues. API changes guaranteed.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-78">
+<h2>PsychoPy 1.78<a class="headerlink" href="#psychopy-1-78" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-78-01">
+<h3>PsychoPy 1.78.01<a class="headerlink" href="#psychopy-1-78-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Aug 2013</p>
+<ul class="simple">
+<li>FIXED: Image Components were showing up a pastel versions when no actual image was provided</li>
+<li>FIXED: MultiStairHandler wasn&#8217;t working on Builder, and had insufficient data outputs when using wide-text csv files</li>
+<li>FIXED: loops couldn&#8217;t be deleted from the Flow if their conditions file couldn&#8217;t be found (e.g. had been moved)</li>
+<li>FIXED: setting of color values was not honouring the autolog setting (was always logging)</li>
+<li>FIXED: gui choice boxes now handle unicode in their options as well as ASCII strings (thanks Anne Peschel)</li>
+<li>FIXED: Scaling bug for SMI eye-tracker in binocular mode (thanks Sol)</li>
+<li>FIXED: Builder Code Components that were showing up in unreadable, single-line boxes</li>
+<li>IMPROVED: All Builder Dialogs now appear close to the top of the screen (so they don&#8217;t shoot off the bottom in most screens)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-78-00">
+<h3>PsychoPy 1.78.00<a class="headerlink" href="#psychopy-1-78-00" title="Permalink to this headline">¶</a></h3>
+<p>Released Aug 2013</p>
+<ul class="simple">
+<li>ADDED: option to preload during Builder scripts using <a class="reference internal" href="builder/components/static.html#static"><span>Static Component</span></a>, which uses <a class="reference internal" href="api/core.html#psychopy.core.StaticPeriod" title="psychopy.core.StaticPeriod"><code class="xref py py-class docutils literal"><span class="pre">StaticPeriod</span></code></a> class</li>
+<li>ADDED: Polygon Component to Builder for drawing regular polygons (including simple lines)</li>
+<li>ADDED: TrialHander can now fetch previous trials as well as future ones (thanks Mike MacAskill)</li>
+<li>ADDED: BufferImageStim accepts mask and pos params (thanks Jeremy)</li>
+<li>ADDED: generated Sounds (not sound files) now use a Hamming window to get rid of sharp onset/offset noises (thanks Jeremy)</li>
+<li>ADDED: microphone component able to play &amp; identify a marker tone (for vocal RT), compute loudness, compression (Jeremy)</li>
+<li>ADDED: sound files: lossless compress / uncompress (requires flac executable installed separately) (Jeremy)</li>
+<li>ADDED: microphone compress() audio recordings; requires flac download (not packaged with PsychoPy)</li>
+<li>ADDED: new preference <cite>flac</cite> = system path for flac, e.g. c:/Program Files (x86)/FLAC/flac.exe (not always needed)</li>
+<li>FIXED: greyscale images were being distorted during display since 1.77.00</li>
+<li>FIXED: reduced number of queries when closing down and provides filenames of changed files in msg (thanks Piot Iwaniuk)</li>
+<li>FIXED: movieStim.contains() and .overlaps() can work, requires that the visual.Window has units of pix</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-77">
+<h2>PsychoPy 1.77<a class="headerlink" href="#psychopy-1-77" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-77-02">
+<h3>PsychoPy 1.77.02<a class="headerlink" href="#psychopy-1-77-02" title="Permalink to this headline">¶</a></h3>
+<p>released July 2013</p>
+<ul class="simple">
+<li>FIXED: problem with Builder Images appearing grey unless they were &#8216;constant&#8217;. This is a bug that was introduced in 1.77.00 with the faster loading of images.</li>
+<li>FIXED: having a monitors folder with a unicode character in the path doesn&#8217;t break the app (thanks Sebastiaan Mathot)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-77-01">
+<h3>PsychoPy 1.77.01<a class="headerlink" href="#psychopy-1-77-01" title="Permalink to this headline">¶</a></h3>
+<p>released June 2013</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Standalone package changes:</dt>
+<dd><ul class="first last simple">
+<li>pytables downgraded to 2.3.5 on Win32 (to be compatible with WinXP)</li>
+<li>pyo upgraded to 0.6.6 on OSX and Win32</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED: The recent files list in Builder now contains recent files! (Thanks Piotr Iwaniuk)</p>
+</li>
+<li><p class="first">FIXED: Timing issue with LC Tech eye-tracker in iohub</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-77-00">
+<h3>PsychoPy 1.77.00<a class="headerlink" href="#psychopy-1-77-00" title="Permalink to this headline">¶</a></h3>
+<p>released June 2013</p>
+<ul>
+<li><dl class="first docutils">
+<dt>ADDED: preview of Sol Simpson&#8217;s <strong>ioHub</strong> for faster (asynchronous) polling of hardware including mouse, keyboard, eyetrackers and other devices. See iohub demos for example usage. This provides many advantages over previous event polling:</dt>
+<dd><ul class="first last simple">
+<li>asynchronous process allows constant polling (not tied to refresh rates) in a way that won&#8217;t impact the rendering of your stimuli. It even runs on a separate CPU core if possible.</li>
+<li>provides up/down/duration for key presses</li>
+<li>provides unicode character (rather than simply key name for keyboard)</li>
+<li>provides a unified API for eyetracker classes</li>
+<li>provides async access to the parallel port</li>
+<li>provides an alternative data output format (using hdf5) particularly useful for high-output streaming data (e.g. eye-trackers)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">DEPRECATED: opensslwrap will soon be replaced by pyFileSec, a much-improved version of the same package (= file-oriented encryption)</p>
+</li>
+<li><p class="first">IMPROVED: substantially (~40%) faster loading of RGB images from disk (by using byte format rather than float). May also allow storing of more images on graphics card than previously</p>
+</li>
+<li><p class="first">ADDED: <cite>AdvancedMicrophone</cite> class to add and retrieve a high-frequency tone to indicate the start of recording (e.g., to allow accurate vocal RT estimation), with demo (Jeremy Gray)</p>
+</li>
+<li><p class="first">REFACTORED: parallel port support. Support for Windows via inpout32/inpout64 and Linux via pyparallel added.  Existing API maintained for single port usage, but new PParallel classes added to provide more flexibility when dealing with multiple ports. see <cite>parallel</cite> (Thanks Mark Hymers)</p>
+</li>
+<li><p class="first">ADDED: <cite>MovieStim</cite> now updates its <cite>status</cite> attribute to FINISHED, in line with other stimuli</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: microphone default file names include milliseconds (to avoid two files with the same name)</span></p>
+</li>
+<li><p class="first">ADDED: color-word speech-recognition demo (coder &gt; input &gt; speech_recognition.py)</p>
+</li>
+<li><p class="first">ADDED: in Builder components dialog boxes, text that will be interpreted as code is displayed in monospace font</p>
+</li>
+<li><p class="first">ADDED: remove and warn about trailing whitespace in Builder component values (but not Text fields)</p>
+</li>
+<li><p class="first">ADDED: support for pyglet version 1.2 alpha (but 1.1.4 is still recommended - it appears to render faster)</p>
+</li>
+<li><p class="first">ADDED: more sound.SoundPyo methods (get &amp; set duration, volume, looping)</p>
+</li>
+<li><p class="first">FIXED: event.Mouse() can obtain a default visual.Window(), if one has already been created</p>
+</li>
+<li><p class="first">ADDED: Builder components generate a compile-time warning if a field&#8217;s value looks dynamic but its updating is constant (Jeremy Gray)</p>
+</li>
+<li><p class="first">ADDED: better simulated scanner-noise in launchScan (just for fun)</p>
+</li>
+<li><p class="first">ADDED: RatingScale.getHistory() returns intermediate time-stamped ratings; allows &#8220;continuous&#8221; ratings</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: RatingScale.getRating() no longer returns False prior to an accepted rating (now returns the currently selected value)</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-76">
+<h2>PsychoPy 1.76<a class="headerlink" href="#psychopy-1-76" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-76-00">
+<h3>PsychoPy 1.76.00<a class="headerlink" href="#psychopy-1-76-00" title="Permalink to this headline">¶</a></h3>
+<p>The compatibility changes in this release below are likely to affect very few users.</p>
+<ul>
+<li><p class="first">ADDED: Window.callOnFlip() function to allow arbitrary functions to be called, timed precisely to the point where the frame flip has occurred (see Coder Demos&gt;Timing&gt;callOnFlip)</p>
+</li>
+<li><p class="first">FIXED: a scaling bug in RatingScale descriptions (Giuseppe Pagnoni)</p>
+</li>
+<li><p class="first">ADDED: support for mirror-image text, and mirror-image BufferImageStim (Jeremy Gray)</p>
+</li>
+<li><p class="first">ADDED: support for lower latency sound with the pyo library. For now pygame remains the default but this can be changed by setting the order in preferences&gt;general&gt;audio</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: PsychoPy Standalone is now being built using python 2.7.3 (rather than 2.6). Under OSX psignifit has been removed from this distribution, as have the libraries to create .mov files using Window.saveMovieFrames(). If you need those features then install the 1.75 Standalone and then update to 1.76 using the auto-update system.</span></p>
+</li>
+<li><p class="first">ADDED: sound objects (either pygame or pyo) now support autologging</p>
+</li>
+<li><p class="first">FIXED: a bug in the generation of the LMS color space conversion matrix. It seems nobody was actually using this for real, but if you were contact Jon for details!</p>
+</li>
+<li><dl class="first docutils">
+<dt><span class="blue">CHANGED: various changes to RatingScale (thanks Henrik Singman):</span></dt>
+<dd><ul class="first last simple">
+<li><span class="blue">CHANGED: choices are now displayed at the tick marks by default (instead of above the line). To restore the old behavior set labels=False. This does not affect experiments created in older versions of the builder.</span></li>
+<li>ADDED: check box &#8220;choiceLabelsAboveLines&#8221; to the RatingScale component of the builder (advanced tab) to still have the choice labels above the line.</li>
+<li>ADDED: arguments tickMarks and labels to RatingScale class to control where tick marks (for quantitative rating scales) should be placed at the line and how these should be labeled.</li>
+<li>ADDED: argument ticksAboveLine to RatingScale class. Controls where the tick marks should be plotted (above or below the line).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED: problem with unset exp.name (was causing wx.Dialog error &#8220;TypeError: String or Unicode type required&#8221; on new experiments)</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: exp.name is no longer available from Builder scripts (can use exp.getExpName() instead)</span></p>
+</li>
+<li><p class="first">FIXED: problem with tiling of depth values for ElementArrayStim (thanks Yuri Spitsyn)</p>
+</li>
+<li><p class="first">FIXED: Fix to setContrast for certain visual stimuli (Jonas Lindeløv)</p>
+</li>
+<li><p class="first">FIXED: inability to launch scripts/experiments if the Mac Standalone was in a folder with a space in it</p>
+</li>
+<li><p class="first">FIXED: Aperture Component now honours the &#8216;units&#8217; (Hiroyuki Sogo)</p>
+</li>
+<li><p class="first">FIXED: stimulus contains/overlaps functions now use stimulus &#8216;units&#8217; and take stimulus orientation into account (Hiroyuki Sogo) NB if you had code in place to perform these corrections yourself you should now remove it!</p>
+</li>
+<li><p class="first">FIXED: some data outputs were not honouring the &#8216;matrixOnly&#8217; option (Mike MacAskill)</p>
+</li>
+<li><p class="first">FIXED: when loading a psydat file of an ExperimentHandler the file automatically saved new copies of its csv/excel outputs. This no longer occurs (if loaded using misc.fromFile)</p>
+</li>
+<li><p class="first">ADDED: timestamp option to event.waitKeys() (Jonas Lindeløv)</p>
+</li>
+<li><p class="first">ADDED: a first-run wizard to check the system, report as html (somewhat experimental) (Jeremy Gray)</p>
+</li>
+<li><p class="first">ADDED: a benchmark wizard (Tools menu) to test hardware &amp; software, option to share on psychopy.org (Jeremy Gray)</p>
+</li>
+<li><p class="first">ADDED: info.getRAM() (Jeremy Gray)</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-75-01">
+<h3>PsychoPy 1.75.01<a class="headerlink" href="#psychopy-1-75-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED: Bug with not being able to play sounds of blank (infinite) duration from Builder</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-75-00">
+<h3>PsychoPy 1.75.00<a class="headerlink" href="#psychopy-1-75-00" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><span class="blue">CHANGED: New Builder experiments will, by default, save a single csv file, a single psydat file and a single log file. Was previously also saving an Excel file (wiht one sheet per loop) and many psydat files (one per loop). Psydat files can still be used to re-output any format of data file.</span></li>
+<li>IMPROVED: Experiment info dialog box easier to control now from experiment settings (user doesn&#8217;t need to write a dictionary by hand any more)</li>
+<li>IMPROVED: Components in the Builder are now arranged in categories, including a special &#8216;Favorites&#8217; category</li>
+<li>IMPROVED: Code Components now support full syntax highlighting and code folding (but still aren&#8217;t quite big enough!)</li>
+<li>ADDED: Builder undo/redo now gives info about what is going to be un/redone</li>
+<li>ADDED: Window now supports a <cite>stereo</cite> flag to provide support for quad-buffers (advanced graphics cards only)</li>
+<li>FIXED: bug with copying/pasting Routines that was breaking Flow in certain situations and corrupting the experiment file</li>
+<li>FIXED: fatal typo in QuestHandler code (Gary Lupyan)</li>
+<li>FIXED: data outputs for multiple key/mouse presses</li>
+<li>ADDED: Microphone now supports <cite>stop</cite> to abort recording early (Jeremy Gray)</li>
+<li>ADDED: beginning of error reporting when generating Builder experiments (thanks Piotr Iwaniuk)</li>
+<li>FIXED: csv files now generated from Builder as expected not dlm files (tab-delimited)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-74">
+<h2>PsychoPy 1.74<a class="headerlink" href="#psychopy-1-74" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-74-04">
+<h3>PsychoPy 1.74.04<a class="headerlink" href="#psychopy-1-74-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>IMPROVED: larger Code Component boxes (and fixed bug with being only one line on linux)</li>
+<li>FIXED: Builder code syntax error when using Mouse set state &#8216;every frame&#8217;</li>
+<li>FIXED: Builder was erroneously using &#8216;estimated duration&#8217; for constraining non-slip timing</li>
+<li>FIXED: Builder couldn&#8217;t open Experiment Settings if the expected screen number didn&#8217;t exist on this system</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-74-03">
+<h3>PsychoPy 1.74.03<a class="headerlink" href="#psychopy-1-74-03" title="Permalink to this headline">¶</a></h3>
+<p>(released Aug 2012)</p>
+<ul class="simple">
+<li>FIXED: the multiline text entry box in the Builder Text Component was broken (thanks Piotr Iwaniuk)</li>
+<li>IMPROVED: serial (RS232) interface to fORP button box to avoid recording repeated presses (thanks Nate Vack). Does not affect use of fORP box from USB interface.</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-74-02">
+<h3>PsychoPy 1.74.02<a class="headerlink" href="#psychopy-1-74-02" title="Permalink to this headline">¶</a></h3>
+<p>(released Aug 2012)</p>
+<ul class="simple">
+<li>FIXED: bug leading to message: <cite>IndexError: string index out of range.</cite> This was caused by problem saving excel files</li>
+<li>FIXED: bug leading to message: <cite>AttributeError: ImageStim instance has no attribute &#8216;rgbPedestal&#8217;.</cite> Was only occurring on non-shaders machines using the new ImageStim.</li>
+<li>FIXED: problem loading old ExperimentHandlers that contained MultiStairHandlers</li>
+<li>FIXED: Builder Text Components gave an error if letter height was a variable</li>
+<li>ADDED: Window.flip() now returns the timestamp for the flip if possible (thanks Sol Simpson)</li>
+<li>ADDED: misc.sph2cart (Becky Sharman)</li>
+<li>ADDED: warning when user presents SimpleImageStim that seems to extend beyond screen (James McMurray)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-74-01">
+<h3>PsychoPy 1.74.01<a class="headerlink" href="#psychopy-1-74-01" title="Permalink to this headline">¶</a></h3>
+<p>(released July 2012)</p>
+<ul class="simple">
+<li>FIXED: the pyo package is now included in the windows Standalone distribution (making audio input available as intended)</li>
+<li>FIXED: error saving excel data from numpy.int formats (Erik Kastman)</li>
+<li>FIXED: error at end of automated gamma calibration (which was causing a crash of the calibration script)</li>
+<li>FIXED: misc.getDateStr() returns numeric date if there&#8217;s an error with unicode encoding (Jeremy)</li>
+<li>FIXED: added partial support for non-ASCII keyboards (Sebastiaan Mathot)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-74-00">
+<h3>PsychoPy 1.74.00<a class="headerlink" href="#psychopy-1-74-00" title="Permalink to this headline">¶</a></h3>
+<p>(<a class="reference external" href="https://github.com/psychopy/psychopy">https://github.com/psychopy/psychopy</a>)</p>
+<p>Major changes (and compatibility changes):</p>
+<ul class="simple">
+<li>ADDED: Long-wide data file outputs, which are now the default for all new Builder experiments.</li>
+<li>ADDED: basic audio capture (and speech recognition via google!). Builder now has a Microphone Component to record inputs, but does not yet use the speech recognition facility. See psychopy.microphone library, coder demo &#8220;input/say_rgb.py&#8221; and Builder demo &#8220;voiceCapture&#8221;.  (Jeremy)</li>
+<li>ADDED: HSV color space for all stimuli</li>
+<li><span class="blue">CHANGED: in Builder the default dotstim has signal dots=&#8217;same&#8217; (once a signal dot, always a signal dot). Only affects new experiments.</span></li>
+</ul>
+<p>Tweaks and fixes:</p>
+<ul class="simple">
+<li>FIXED: missing parameter name in conditions file is detected, triggers more informative error message</li>
+<li>ADDED: fORP: option asKeys to handle button presses as pyglet keyboard events (when using a serial port); faster getUniqueEvents()</li>
+<li>ADDED: basic file encryption (beta) using RSA + AES-256; see API encryption for usage and caveats</li>
+<li>ADDED: upload a file to a remote server over http (libs: web.upload) with coder demo, php scripts for server (contrib/http/<a href="#id35"><span class="problematic" id="id36">*</span></a>)</li>
+<li>ADDED: Builder demo (dualRatingScales): show a stim, get two different ratings side by side [unpack the demos again]</li>
+<li>ADDED: rating scale options: &#8216;maxTime&#8217; to time-out, &#8216;disappear&#8217; to hide after a rating; see new Builder demo</li>
+<li>FIXED: rating scale bug: skipKeys was not handling &#8216;tab&#8217; properly (no skip for tab-key, do skip for &#8216;t&#8217;, &#8216;a&#8217;, or &#8216;b&#8217;)</li>
+<li>ADDED: new locale pref for explicitly setting locale, used in date format and passed to builder scripts (Jeremy, Hiroku Sogo)</li>
+<li>ADDED: &#8216;enable escape&#8217; option in experiment settings, default is &#8216;enabled&#8217;</li>
+<li>ADDED: support for ElementArrayStim to use the same set of color spaces as other stimuli</li>
+<li><span class="blue">CHANGED: removed python 2.4&#8217;s version of sha1 digest from :class:&#8217;~psychopy.info.RunTimeInfo&#8217;</span></li>
+<li><span class="blue">CHANGED: removed any need for PyOpenGL (pyglet.gl now used throughout even for pygame windows)</span></li>
+<li>FIXED: Builder was ignoring changes to DotStim FieldPos (thanks Mike MacAskill)</li>
+<li>FIXED: Builder Flow is smarter about Loops and now stops you creating &#8216;broken&#8217; ones (e.g. Loops around nothing)</li>
+<li>FIXED: MovieStim used from Builder was not working very well. Sounds continued when it was told to stop and the seek(0.0001) line was causing some file formats not to work from Builder only (those that don&#8217;t support seeking)</li>
+<li>FIXED: Mouse component was not saving clicks in Builder experiments if forceEndOnClick was set to be False</li>
+<li>FIXED: DotStim.setFieldCoherence was having no effect if noise dots were updating by &#8216;position&#8217;</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-73">
+<h2>PsychoPy 1.73<a class="headerlink" href="#psychopy-1-73" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-73-06">
+<h3>PsychoPy 1.73.06<a class="headerlink" href="#psychopy-1-73-06" title="Permalink to this headline">¶</a></h3>
+<p>(released April 2012)</p>
+<ul class="simple">
+<li>FIXED: xlsx outputs were collapsing raw data from trials with non-response</li>
+<li>FIXED: monitor gamma grids are now returned as arrays rather than lists (Ariel Rokem)</li>
+<li>FIXED: bug with Window.setColor being incorrectly scaled for some spaces</li>
+<li>FIXED: buglet preventing unicode from being used in TrialHandler parameter names (William Hogman) and saving to data files (Becky Sharman)</li>
+<li>FIXED: StairHandler in Builder now saves the expInfo dictionary (Jeremy)</li>
+<li>FIXED: can unpickle from either old-style or new-style data files (using psychopy.compatibility.fromFile()) (Erik Kastman)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-73-05">
+<h3>PsychoPy 1.73.05<a class="headerlink" href="#psychopy-1-73-05" title="Permalink to this headline">¶</a></h3>
+<p>(Released March 2012)</p>
+<ul class="simple">
+<li>FIXED: Joystick error when calling .getHat() or .getHats() (fixed by Gary Lupyan)</li>
+<li>FIXED: BufferImageStim crashing on some linux boxes (due to bug with checking version of OpenGL) (fixed by Jonas Lindelov)</li>
+<li>FIXED: fMRI emulator class was providing old-format key events (fixed by Erik Kastman and Jeremy)</li>
+<li>FIXED: Win.setRecordFrameIntervals(True) was including the time since it was turned off as a frame interval (fixed by Alex Holcombe)</li>
+<li>FIXED: using forceEndtrial from a mouse component in Builder wasn&#8217;t working (thanks Esteban for the heads-up)</li>
+<li>FIXED: visual.Circle now respects the edges parameter (fixed by Jonas Lindelov)</li>
+<li>FIXED: having IPython v0.12 should no longer crash psychopy on startup (Jeremy)</li>
+<li>FIXED: non-ascii month-name (eg Japanese) from %B is now filtered out to avoid crash when compile a psyexp script (Jeremy)</li>
+<li>ADDED: support for usb-&gt;serial devices under linux (William Hogman)</li>
+<li>ADDED: option to vertically flip a BufferImageStim upon capture (esp for fMRI-related presentation of text) (Jeremy)</li>
+<li>ADDED: option to play a sound (simple tone) during fMRI launchScan simulation (Jeremy)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-73-04">
+<h3>PsychoPy 1.73.04<a class="headerlink" href="#psychopy-1-73-04" title="Permalink to this headline">¶</a></h3>
+<p>(released Feb 2012)</p>
+<ul class="simple">
+<li><span class="blue">CHANGED: Builder scripts now silently convert division from integers to float where necessary. That means 1/3=0.333 whereas previously 1/3=0. This is done simply by adding the line &#8216;from __future__ import division&#8217; at the top of the script, which people using Coder might want to think about too.</span></li>
+<li>FIXED: problem with loading .psydat files using misc.fromFile (thanks Becky)</li>
+<li>FIXED: issue on OSX with updating from 1.70 binaries to 1.73 patch release</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-73-03">
+<h3>PsychoPy 1.73.03<a class="headerlink" href="#psychopy-1-73-03" title="Permalink to this headline">¶</a></h3>
+<p>(released Jan 2012)</p>
+<ul class="simple">
+<li>FIXED: problem with loops crashing during save of xlsx/csv files if conditions were empty</li>
+<li>FIXED: bugs in Builder setting Dots coherence and direction parameters</li>
+<li>FIXED: problem with strange text and image rendering on some combinations of ATI graphics on Windows machines</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-73-02">
+<h3>PsychoPy 1.73.02<a class="headerlink" href="#psychopy-1-73-02" title="Permalink to this headline">¶</a></h3>
+<p>(released Jan 2012)</p>
+<ul class="simple">
+<li>ADDED: loop property to MovieStim for coder only so far (thanks Ariel Rokem)</li>
+<li>FIXED: buglet requesting import of pyaudio (thanks Britt for noticing and Dan Shub for fixing)</li>
+<li>FIXED: problem with avbin (win32)</li>
+<li>FIXED: problem with unicode characters in filenames preventing startup</li>
+<li>FIXED: bug with &#8216;fullRandom&#8217; method of TrialHandler missing some trials during data save</li>
+<li>FIXED: Mouse.clickReset() now resets the click timers</li>
+<li>FIXED(?): problem with avbin.dll not being found under 64-bit windows</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-73-00">
+<h3>PsychoPy 1.73.00<a class="headerlink" href="#psychopy-1-73-00" title="Permalink to this headline">¶</a></h3>
+<p>(released Jan 2012)</p>
+<ul class="simple">
+<li><span class="blue">CHANGED: psychopy.log has moved to psychopy.logging (Alex Holcombe&#8217;s suggestion). You&#8217;ll now get a deprecation warning for using psychopy.log but it will still work (for the foreseeable future)</span></li>
+<li>ADDED: new hardware.joystick module supporting pyglet and pyjame backbends for windows and OSX. Demo in Not working on Linux yet. See demos&gt;input</li>
+<li>ADDED: support for CRS ColorCAL mkII for gamma calibrations in Monitor Center.</li>
+<li>ADDED: data.ExpHandler to combine data for multiple separate loops in one study, including output of a single wide csv file. See demos&gt;experimental control&gt;experimentHandler. Support from Builder should now be easy to add</li>
+<li>ADDED: ability to fix (seed) the pseudorandom order of trials in Builder random/full-random loops</li>
+<li>ADDED: auto-update (and usage stats) can now detect proxies in proxy.pac files. Also this now runs in a low-priority background thread to prevent any slowing at startup time.</li>
+<li>FIXED: bug when passing variables to Staircase loops in Builder</li>
+<li>FIXED: mouse in Builder now ignores button presses that began before the &#8216;start&#8217; of the mouse</li>
+<li>FIXED: can now use pygame or pyaudio instead of pygame for sounds, although it still isn&#8217;t recommended (thanks Ariel Rokem for patch)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-72-00">
+<h3>PsychoPy 1.72.00<a class="headerlink" href="#psychopy-1-72-00" title="Permalink to this headline">¶</a></h3>
+<p>(rc1 released Nov 2011)</p>
+<ul class="simple">
+<li><span class="blue">CHANGED: gui.Dlg and gui.dlgFromDict can now take a set of choices and will convert</span></li>
+</ul>
+<dl class="docutils">
+<dt>to a choice control if this is used (thanks Manuel Ebert)</dt>
+<dd><ul class="first simple">
+<li>for gui.Dlg the <cite>.addField()</cite> method now has <cite>choices</cite> attribute</li>
+<li>for gui.dlgFromDict if one of the values in the dict is a list it will be</li>
+</ul>
+<p class="last">interpreted as a set of choices (NB this potentially breaks old code)
+- for info see API docs for psychopy.gui</p>
+</dd>
+</dl>
+<ul>
+<li><dl class="first docutils">
+<dt>ADDED: improvements to drawing of shapes (thanks Manuel Ebert for all)</dt>
+<dd><ul class="first last simple">
+<li>ShapeStim now has a size parameter that scales the locations of vertices</li>
+<li>new classes; Rect, Line, Circle, Polygon</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED: error with DotStim when fieldSize was a tuple and fieldShape was &#8216;sqr&#8217;</p>
+</li>
+<li><p class="first">FIXED: calibration plots in Monitor Center now resize and quit as expected</p>
+</li>
+<li><p class="first">FIXED: conditions files can now have lists of numbers [0,0]</p>
+</li>
+<li><p class="first">FIXED: buglet with flushing mouse events (thanks Sebastiaan Mathot)</p>
+</li>
+<li><p class="first">FIXED: Builder components now draw in order, from top to bottom, so lower items obscure higher ones</p>
+</li>
+<li><p class="first">FIXED: problem with Patch Component when size was set to be dynamic</p>
+</li>
+<li><p class="first">FIXED: problem with Builder loops not being able to change type (e.g. change &#8216;random&#8217; into &#8216;staircase&#8217;)</p>
+</li>
+<li><p class="first">FIXED: data from TrialHandler can be output with unicode contents (thanks Henrik Singmann)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-71">
+<h2>PsychoPy 1.71<a class="headerlink" href="#psychopy-1-71" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-71-01">
+<h3>PsychoPy 1.71.01<a class="headerlink" href="#psychopy-1-71-01" title="Permalink to this headline">¶</a></h3>
+<p>(released Oct 2011)</p>
+<ul class="simple">
+<li><span class="blue">CHANGED: the number of stimulus-resized and frames-dropped warnings is now limited to 5 (could become a preference setting?)</span></li>
+<li>FIXED: Builder now allows images to have size of None (or &#8216;none&#8217; or just blank) and reverts to using the native size of the image in the file</li>
+<li>FIXED: occasional glitch with rendering caused by recent removal of depth testing (it was getting turned back on by TextStim.draw())</li>
+<li>FIXED: opening a builder file from coder window (and vice versa) switches view and opens there</li>
+<li>FIXED: problem showing the About... item on OS X Builder view</li>
+<li>FIXED problem with loops not showing up if the conditions file wasn&#8217;t found</li>
+<li>FIXED: runTimeInfo: better handling of cwd and git-related info</li>
+<li>FIXED: rating scale: single click with multiple rating scales, auto-scale with precision = 1</li>
+<li>IMPROVED: rendering speed on slightly older nVidia cards (e.g. GeForce 6000/7000 series) under win32/linux. ElementArrays now render at full speed. Other cards/systems should be unchanged.</li>
+<li>IMPROVED: rating scale: better handling of default description, scale=None more intuitive</li>
+<li>ADDED: new function getFutureTrial(n=1) to TrialHandler, allowing users to find out what a trial will be without actually going to that trial</li>
+<li>ADDED: misc.createXYs() to help creating a regular grid of xy values for ElementArrayStim</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-71-00">
+<h3>PsychoPy 1.71.00<a class="headerlink" href="#psychopy-1-71-00" title="Permalink to this headline">¶</a></h3>
+<p>(released Sept 2011)</p>
+<ul>
+<li><p class="first"><span class="blue">CHANGED: Depth testing is now disabled. It was already being recommended that depth was controlled purely by drawing order (not depth settings) but this is now the *only* way to do that</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: The Builder representation of the Components onset/offset is now based on &#8216;estimatedStart/Stop&#8217; where a value has been given. NB this does not affect the actual onset/offset of Components merely its representation on the timeline.</span></p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: Builder loop conditions mini-editor: (right-click in the filename box in a loop dialog)</dt>
+<dd><ul class="first last simple">
+<li>create, edit, and save conditions from within PsychoPy; save &amp; load using pickle format</li>
+<li>preview .csv or .xlsx conditions files (read-only)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: RatingScale method to allow user to setMarkerPosition()</p>
+</li>
+<li><p class="first">ADDED: Builder dialogs display a &#8216;$&#8217; to indicate fields that expect code/numeric input</p>
+</li>
+<li><p class="first">ADDED: Text Component now has a wrapWidth parameter to control the bounding box of the text</p>
+</li>
+<li><p class="first">ADDED: Opacity parameter to visual stimulus components in the Builder, so you can now draw plaids etc from the builder</p>
+</li>
+<li><p class="first">FIXED: can edit or delete filename from loop dialog</p>
+</li>
+<li><p class="first">FIXED: bug in RunTimeInfo (no longer assumes that the user has git installed)</p>
+</li>
+<li><p class="first">FIXED: bug in BufferImageStim</p>
+</li>
+<li><p class="first">FIXED: bug in Builder Ratingscale (was always ending routine on response)</p>
+</li>
+<li><p class="first">FIXED: problem with nested loops in Builder. Inner loop was not being repeated. Loops are now only created as they are needed in the code, not at the beginning of the script</p>
+</li>
+<li><p class="first">FIXED: rendering of many stimuli was not working beyond 1000 elements (fixed by removal of depth testing)</p>
+</li>
+<li><p class="first">FIXED: mouse component now using start/duration correctly (broken since 1.70.00)</p>
+</li>
+<li><p class="first">FIXED: when changing the texture (image) of a PatchStim, the stimulus now &#8216;remembers&#8217; if it had been created with no size/sf set and updates these for the new image (previously the size/sf got set according to the first texture provided)</p>
+</li>
+<li><p class="first">FIXED: putting a number into Builder Sound Component does now produce a sound of that frequency</p>
+</li>
+<li><p class="first">FIXED: added &#8216;sound&#8217;,&#8217;misc&#8217;,&#8217;log&#8217; to the component names that PsychoPy will refuse. Also a slightly more informative warning when the name is already taken</p>
+</li>
+<li><p class="first">FIXED: Opacity parameter was having no effect on TextStim when using shaders</p>
+</li>
+<li><p class="first">FIXED bug with MovieStim not starting at beginning of movie unless a new movie was added each routine</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-70">
+<h2>PsychoPy 1.70<a class="headerlink" href="#psychopy-1-70" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-70-01">
+<h3>PsychoPy 1.70.01<a class="headerlink" href="#psychopy-1-70-01" title="Permalink to this headline">¶</a></h3>
+<p>(Released Aug 2011)</p>
+<ul class="simple">
+<li>FIXED: buglet with Builder (1.70.00) importing older files not quite right and corrupting the &#8216;allowedKeys&#8217; of keyboard component</li>
+<li>FIXED: buglet with SimpleImageStim. On machines with no shaders some images were being presented strangely</li>
+<li>FIXED: buglet with PatchStim. After a call to setSize, SF was scaling with the stimulus (for unit types where that shouldn&#8217;t happen)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-70-00">
+<h3>PsychoPy 1.70.00<a class="headerlink" href="#psychopy-1-70-00" title="Permalink to this headline">¶</a></h3>
+<p>(Released Aug 2011)</p>
+<p><em>NB This version introduces a number of changes to Builder experiment files that will prevent files from this version being opened by earlier versions of PsychoPy</em></p>
+<ul>
+<li><p class="first"><span class="blue">CHANGED use of allowedKeys in Keyboard Component. You used to be able to type &#8216;ynq&#8217; to get those keys, but this was confusing when you then needed &#8216;&#8217;space&#8217;&#8217; or &#8216;&#8217;left&#8217;&#8217; etc. Now you must type &#8216;y&#8217;,&#8217;n&#8217;,&#8217;q&#8217;, which makes it more obvious how to include &#8216;space&#8217;,&#8217;left&#8217;,&#8217;right&#8217;...</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED dot algorithm in DotStim. Previously the signalDots=same/different was using the opposite to Scase et al&#8217;s terminology, now they match. Also the default method for noiseDots was &#8216;position&#8217; and this has been changed to &#8216;direction&#8217;. The documentation explaining the algorithms has been clarified. (see :ref:&#8217;dots&#8217;)</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED &#8216;MovieStim.playing&#8217; property to be called &#8216;MovieStim.status&#8217; (in keeping with other stimuli)</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED names:</span></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>data.importTrialTypes</cite> is now <cite>data.importConditions</cite></li>
+<li><cite>forceEndTrial</cite> in Keyboard Component is now <cite>forceEndRoutine</cite></li>
+<li><cite>forceEndTrialOnPress</cite> in Mouse Component is now <cite>forceEndRoutineOnPress</cite></li>
+<li><cite>trialList</cite> and <cite>trialListFile</cite> in Builder are now <cite>conditions</cite> and <cite>conditionsFile</cite>, respectively</li>
+<li>&#8216;window units&#8217; to set Component units is now &#8216;from exp settings&#8217; for less confusion</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><span class="blue">CHANGED numpy imports in Builder scripts:</span></p>
+<blockquote>
+<div><ul class="simple">
+<li>only a subset of numpy features are now imported by default: numpy: sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray, random, randint, normal, shuffle</li>
+<li>all items in the numpy namespace are available as np.*</li>
+<li>if a pre-v1.70 script breaks due to this change, try prepending &#8216;np.&#8217; or &#8216;np.random.&#8217;</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><span class="blue">CHANGED Builder use of $. $ can now appear anywhere in the field (previously only the start). To display a &#8216;$&#8217; character now requires &#8216;$&#8217; in a text field (to prevent interpretation of normal text as being code).</span></p>
+</li>
+<li><p class="first">ADDED flexibility for start/stop in Builder Components. Can now specify stimuli according to;</p>
+<blockquote>
+<div><ul class="simple">
+<li>variable values (using $ symbol). You can also specify an &#8216;expected&#8217; time/duration so that something is still drawn on the timeline</li>
+<li>number of frames, rather than time (s), for greater precision</li>
+<li>an arbitrary condition (e.g. otherStim.status==STOPPED )</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">ADDED the option to use a raised cosine as a PatchStim mask (thanks Ariel Rokem)</p>
+</li>
+<li><p class="first">ADDED a preference setting for adding custom path locations to Standalone PsychoPy</p>
+</li>
+<li><p class="first">ADDED Dots Component to Builder interface for random dot kinematograms</p>
+</li>
+<li><p class="first">ADDED wide-format data files (saveAsWideText()) (thanks Michael MacAskill)</p>
+</li>
+<li><p class="first">ADDED option for full randomization of repeated lists (loop type &#8216;fullRandom&#8217;) (Jeremy)</p>
+</li>
+<li><p class="first">ADDED builder icons can now be small or large (in prefs)</p>
+</li>
+<li><p class="first">ADDED checking of conditions files for parameter name conflicts (thanks Jeremy)</p>
+</li>
+<li><p class="first">ADDED emulate sync pulses and user key presses for fMRI or other scanners (for testing); see hardware/launchScan in the API reference, and Coder <cite>demos &gt; experimental control &gt; fMRI_launchScan.py</cite> (Jeremy)</p>
+</li>
+<li><p class="first">ADDED right-clicking the expInfo in Experiment Settings tests &amp; previews the dialog box (Jeremy)</p>
+</li>
+<li><p class="first">ADDED syntax checking in code component dialog, right-click (Jeremy)</p>
+</li>
+<li><p class="first">IMPROVED documentation (thanks Becky Sharman)</p>
+</li>
+<li><p class="first">IMPROVED syntax for using $ in code snippets (e.g., &#8220;[$xPos, $yPos]&#8221; works) (Jeremy)</p>
+</li>
+<li><p class="first">IMPROVED Flow and Routine displays in the Builder, with zooming; see the View menu for key-board shortcuts (Jeremy)</p>
+</li>
+<li><p class="first">IMPROVED Neater (and slightly faster) changing of Builder Routines on file open/close</p>
+</li>
+<li><p class="first">FIXED demos now unpack to an empty folder (Jeremy)</p>
+</li>
+<li><p class="first">FIXED deleting an empty loop from the flow now works (Jeremy)</p>
+</li>
+<li><p class="first">FIXED further issue in QUEST (the addition in 1.65.01 was being used too widely)</p>
+</li>
+<li><p class="first">FIXED bug with updating of gamma grid values in Monitor Center</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-65">
+<h2>PsychoPy 1.65<a class="headerlink" href="#psychopy-1-65" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-65-02">
+<h3>PsychoPy 1.65.02<a class="headerlink" href="#psychopy-1-65-02" title="Permalink to this headline">¶</a></h3>
+<p>(Released July 2011)</p>
+<ul>
+<li><p class="first">FIXED Builder keyboard component was storing &#8216;all keys&#8217; on request but not all RTs</p>
+</li>
+<li><p class="first">FIXED Aperture Component in Builder, which was on for an entire Routine. Now supports start/stop times like other components</p>
+</li>
+<li><p class="first">IMPROVED Sound stimuli in Builder:</p>
+<blockquote>
+<div><ul class="simple">
+<li>FIXED: sounds could be distorted and would repeat if duration was longer than file</li>
+<li>ADDED volume parameter to sound stimuli</li>
+<li>FIXED: duration parameter now stops a file half-way through if needed</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">FIXED buglet preventing some warning messages being printed to screen in Builder experiments</p>
+</li>
+<li><p class="first">FIXED bug in the copying/pasting of Builder Routines, which was previously introducing errors of the script with invalid _continueName values</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-65-01">
+<h3>PsychoPy 1.65.01<a class="headerlink" href="#psychopy-1-65-01" title="Permalink to this headline">¶</a></h3>
+<p>(Released July 2011)</p>
+<ul class="simple">
+<li>FIXED buglets in QUEST handler (thanks Gerrit Maus)</li>
+<li>FIXED absence of pygame in 1.65.00 Standalone release</li>
+<li>ADDED shelve module to Standalone (needed by scipy.io)</li>
+<li>ADDED warnings about going outside the monitor gamut for certain colors (thanks Alex Holcombe)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-65-00">
+<h3>PsychoPy 1.65.00<a class="headerlink" href="#psychopy-1-65-00" title="Permalink to this headline">¶</a></h3>
+<p>(Released July 2011)</p>
+<ul class="simple">
+<li>ADDED improved gamma correction using L=a+(b+kI)**G formula (in addition to industry-standard form). Existing gamma calibrations will continue to use old equation but new calibrations will take the new extended formula by default.</li>
+<li>ADDED MultiStairHandler to run multiple interleaved staircases (also from the Builder)</li>
+<li>ADDED createFactorialTrialList, a convenience function for full factorial conditions (thanks Marco Bertamini)</li>
+<li><span class="blue">CHANGED Builder keyboard components now have the option to discard previous keys (on by default)</span></li>
+<li><span class="blue">CHANGED RatingScale:</span><ul>
+<li>ADDED: argument to set lineColor independently (thanks Jeff Bye)</li>
+<li><span class="blue">CHANGED default marker is triangle (affects windows only)</span></li>
+<li>ADDED single-click option, custom-marker support</li>
+<li>FIXED: bug with precision=1 plus auto-rescaling going in steps of 10 (not 1)</li>
+</ul>
+</li>
+<li>FIXED errors with importing from &#8216;ext&#8217; and &#8216;contrib&#8217;</li>
+<li>FIXED error in joystick demos</li>
+<li>FIXED bug in ElementArrayStim depth</li>
+<li>FIXED bug in misc.maskMatrix. Was not using correct scale (0:1) for the mask stage</li>
+<li>FIXED buglet in StairHandler, which was only terminating during a reversal</li>
+<li>FIXED bug when loading movies - they should implicitly pause until first draw() (thanks Giovanni Ottoboni)</li>
+<li>IMPROVED handling of non-responses in Builder experiments, and this can now be the correct answer too (corrAns=None). ie. can now do go/no-go experiments. (Non-responses are now empty cells in excel file, not &#8220;&#8211;&#8221; as before.)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-64">
+<h2>PsychoPy 1.64<a class="headerlink" href="#psychopy-1-64" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-64-00">
+<h3>PsychoPy 1.64.00<a class="headerlink" href="#psychopy-1-64-00" title="Permalink to this headline">¶</a></h3>
+<p>Released April 2011</p>
+<ul>
+<li><p class="first">ADDED option to return field names when importing a trial list (thanks Gary Lupyan)</p>
+</li>
+<li><p class="first">ADDED Color-picker on toolbar for Coder and context menu for Builder (Jeremy Gray)</p>
+</li>
+<li><p class="first">ADDED CustomMouse to visual (Jeremy Gray)</p>
+</li>
+<li><p class="first">ADDED Aperture object to visual (thanks Yuri Spitsyn) and as a component to Builder (Jeremy Gray)</p>
+</li>
+<li><dl class="first docutils">
+<dt><span class="blue">CHANGED RatingScale (Jeremy Gray):</span></dt>
+<dd><ul class="first last simple">
+<li>FIXED bug in RatingScale that prevented scale starting at zero</li>
+<li>ADDED RatingScale &#8220;choices&#8221; (non-numeric); text size, color, font, &amp; anchor labels; pos=(x,y) (Jeremy Gray)</li>
+<li><span class="blue">CHANGED RatingScale internals; renamed escapeKeys as skipKeys; subject now uses &#8216;tab&#8217; to skip (Jeremy Gray)</span></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED user-configurable code/output font (see coder prefs to change)</p>
+</li>
+<li><p class="first">ADDED gui.Dlg now automatically uses checkboxes for bools in inputs (Yuri Spitsyn)</p>
+</li>
+<li><p class="first">ADDED RatingScale component for Builder (Jeremy Gray)</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED packages to Standalone distros:</dt>
+<dd><ul class="first last simple">
+<li>pyxid (Cedrus button boxes)</li>
+<li>labjack (good, fast, cheap USB I/O device)</li>
+<li>egi (pynetstation)</li>
+<li>pylink (SR Research eye trackers)</li>
+<li>psignifit (bootstrapping, but only added on mac for now)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED option for Builder components to take code (e.g. variables) as start/duration times</p>
+</li>
+<li><p class="first">ADDED support for RGBA files in SimpleImageStim</p>
+</li>
+<li><p class="first">IMPROVED namespace management for variables in Builder experiments (Jeremy Gray)</p>
+</li>
+<li><p class="first">IMPROVED prefs dialog</p>
+</li>
+<li><p class="first">IMPROVED test sequence for PsychoPy release (so hopefully fewer bugs in future!)</p>
+</li>
+<li><p class="first">FIXED bug with ElementArrayStim affecting the subsequent color of ShapeStim</p>
+</li>
+<li><p class="first">FIXED problem with the error dialog from Builder experiments not being a sensible size (since v1.63.03 it was just showing a tiny box instead of an error message)</p>
+</li>
+<li><p class="first">FIXED Coder now reloads files changed outside the app when needed (thanks William Hogman)</p>
+</li>
+<li><p class="first">FIXED Builder Text Component now respects the font property</p>
+</li>
+<li><p class="first">FIXED problem with updating to a downloaded zip file (win32 only)</p>
+</li>
+<li><p class="first">FIXED bug with ShapeStim.setOpacity when no shaders are available</p>
+</li>
+<li><p class="first">FIXED <em>long-standing pygame scaling bug</em></p>
+</li>
+<li><p class="first">FIXED you can now scroll Builder Flow and still insert a Routine way to the right</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-63">
+<h2>PsychoPy 1.63<a class="headerlink" href="#psychopy-1-63" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-63-04">
+<h3>PsychoPy 1.63.04<a class="headerlink" href="#psychopy-1-63-04" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2011</p>
+<ul class="simple">
+<li>FIXED bug in windows prefs that prevents v1.63.03 from starting up</li>
+<li>FIXED bug that prevents minolte LS100 from being found</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-63-03">
+<h3>PsychoPy 1.63.03<a class="headerlink" href="#psychopy-1-63-03" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2011</p>
+<ul>
+<li><dl class="first docutils">
+<dt>ADDED Interactive shell to the bottom panel of the Coder view. Choose (in prefs) one of;</dt>
+<dd><ul class="first last simple">
+<li>pyShell (the default, with great tooltips and help)</li>
+<li>IPython (for people that like it, but beware it crashes if you create a psychopy.visual.Window() due to some threading issue(?))</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED scrollbar to output panel</p>
+</li>
+<li><p class="first">FIXED small bug in QUEST which gave an incorrectly-scaled value for the next() trial</p>
+</li>
+<li><p class="first">FIXED ElementArrayStim was not drawing correctly to second window in multi-display setups</p>
+</li>
+<li><p class="first">FIXED negative sound durations coming from Builder, where sound was starting later than t=0</p>
+</li>
+<li><p class="first">FIXED a problem where Builder experiments failed to run if &#8216;participant&#8217; wasn&#8217;t in the experiment info dialog</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-63-02">
+<h3>PsychoPy 1.63.02<a class="headerlink" href="#psychopy-1-63-02" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2011</p>
+<ul>
+<li><p class="first">ADDED clearFrames option to Window.saveMovieFrames</p>
+</li>
+<li><p class="first">ADDED support for Spectrascan PR655/PR670</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED &#8216;height&#8217; as a type of unit for visual stimuli</dt>
+<dd><p class="first last">NB. this is likely to become the default unit for new users (set in prefs)
+but for existing users the unit set in their prefs will remain. That means
+that your system may behave differently to your (new user) colleague&#8217;s</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">IMPROVED handling of damaged experiments in Builder (they don&#8217;t crash the app any more!)</p>
+</li>
+<li><p class="first">IMPROVED performance of autoLogging (including demos showing how to turn of autoLog for dynamic stimuli)</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-63-01">
+<h3>PsychoPy 1.63.01<a class="headerlink" href="#psychopy-1-63-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Jan 2011</p>
+<ul>
+<li><p class="first">FIXED bug with ElementArrayStim.setFieldPos() not updating</p>
+</li>
+<li><p class="first">FIXED mouse release problem with pyglet (since in 1.63.00)</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED ability to retrieve a timestamp for a mouse event, similar to those in keyboard events.</dt>
+<dd><p class="first last">This is possible even though you may not retrieve the mouse event until later (e.g. waiting
+for a frame flip). Thanks Dave Britton</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED bug with filters.makeGrating: gratType=&#8217;sqr&#8217; was not using ori and phase</p>
+</li>
+<li><dl class="first docutils">
+<dt>FIXED bug with fetching version info for autoupdate (was sometimes causing a crash on startup</dt>
+<dd><p class="first last">if users selected &#8216;skip ths version&#8217;)</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><span class="blue">CHANGED optimisation routine from fmin_powell to fmin_bfgs. It seems more robust to starting params.</span></p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-63-00">
+<h3>PsychoPy 1.63.00<a class="headerlink" href="#psychopy-1-63-00" title="Permalink to this headline">¶</a></h3>
+<p>Released Dec 2010</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>ADDED autoLog mechanism:</strong></dt>
+<dd><ul class="first last simple">
+<li>many more messages sent, but only written when log.flush() is called</li>
+<li>rewritten backend to logging functions to remove file-writing performance hit</li>
+<li>added <cite>autoLog</cite> and <cite>name</cite> attributes to visual stimuli</li>
+<li>added setAutoDraw() method to visual stimuli (draws on every win.flip() until set to False)</li>
+<li>added logNextFlip() method to visual.Window to send a log message time-stamped to flip</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first"><strong>FIXED bug in color calibration for LMS color space (anyone using this space should recalibrate immediately)</strong> Thanks Christian Garber for picking up on this one.</p>
+</li>
+<li><p class="first">FIXED bug with excel output from StairHandler</p>
+</li>
+<li><p class="first">FIXED bug in ElemetArray.setSizes()</p>
+</li>
+<li><p class="first">FIXED bug in running QuestHandler (Zarrar Shehzad)</p>
+</li>
+<li><p class="first">FIXED bug trying to remove a Routine from Flow when enclosed in a Loop</p>
+</li>
+<li><p class="first">FIXED bug with inseting Routines into Flow under Linux</p>
+</li>
+<li><p class="first">FIXED bug with playing a MovieStim when another is already playing</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED default values for Builder experiment settings (minor)</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED ShapeStim default fillColor to None (from (0,0,0))</span></p>
+</li>
+<li><p class="first">FIXED DotStim now supports a 2-element fieldSize (x,y) again</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED phase of RadialStim to be &#8216;sin&#8217; instead of &#8216;cosine&#8217; at phase=0</span></p>
+</li>
+<li><p class="first">FIXED rounding issue in RadialStim phase</p>
+</li>
+<li><p class="first">FIXED ElementArrayStim can now take a 2x1 input for setSizes(), setSFs(), setPhases()</p>
+</li>
+<li><p class="first">ADDED packages to standalone distributions: pyserial, pyparallel (win32 only), parallel python (pp), IPython</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED Builder demos are now back in the distributed package. Use &gt;Demos&gt;Unpack... to put them in a folder you have access to and you can then run them from the demos menu</span></p>
+</li>
+<li><p class="first">FIXED bug with ShapeStim initialisation (since 1.62.02)</p>
+</li>
+<li><dl class="first docutils">
+<dt>UPDATED: Standalone distribution now uses Python2.6 and adds/upgrades;</dt>
+<dd><ul class="first last simple">
+<li>parallel python (pp)</li>
+<li>pyserial</li>
+<li>ioLabs</li>
+<li>ipython (for future ipython shell view in coder)</li>
+<li>numpy=1.5.1, scipy=0.8.0, matplotlib=1.0</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">UPDATED: Builder demos</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-62">
+<h2>PsychoPy 1.62<a class="headerlink" href="#psychopy-1-62" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-62-02">
+<h3>PsychoPy 1.62.02<a class="headerlink" href="#psychopy-1-62-02" title="Permalink to this headline">¶</a></h3>
+<p>Released Oct 2010</p>
+<ul class="simple">
+<li>FIXED: problem with RadialStim causing subsequent TextStims not to be visible</li>
+<li>FIXED: bug with saving StairHandler data as .xlsx</li>
+<li>ADDED: option for gui.fileOpenDlg and fileSaveDlg to receive a custom file filter</li>
+<li>FIXED: builder implementation of staircases (initialisation was buggy)</li>
+<li>FIXED: added Sound.setSound() so that sounds in builder can take new values each trial</li>
+<li>FIXED: when a Routine was copied and pasted it didn&#8217;t update its name properly (e.g. when inserted into the Flow it kept the origin name)</li>
+<li>FIXED: color rendering for stimuli on non-shader machines using dkl,lms, and named color spaces</li>
+<li>ADDED: data.QuestHandler (Thanks to Zarrar Shehzad). This is much like StairHandler but uses the QUEST routine of Watson and Pelli</li>
+<li><a href="#id37"><span class="problematic" id="id38">**</span></a><span class="blue">CHANGED: TextStim orientation now goes the other way, for consistency with other stimuli (thanks Manuel Spitschan for noticing)**</span></li>
+<li>FIXED: Problem with DotStim using &#8216;sqr&#8217; fieldShape</li>
+<li>ADDED: MovieStim now has a setMovie() method (a copy of loadMovie())</li>
+<li>FIXED: problem with MovieStim.loadMovie() when a movie had already been loaded</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-62-01">
+<h3>PsychoPy 1.62.01<a class="headerlink" href="#psychopy-1-62-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Sept 2010</p>
+<ul>
+<li><p class="first">ADDED: clicking on a Routine in the Flow window brings that Routine to current focus above</p>
+</li>
+<li><p class="first">ADDED: by setting a loop in the Flow to have 0 repeats, that part of your experiment can be skipped</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: builder hides mouse now during fullscreen experiments (should make this a pref or setting though?)</span></p>
+</li>
+<li><p class="first">FIXED: rendering problem with the Flow and Routine panels not updating on some platforms</p>
+</li>
+<li><p class="first">ADDED: added .pause() .play() and .seek() to MovieStim (calling .draw() while paused will draw current static frame)</p>
+</li>
+<li><p class="first">FIXED: bug in MovieStim.setOpacity() (Ariel Rokem)</p>
+</li>
+<li><p class="first">FIXED: bug in win32 - shortcuts were created in user-specific start menu not all-users start menu</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: data output now uses std with N-1 normalisation rather than (scipy default) N</span></p>
+</li>
+<li><p class="first">FIXED: bug when .psyexp files were dropped on Builder frame</p>
+</li>
+<li><p class="first">FIXED: bug with Builder only storing last letter or multi-key button (e.g. &#8216;left&#8217;-&gt;&#8217;t&#8217;) under certain conditions</p>
+</li>
+<li><p class="first">FIXED: when nReps=0 in Builder the loop should be skipped (was raising error)</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: mouse icon is now hidden for full-screen Builder experiments</span></p>
+</li>
+<li><p class="first">FIXED: Builder was forgetting the TrialList file if you edited something else in the loop dialog</p>
+</li>
+<li><p class="first">ADDED: visual.RatingScale and a demo to show how to use it (Jeremy Gray)</p>
+</li>
+<li><dl class="first docutils">
+<dt>ADDED: The Standalone distributions now includes the following external libs:</dt>
+<dd><ul class="first last simple">
+<li>pynetstation (import psychopy.hardware.egi)</li>
+<li>ioLab library (import psychopy.harware.ioLab)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: trial loops in builder can now be aborted by setting someLoopName.finished=True</p>
+</li>
+<li><p class="first">ADDED: improved timing. <em>Support for blocking on VBL for all platforms</em> (may still not work on intel integrated chips)</p>
+</li>
+<li><p class="first">FIXED: minor bug with closing Coder windows generating spurious error messages</p>
+</li>
+<li><p class="first">ADDED: &#8216;allowed&#8217; parameter to gui.fileOpeNDlg and fileCloseDlg to provide custom file filters</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-62-00">
+<h3>PsychoPy 1.62.00<a class="headerlink" href="#psychopy-1-62-00" title="Permalink to this headline">¶</a></h3>
+<p>Released: August 2010</p>
+<ul>
+<li><dl class="first docutils">
+<dt>ADDED: support for Excel 2007 files (.xlsx) for data output and trial types input:</dt>
+<dd><ul class="first last simple">
+<li>psychopy.data now has importTrialList(fileName) to generate a trial list (suitable for TrialHandler) from .xlsx or .csv files</li>
+<li>Builder loops now accept either an xlsx or csv file for the TrialList</li>
+<li>TrialHandler and StairHandler now have saveToExcel(filename, sheetName=&#8217;rawData&#8217;, appendFile=True). This can be used to generate almost identical files to the previous delimited files, but also allows multiple (named) worksheets in a single file. So you could have one file for a participant and then one sheet for each session or run.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first"><span class="blue">CHANGED: for builder experiments the trial list for a loop is now imported from the file on every run, rather than just when the file is initially chosen</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: data for TrialHandler are now stored as masked arrays where possible. This means that trials with no response can be more easily ignored by analysis</span></p>
+</li>
+<li><p class="first">FIXED: bug opening loop properties (bug introduced by new advanced params option)</p>
+</li>
+<li><p class="first">FIXED: bug in Builder code generation for keyboard (only when using forceEnd=True but store=&#8217;nothing&#8217;)</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: RunTimeInfo is now in psychopy.info not psychopy.data</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: PatchStim for image files now defaults to showing the image at native size in pixels (making SimpleImageStim is less useful?)</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: access to the parameters of TrialList in the Builder now (by default) uses a more cluttered namespace for variables. e.g. if your TrialList file has heading rgb, then your components can access that with &#8216;$rgb&#8217; rather than &#8216;$thisTrial.rgb&#8217;. This behaviour can be turned off with the new Builder preference &#8216;allowClutteredNamespace&#8217;.</span></p>
+</li>
+<li><p class="first">FIXED: if Builder needs to output info but user had closed the output window, it is now reopened</p>
+</li>
+<li><p class="first">FIXED: Builder remembers its window location</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: Builder demos now need to be fetched by the user - menu item opens a browser (this is slightly more effort, but means the demos aren&#8217;t stored within the app which is good)</span></p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: loops/routines now get inserted to Flow by clicking the mouse where you want them :-)</span></p>
+</li>
+<li><p class="first">ADDED: you can now have multiple Builder windwos open with different experiments</p>
+</li>
+<li><p class="first">ADDED: you can now copy and paste Routines form one Builder window to another (or itself) - useful for reusing &#8216;template&#8217; routines</p>
+</li>
+<li><p class="first">FIXED: color of window was incorrectly scaled for &#8216;named&#8217; and &#8216;rgb256&#8217; color spaces</p>
+</li>
+<li><p class="first">ADDED: quicktime movie output for OSX 10.6 (10.5 support was already working)</p>
+</li>
+<li><p class="first">ADDED: Mac app can now receive dropped files on the coder and builder panels (but won&#8217;t check if these are sensible!!)</p>
+</li>
+<li><p class="first">ADDED: debugMode preference for the app (for development purposes)</p>
+</li>
+<li><p class="first">ADDED: working version of RatingStim</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-61">
+<h2>PsychoPy 1.61<a class="headerlink" href="#psychopy-1-61" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-61-03">
+<h3>PsychoPy 1.61.03<a class="headerlink" href="#psychopy-1-61-03" title="Permalink to this headline">¶</a></h3>
+<p>Patch released July 2010</p>
+<ul class="simple">
+<li>FIXED: harmless error messages caused by trying to get the file date/time when no file is open</li>
+<li><span class="blue">CHANGED: movie file used in movie demo (the chimp had unknown copyright)</span></li>
+<li>FIXED: problem with nVidia cards under win32 being slow to render RadialStim</li>
+<li>FIXED bug in filters.makeGrating where gratType=&#8217;sqr&#8217;</li>
+<li>FIXED bug in new color spaces for computers that don&#8217;t support shaders</li>
+<li>ADDED option to Builder components to have &#8216;advanced&#8217; parameters not shown by default (and put this to use for Patch Component)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-61-02">
+<h3>PsychoPy 1.61.02<a class="headerlink" href="#psychopy-1-61-02" title="Permalink to this headline">¶</a></h3>
+<p>Patch released June 2010</p>
+<ul class="simple">
+<li>ADDED: Code Component to Builder (to insert arbitrary python code into experiments)</li>
+<li>ADDED: visual.RatingScale &#8216;stimulus&#8217; (thanks to JG). See ratingScale demo in Coder view</li>
+<li>FIXED: TrialHandler can now have dataTypes that contain underscores (thanks fuchs for the fix)</li>
+<li>FIXED: loading of scripts by coder on windows assumed ASCII so broke with unicode characters. Now assumes unicode (as was case with other platforms)</li>
+<li>FIXED: minor bugs connecting to PR650</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-61-01">
+<h3>PsychoPy 1.61.01<a class="headerlink" href="#psychopy-1-61-01" title="Permalink to this headline">¶</a></h3>
+<p>Patch released May 2010</p>
+<ul class="simple">
+<li>FIXED: Bug in coder spitting out lots of errors about no method BeginTextColor</li>
+<li>FIXED: Buglet in rendering of pygame text withour shaders</li>
+<li>FIXED: broken link for &gt;Help&gt;Api (reference) menuitem</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-61-00">
+<h3>PsychoPy 1.61.00<a class="headerlink" href="#psychopy-1-61-00" title="Permalink to this headline">¶</a></h3>
+<p>Released May 2010</p>
+<ul class="simple">
+<li><span class="blue">CHANGED: color handling substantially. Now supply color and colorSpace arguments and use setColor rather than setRGB etc. Previous methods still work but give deprecation warning.</span></li>
+<li>ADDED: Colors can now also be specified by name (one of the X11 or web colors, e.g. &#8216;DarkSalmon&#8217;) or hex color spec (e.g. &#8216;#E9967A&#8217;)</li>
+<li>REMOVED: TextStimGLUT (assuming nobody uses GLUT backend anymore)</li>
+<li>ADDED: &#8216;saw&#8217; and &#8216;tri&#8217; options to specify grating textures, to give sawtooth and triangle waves</li>
+<li>FIXED: visual.DotStim does now update coherence based on setFieldCoherence calls</li>
+<li>FIXED: bug in autoupdater for installs with setuptools-style directory structure</li>
+<li>FIXED: bug in SimpleImageStim - when graphics card doesn&#8217;t support shaders colors were incorrectly scaled</li>
+<li><span class="blue">CHANGED: console (stdout) default logging level to WARNING. More messages will appear here than before</span></li>
+<li>ADDED: additional log level called DATA for saving data info from experiments to logfiles</li>
+<li>ADDED: mouse component to Builder</li>
+<li>ADDED: checking of coder script for changes made by an external application (thanks to Jeremy Gray)</li>
+<li>ADDED: data.RuntimeInfo() for providing various info about the system at launch of script (thanks to Jeremy Gray)</li>
+<li>FIXED: problem with rush() causing trouble between XP/vista (thanks to Jeremy Gray)</li>
+<li>AMERICANIZATION: now consistently using &#8216;color&#8217; not &#8216;colour&#8217; throughout the project! ;-)</li>
+<li>FIXED: problem with non-numeric characters being inserted into data structures</li>
+<li><span class="blue">CHANGED: stimuli using textures now automatically clean these up, so no need for users to call .clearTextures()</span></li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-60">
+<h2>PsychoPy 1.60<a class="headerlink" href="#psychopy-1-60" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-60-04">
+<h3>PsychoPy 1.60.04<a class="headerlink" href="#psychopy-1-60-04" title="Permalink to this headline">¶</a></h3>
+<p>Released March 2010</p>
+<ul class="simple">
+<li>FIXED build error (OS X 10.6 only)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-60-03">
+<h3>PsychoPy 1.60.03<a class="headerlink" href="#psychopy-1-60-03" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2010</p>
+<ul class="simple">
+<li>FIXED buglet in gui.py converting &#8216;false&#8217; to True in dialogs (thanks Michael MacAskill)</li>
+<li>FIXED bug in winXP version introduced by fixes to the winVista version! Now both should be fine!!</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-60-02">
+<h3>PsychoPy 1.60.02<a class="headerlink" href="#psychopy-1-60-02" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2010</p>
+<ul class="simple">
+<li><span class="blue">CHANGED ext.rush() is no longer run by default on creation of a window. It seems to be causing more probs and providing little enhancement.</span></li>
+<li>FIXED error messages from vista/7 trying to import pywintypes.dll</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-60-01">
+<h3>PsychoPy 1.60.01<a class="headerlink" href="#psychopy-1-60-01" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2010</p>
+<ul class="simple">
+<li>FIXED minor bug with the new psychophysicsStaircase demo (Builder)</li>
+<li>FIXED problem with importing wx.lib.agw.hyperlink (for users with wx&lt;2.8.10)</li>
+<li>FIXED bug in the new win.clearBuffer() method</li>
+<li><span class="blue">CHANGED builder component variables so that the user inputs are interpretted as literal text unless preceded by $, in which case they are treated as variables/python code</span></li>
+<li><span class="blue">CHANGED builder handling of keyboard &#8216;allowedKeys&#8217; parameter. Instead of &#8216;[&#8216;1&#8217;,&#8216;2&#8217;,&#8217;q&#8217;]&#8217; you can now simply use &#8216;12q&#8217; to indicate those three keys. If you want a key like &#8216;&#8217;right&#8217;&#8217; and &#8216;&#8217;left&#8217;&#8217; you now have to use &#8216;$[&#8216;right&#8217;,&#8217;left&#8217;]&#8217;</span></li>
+<li>TWITTER follow on <a class="reference external" href="http://twitter.com/psychopy">http://twitter.com/psychopy</a></li>
+<li>FIXED? win32 version now compatible with Vista/7? Still compatible with XP?</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-60-00">
+<h3>PsychoPy 1.60.00<a class="headerlink" href="#psychopy-1-60-00" title="Permalink to this headline">¶</a></h3>
+<p>Released Feb 2010</p>
+<ul>
+<li><dl class="first docutils">
+<dt>simplified prefs:</dt>
+<dd><ul class="first last simple">
+<li>no more site prefs (user prefs only)</li>
+<li>changed key bindings for compileScript(F5), runScript(Ctrl+R), stopScript(Ctrl+.)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">ADDED: full implementation of staircase to Builder loops and included a demo for it to Builder</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: builder components now have a &#8216;startTime&#8217; and &#8216;duration&#8217; rather than &#8216;times&#8217;</span></p>
+</li>
+<li><p class="first">ADDED: QuickTime output option for movies (OSX only)</p>
+</li>
+<li><p class="first">ADDED: script is saved by coder before running (can be turned off in prefs)</p>
+</li>
+<li><p class="first">ADDED: coder checks (and prompts) for filesave before running script</p>
+</li>
+<li><p class="first">ADDED: setHeight to TextStim objects, so that character height can be set after initialisation</p>
+</li>
+<li><p class="first">ADDED: setLineRGB, setFillRGB to ShapeStim</p>
+</li>
+<li><p class="first">ADDED: ability to auto-update form PsychoPy source installer (zip files)</p>
+</li>
+<li><p class="first">ADDED: Monitor Center can be closed with Ctrl-W</p>
+</li>
+<li><p class="first">ADDED: visual.Window now has a setRGB() method</p>
+</li>
+<li><p class="first">ADDED: visual.Window now has a clearBuffer() method</p>
+</li>
+<li><p class="first">ADDED: context-specific help buttons to Builder dialogs</p>
+</li>
+<li><p class="first">ADDED: implemented of code to flip SimpleImageStim (added new methods flipHoriz() and flipVert())</p>
+</li>
+<li><p class="first">ADDED: Butterworth filters to psychopy.filters (thanks Yaroslav Halchenko)</p>
+</li>
+<li><p class="first">ADDED: options to view whitespace, EOLs and indent guides in Coder</p>
+</li>
+<li><p class="first">ADDED: auto-scaling of time axis in Routines panel</p>
+</li>
+<li><p class="first">IMPROVED: Splash screen comes up faster to show the app is loading</p>
+</li>
+<li><p class="first">FIXED: bug in RadialStim .set functions (default operation should be &#8220;&#8221; not None)</p>
+</li>
+<li><p class="first">FIXED: on mac trying to save an unchanged document no longer inserts an &#8216;s&#8217;</p>
+</li>
+<li><p class="first">FIXED: bug with SimpleImageStim not drawing to windows except #1</p>
+</li>
+<li><p class="first">FIXED: one bug preventing PsychoPy from running on vista/win7 (are there more?)</p>
+</li>
+<li><p class="first"><span class="blue">CHANGED: psychopy.filters.makeMask() now returns a mask with values -1:1, not 0:1 (as expected by stimulus masks)</span></p>
+</li>
+<li><p class="first">RESTRUCTURED: the serial package is no longer a part of core psychopy and is no longer required (except when hardware is actually being connected). This should now be installed as a dependency by users, but is still included with the Standalone packages.</p>
+</li>
+<li><p class="first">RESTRUCTURED: preparing for further devices to be added, hardware is now a folder with files for each manufacturer. Now use e.g.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">psychopy.hardware.PR</span> <span class="kn">import</span> <span class="n">PR650</span>
+<span class="kn">from</span> <span class="nn">psychopy.hardware.cedrus</span> <span class="kn">import</span> <span class="n">RB730</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-51-00">
+<h2>PsychoPy 1.51.00<a class="headerlink" href="#psychopy-1-51-00" title="Permalink to this headline">¶</a></h2>
+<p>(released Nov 2009)</p>
+<ul class="simple">
+<li><span class="blue">CHANGED: gamma handling to handle buggy graphics drivers on certain cards - see note below</span></li>
+<li><span class="blue">CHANGED: coord systems for mouse events - both winTypes now provide mouse coords in the same units as the Window</span></li>
+<li>FIXED: mouse in pyglet window does now get hidden with Window allowGUI=False</li>
+<li>FIXED: (Builder) failed to open from Coder view menu (or cmd/ctrl L)</li>
+<li>FIXED: failure to load user prefs file</li>
+<li>ADDED: keybindings can be handled from prefs dialog (thanks to Jeremy Gray)</li>
+<li>ADDED: NxNx3 (ie RGB) numpy arrays can now be used as textures</li>
+<li>FIXED: MovieStim bug on win32 (was giving spurious avbin error if visual was imported before event)</li>
+</ul>
+<p>NB. The changes to gamma handling should need no changes to your code, but could alter the gamma correction on
+some machines. For setups/studies that require good gamma correction it is recommended that you recalibrate when
+you install this version of PsychoPy.</p>
+</div>
+<div class="section" id="psychopy-1-50">
+<h2>PsychoPy 1.50<a class="headerlink" href="#psychopy-1-50" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-50-04">
+<h3>PsychoPy 1.50.04<a class="headerlink" href="#psychopy-1-50-04" title="Permalink to this headline">¶</a></h3>
+<p>(released Sep 09)</p>
+<ul class="simple">
+<li>FIXED (Builder) bug with loading files (monitor fullScr incorrectly reloaded)</li>
+<li>FIXED (Coder) bug with Paste in coder</li>
+<li>FIXED (Builder) bug with drop-down boxes</li>
+<li>FIXED (Builder) bug with removed routines remaining in Flow and InsertRoutineDlg</li>
+<li>MOVED demos to demos/scripts and added demos/exps (for forthcoming Builder demos)</li>
+<li><span class="blue">CHANGED (Builder) creating a new file in Builder (by any means) automatically adds a &#8216;trial&#8217; Routine</span></li>
+<li>FIXED (Builder) various bugs with the Patch component initialisation (params being ignored)</li>
+<li>FIXED (Builder) better default parameters for text component</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-50-02">
+<h3>PsychoPy 1.50.02<a class="headerlink" href="#psychopy-1-50-02" title="Permalink to this headline">¶</a></h3>
+<p>(released Sep 09)</p>
+<ul class="simple">
+<li>FIXED bug loading .psydat (files component variables were being saved but not reloaded)</li>
+<li>removed debugging messages that were appearing in Coder output panel</li>
+<li>FIXED long-standing problem (OS X only) with &#8220;save unchanged&#8221; dialogs that won&#8217;t go away</li>
+<li>FIXED bug with &#8216;cancel&#8217; not always cancelling on &#8220;save unchanged&#8221; dialogs</li>
+<li>ADDED warning dialog if user adds component without having any routines</li>
+<li>ADDED builder now remembers its location, size and panel sizes (which can be moved around)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-50-01">
+<h3>PsychoPy 1.50.01<a class="headerlink" href="#psychopy-1-50-01" title="Permalink to this headline">¶</a></h3>
+<p>(released Sep 09)</p>
+<ul class="simple">
+<li>FIXED problem creating prefs file on first use</li>
+<li>FIXED problem with removing (identical) routines in Flow panel</li>
+<li>FIXED problem with avbin import (OS X standalone version)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-50-00">
+<h3>PsychoPy 1.50.00<a class="headerlink" href="#psychopy-1-50-00" title="Permalink to this headline">¶</a></h3>
+<p>(released Sep 09)</p>
+<ul class="simple">
+<li>ADDED A preview of the new application structure and GUI</li>
+<li>ADDED performance enhancements (OS X now blocks on vblank, all platforms rush() if user has permissions)</li>
+<li>ADDED config files. These are already used by the app, but not the library.</li>
+<li>ADDED data.getDateStr() for convenience</li>
+<li>FIXED bug on certain intel gfx cards (shaders now require float extension as well as opengl2.0)</li>
+<li>FIXED bug scaling pygame text (which caused pygame TextStims not to appear)</li>
+<li>BACKWARDS NONCOMPAT: monitors is moved to be a subpackage of psychopy</li>
+<li>BACKWARDS NONCOMPAT: added &#8216;all_mean&#8217; (and similar) data types to TrialHandler.saveAsText and these are now default</li>
+<li>ADDED TrialType object to data (extends traditional dicts so that trial.SF can be used as well as trial[&#8216;SF&#8217;])</li>
+<li>converted docs/website to sphinx rather than wiki (contained in svn)</li>
+<li>FIXED bug with MovieStim not displaying correctly after SimpleImageStim</li>
+<li>FIXED incorrect wx sizing of app(IDE) under OS X on opening</li>
+<li><span class="blue">CHANGED license to GPL (more restrictive, preventing proprietary use)</span></li>
+<li><span class="blue">CHANGED gui dialogs are centered on screen rather than wx default position</span></li>
+<li>new dependency on lxml (for saving/loading builder files)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="psychopy-1-00">
+<h2>PsychoPy 1.00<a class="headerlink" href="#psychopy-1-00" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-1-00-04">
+<h3>PsychoPy 1.00.04<a class="headerlink" href="#psychopy-1-00-04" title="Permalink to this headline">¶</a></h3>
+<p>(released Jul 09)</p>
+<ul class="simple">
+<li>DotStim can have fieldShape of &#8216;sqr&#8217;, &#8216;square&#8217; or &#8216;circle&#8217; (the first two are equiv)</li>
+<li><span class="blue">CHANGED intepreters in all .py scripts to be the same (#!/usr/bin/env python). Use PATH env variable to choose non-default python version for your Python scripts</span></li>
+<li><span class="blue">CHANGED pyglet textures to use numpy-&gt;ctypes rather than numpy-&gt;string</span></li>
+<li>FIXED systemInfo assigned on Linux systems</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-00-03">
+<h3>PsychoPy 1.00.03<a class="headerlink" href="#psychopy-1-00-03" title="Permalink to this headline">¶</a></h3>
+<p>(released Jul 09)</p>
+<ul class="simple">
+<li>FIXED initialisation bug with SimpleImageStimulus</li>
+<li>FIXED &#8220;useShaders&#8221; buglet for TextStim</li>
+<li><span class="blue">CHANGED IDE on win32 to run scripts as processes rather than imports (gives better error messages)</span></li>
+<li>ADDED mipmap support for textures (better antialiasing for down-scaling)</li>
+<li><span class="blue">CHANGED win32 standalone to include the whole raw python rather than using py2exe</span></li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-00-02">
+<h3>PsychoPy 1.00.02<a class="headerlink" href="#psychopy-1-00-02" title="Permalink to this headline">¶</a></h3>
+<p>(released Jun 09)</p>
+<ul class="simple">
+<li>ADDED SimpleImageStimulus for simple blitting of raw, unscaled images</li>
+<li>ADDED collection of anonymous usage stats (e.g.: OSX_10.5.6_i386 1.00.02 2009-04-27_17:26 )</li>
+<li>RENAMED DotStim.setDirection to setDir for consistency (the attribute is dir not direction)</li>
+<li>FIXED bug with DotStim updating for &#8216;walk&#8217; and &#8216;position&#8217; noise dots (thanks Alex Holcombe)</li>
+<li>FIXED bug with DotStim when fieldSize was initialised with a list rather than an array</li>
+<li>FIXED buglet using event.getKeys in pygame (nothing fetched if pyglet installed)</li>
+<li><span class="blue">CHANGED image loading code to check whether the image is a file, rather than using try..except</span></li>
+<li>FIXED buglet raising trivial error messages on closing final window in IDE</li>
+<li>FIXED problem pasting into find dlg in IDE</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-00-01">
+<h3>PsychoPy 1.00.01<a class="headerlink" href="#psychopy-1-00-01" title="Permalink to this headline">¶</a></h3>
+<p>(released Feb 09)</p>
+<ul class="simple">
+<li>FIXED buglet in windows standalone installer</li>
+</ul>
+</div>
+<div class="section" id="psychopy-1-00-00">
+<h3>PsychoPy 1.00.00<a class="headerlink" href="#psychopy-1-00-00" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED ShapeStim, for drawing geometric stimuli (see demos/shapes.py and new clockface.py)</li>
+<li>ADDED support for the tristate ctrl bit on parallel ports (thanks Gary Strangman for the patch)</li>
+<li>ADDED standalone installer support for windows (XP, vista?)</li>
+<li>FIXED minor bug in Window.flip() with frame recording on (average -&gt; numpy.average)</li>
+<li>FIXED minor bug in sound, now forcing pygame.mixer to use numpy (thanks Konstantin for the patch)</li>
+<li>FIXED visual stimulus positions forced to be floats on init (thanks C Luhmann)</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="psychopy-0-97">
+<h2>PsychoPy 0.97:<a class="headerlink" href="#psychopy-0-97" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-0-97-01">
+<h3>PsychoPy 0.97.01:<a class="headerlink" href="#psychopy-0-97-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED bug with IDE not closing properly (when current file was not right-most)</li>
+<li>ADDED parallel.readPin(pinN) so that parallel port can be used for input as well as output</li>
+<li>FIXED bug in parallel.setPortAddress(addr)</li>
+<li>ADDED check for floats as arguments to ElementArrayStim set___ methods</li>
+<li><span class="blue">CHANGED: frame time recording to be *off* by default (for plotting, for Window.fps() and for warnings). To turn it on use Window.setRecordFrameIntervals(True), preferably after first few frames have elapsed</span></li>
+<li>IMPROVED detection of the (truly) dropped frames using log.console.setLevel(log.WARNING)</li>
+<li>FIXED bug that was preventing bits++ from detecting LUT on the Mac (ensure screen gamma is 1.0 first)</li>
+<li>FIXED buglet with .setRGB on stimuli - that method should require an operation argument (def=None)</li>
+<li>ADDED fieldDepth and depths (for elements, releative to fieldDepth) as separate arguments to the ElementArrayStim</li>
+</ul>
+</div>
+<div class="section" id="psychop-0-97-00">
+<h3>PsychoP 0.97.00:<a class="headerlink" href="#psychop-0-97-00" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED options to DotStim motions. Two args have been added:
+* signalDots can be &#8216;different&#8217; from or &#8216;same&#8217; as the noise dots (from frame to frame)
+* noiseDots determines the update rule for the distractor dots (random &#8216;position&#8217;, &#8216;walk&#8217;, &#8216;direction&#8217;)
+* dotLife now works (was previously just a placeholder). Default is -1 (so should be same as before)
+see Scase, Braddick &amp; Raymond (1996) for further info on the importance of these</li>
+<li>ADDED options to event.getKeys
+* keyList to limit which keys are checked for (thanks Gary Strangman)
+* timeStamped=False/True/Clock (thanks Dave Britton)</li>
+<li><span class="blue">CHANGED pyglet key checking now returns &#8216;1&#8217; as the key irrespective of numpad or otherwise (used to return &#8216;1&#8217; or &#8216;NUM_1&#8217;)</span></li>
+<li>FIXED bug in event.py for machines where pyglet is failing to import</li>
+<li>REMOVED AlphaStim (after a long period of &#8216;deprecated&#8217;)</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="psychopy-0-96">
+<h2>PsychoPy 0.96:<a class="headerlink" href="#psychopy-0-96" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-0-96-02">
+<h3>PsychoPy 0.96.02:<a class="headerlink" href="#psychopy-0-96-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED bug introduced with clipping of text in 0.96.01 using textstimuli with shaders  under pygame</li>
+<li>FIXED bug with rendering png alpha layer using pyglet shaders</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-96-01">
+<h3>PsychoPy 0.96.01:<a class="headerlink" href="#psychopy-0-96-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED problem with write errors running demos from Mac IDE</li>
+<li>ADDED frameWidth to textStim for multiline</li>
+<li>ADDED setRecordFrameIntervals, saveFrameTimes() to Window and misc.plotFrameIntervals()</li>
+<li>FIXED had accidentally made pygame a full dependency in visual.py</li>
+<li>FIXED MovieStim was being affected by texture color of other stimuli</li>
+<li>FIXED window now explicitly checks for GL_ARB_texture_float before using shaders</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-96-00">
+<h3>PsychoPy 0.96.00:<a class="headerlink" href="#psychopy-0-96-00" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED pygame back-end so that can be used as a valid alternative to pyglet (requires pygame1.8+ and PyOpenGL3.0+, both included in mac app)</li>
+<li><span class="blue">CHANGED default sound handler to be pygame again. Although pyglet looked promising for this</span>
+it has turned out to be buggy. Timing of sounds can be very irregular and sometimes they don&#8217;t even play
+Although pygame has longer overall latencies (20-30ms) it&#8217;s behaviour is at least robust. This will be
+revisited one day when i have time to write driver-specific code for sounds</li>
+<li>FIXED image importing - scaling from square image wasn&#8217;t working and CMYK images weren&#8217;t imported
+properly. Both are now fine.</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="psychopy-0-95">
+<h2>PsychoPy 0.95:<a class="headerlink" href="#psychopy-0-95" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-0-95-11">
+<h3>PsychoPy 0.95.11:<a class="headerlink" href="#psychopy-0-95-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED sound.Sound.getDuration() method</li>
+<li>FIXED spurious (unimportant but ugly) error messages raised by certain threads on core.quit()</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-9">
+<h3>PsychoPy 0.95.9:<a class="headerlink" href="#psychopy-0-95-9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED further bug in sound.Sound on win32 (caused by thread being polled too frequently)</li>
+<li>FIXED new bug in notebook view (introduced in 0.95.8)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-8">
+<h3>PsychoPy 0.95.8:<a class="headerlink" href="#psychopy-0-95-8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED bug in sound.Sound not repeating when play() is called repeatedly</li>
+<li>IDE uses improved notebook view for code pages</li>
+<li>IDE line number column is larger</li>
+<li>IDE SaveAs no longer raises (inconsequential) error</li>
+<li>IDE Cmd-S or Ctrl-S now clears autocomplete</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-7">
+<h3>PsychoPy 0.95.7:<a class="headerlink" href="#psychopy-0-95-7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED misc.cart2pol()</li>
+<li>ADDED highly optimised ElementArrayStim, suitable for drawing large numbers of elements. Requires fast OpenGL 2.0 gfx card - at least an nVidia 8000 series or ATI HD 2600 are recommended.</li>
+<li>FIXED bug in calibTools with MonitorFolder (should have been monitorFolder)</li>
+<li>FIXED bug in Sound.stop() for pyglet contexts</li>
+<li>FIXED bug in running scripts with spaces in the filename/path (Mac OS X)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-6">
+<h3>PsychoPy 0.95.6:<a class="headerlink" href="#psychopy-0-95-6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>DISABLED the setting of gamma if this is [1,1,1] (allows the user to set it from a control panel and not have this adjusted)</li>
+<li>FIXED gamma setting on linux (thanks to Luca Citi for testing)</li>
+<li>FIXED bug in TextStim.setRGB (wasn&#8217;t setting properly after text had been created)</li>
+<li>FIXED bug searching for shaders on ATI graphics cards</li>
+<li>FIXED - now no need to download avbin for the mac IDE installation</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-5">
+<h3>PsychoPy 0.95.5:<a class="headerlink" href="#psychopy-0-95-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED bug in event.clearEvents() implementation in pyglet (wasn&#8217;t clearing)</li>
+<li>FIXED - psychopy no longer disables ipython shortcut keys</li>
+<li>FIXED bug in sound.Sound initialisation without pygame installeds</li>
+<li>ADDED core.rush() for increasing thread priority on win32</li>
+<li>ADDED Window._haveShaders, XXXStim._useShaders and XXXStim.setUseShaders</li>
+<li>FIXED crashes on win32, running a pyglet context after a DlgFromDict</li>
+<li>ADDED gamma correction for pyglet contexts (not tested yet on linux)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-4">
+<h3>PsychoPy 0.95.4:<a class="headerlink" href="#psychopy-0-95-4" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt><span class="blue">CHANGED PsychoPy options (IDE and monitors) now stored the following, rather than with the app. (monitor calib files will be moved here if possible)</span></dt>
+<dd><ul class="first last simple">
+<li>~/.PsychoPy/IDE (OS X, linux)</li>
+<li>&lt;Docs and Settings&gt;/&lt;user&gt;/Application Data/PsychoPy</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">FIXED bug in text rendering (ATI/win32/pyglet combo only)</p>
+</li>
+<li><p class="first">FIXED minor bug in handling of images with alpha channel</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-3">
+<h3>PsychoPy 0.95.3:<a class="headerlink" href="#psychopy-0-95-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED a .clearTextures() method to PatchStim and RadialStim, which should be called before de-referencing a stimulus</li>
+<li><span class="blue">CHANGED input range for numpy array textures to -1:1</span></li>
+<li>ADDED sysInfo.py to demos</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-2">
+<h3>PsychoPy 0.95.2:<a class="headerlink" href="#psychopy-0-95-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED quitting PsychoPyIDE now correctly cancels when saving files</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-1">
+<h3>PsychoPy 0.95.1:<a class="headerlink" href="#psychopy-0-95-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED problem with saving files from the IDE on Mac</li>
+<li>FIXED Cmd-C now copies from the output window of IDE</li>
+<li>even nicer IDE icons (thanks to the Crystal project at everaldo.com)</li>
+<li>FIXED bug in the shaders code under pyglet (was working fine in pygame already)</li>
+<li>(refactored code to use a template visual stimulus)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-95-0">
+<h3>PsychoPy 0.95.0:<a class="headerlink" href="#psychopy-0-95-0" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED linux bug preventing repeated dialogs (thanks Luca Citi)</li>
+<li>REWRITTEN stimuli to use _BaseClass, defining ._set() method</li>
+<li>MAJOR IMPROVEMENTS to IDE:
+* Intel mac version available as app bundle, including python
+* FIXED double help menu
+* cleaned code for fetching icons
+* fixed code for updating SourceAssistant (now runs from .OnIdle())</li>
+</ul>
+</div>
+</div>
+<div class="section" id="older">
+<h2>Older<a class="headerlink" href="#older" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psychopy-0-94-0">
+<h3>PsychoPy 0.94.0:<a class="headerlink" href="#psychopy-0-94-0" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>pyglet:
+* can use multiple windows and multiple screens (see screensAndWindows demo)
+* sounds are buffered faster and more precisely (16ms with &lt;0.1ms variability on my system)
+* creating sounds in pyglet starts a separate thread. If you use sounds in your script you must call core.quit() when you&#8217;re done to exit the system (or this background thread will continue).
+* pyglet window.setGamma and setGammaRamp working on win and mac (NOT LINUX)
+* pyglet event.Mouse complete (and supports wheel as well as buttons)
+* pyglet is now the default context. pygame will be used if explicitly called or if pyglet (v1.1+) isn&#8217;t found
+* pyglet can now get/save movie frames (like pygame)
+* TextStims are much cleaner (and a bit bigger?) Can use multiple lines too. New method for specifying font</li>
+<li>added simpler parallel.py (wraps _parallel which will remain for now)</li>
+<li>removed the C code extensions in favour of ctypes (so compiler no longer necessary)</li>
+<li>converted &#8220;is&#8221; for &#8220;==&#8221; where appropriate (thanks Luca)</li>
+<li>Window.getMovieFrame now takes a buffer argument (&#8216;front&#8217; or &#8216;back&#8217;)</li>
+<li>monitor calibration files now stored in HOME/.psychopy/monitors rather than site-packages</li>
+<li>Window.flip() added and supports the option not to clear previous buffer (for incremental drawing). Window.update() is still available for now but can be replaced with flip() commands</li>
+<li>updated demos</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-93-6">
+<h3>PsychoPy 0.93.6:<a class="headerlink" href="#psychopy-0-93-6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bug fixes for OS X 10.5 and ctypes OpenGL</li>
+<li>new improved OS X installer for dependencies</li>
+<li>moved to egg for OS X distribution</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-93-5">
+<h3>PsychoPy 0.93.5:<a class="headerlink" href="#psychopy-0-93-5" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">added rich text ctrl to IDE output, including links to lines of errors</p>
+</li>
+<li><p class="first">IDE now only opens one copy of a given text file</p>
+</li>
+<li><p class="first">improved (chances of) sync-to-vertical blank on windows without adjusting driver settings (on windows it&#8217;s still better to set driver to force sync to be safe!)</p>
+</li>
+<li><p class="first">added center and radius arguments to filters.makeMask and filters.makeRadialMatrix</p>
+</li>
+<li><dl class="first docutils">
+<dt>implemented pyglet backend for;</dt>
+<dd><ul class="first last simple">
+<li>better screen handling (can specify which screen a window should appear in)</li>
+<li>fewer dependencies (takes care of pygame and opengl)</li>
+<li>faster sound production</li>
+<li>TextStims can be multi-line</li>
+<li>NO GAMMA-SETTING as yet. Don&#8217;t use this backend if you need a gamma-corrected window and aren&#8217;t using Bits++.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>changed the behaviour of Window winTypes</dt>
+<dd><p class="first last">If you leave winType as None PsychoPy tries to use Pygame, Pyglet, GLUT in that order
+(when Pyglet can handle gamma funcs it will become default). Can be overridden by specifying winType.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">turned off depth testing for drawing of text (will simply be overlaid in the order called)</p>
+</li>
+<li><p class="first">changes to TextStim: pyglet fonts are loaded by name only, not filename. PsychoPy TextStim now has an additional argument called &#8216;fontFiles=[]&#8217; to allow the adding of custom ttf fonts, but the font name should be used as the font=&#8221; &#8221; argument.</p>
+</li>
+<li><p class="first">updated some of the Reference docs</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-93-3">
+<h3>PsychoPy 0.93.3:<a class="headerlink" href="#psychopy-0-93-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed problem with &#8216;dynamic loading of multitextureARB&#8217; (only found on certain graphics cards)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-93-2">
+<h3>PsychoPy 0.93.2:<a class="headerlink" href="#psychopy-0-93-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>improved detection of non-OpenGL2.0 drivers</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-93-1">
+<h3>PsychoPy 0.93.1:<a class="headerlink" href="#psychopy-0-93-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>now automatically uses shaders only if available (older machines can use this version but will not benefit from the speed up)</li>
+<li>slight speed improvement for TextStim rendering (on all machines)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-93-0">
+<h3>PsychoPy 0.93.0:<a class="headerlink" href="#psychopy-0-93-0" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new requirement of PyOpenGL3.0+ (and a graphics card with OpenGL2.0 drivers?)</li>
+<li>much faster implementation of setRGB, setContrast and setOpacity (using fragment shaders)</li>
+<li>images (and other textures) need not be square. They will be automatically resampled if they arent. Square power-of-two image textures are still recommended</li>
+<li>Fixed problem in calibTools.DACrange caused by change in numpy rounding behaviour. (symptom was strange choice of lum values for calibrations)</li>
+<li>numpy arrays as textures currently need to be NxM intensity arrays</li>
+<li>multitexturing now handled by OpenGL2.0 rather than ARB</li>
+<li>added support for Cedrus response pad</li>
+<li>if any component of rgb*contrast&gt;1 then the stimulus will be drawn as low contrast and b/y (rgb=[0.2,0.2,-0.2]) in an attempt to alert the user that this is out of range</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-92-5">
+<h3>PsychoPy 0.92.5:<a class="headerlink" href="#psychopy-0-92-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed issue with stairhandler (it was terminating based only on the nTrials). It does now terminate when both the nTrials and the nReversals [or length(stepSizes) if this is greater] are exceeded.</li>
+<li>Minor enhancements to IDE (added explicit handlers to menus for Ctrl-Z, Ctrl-Y, Ctrl-D)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-92-4">
+<h3>PsychoPy 0.92.4:<a class="headerlink" href="#psychopy-0-92-4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed some source packaging problems for linux (removed trademark symbols from serialposix.py and fixed directory capitalisation of IDE/Resources in setup.py). Thanks to Jason Locklin and Samuele Carcagno for picking them up.</li>
+<li>numerous minor improvements to the IDE</li>
+<li>reduced the buffer size of sound stream to reduce latency of sound play</li>
+<li>fixed error installing start menu links (win32)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-92-3">
+<h3>PsychoPy 0.92.3:<a class="headerlink" href="#psychopy-0-92-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new source .zip package (switched away from the use of setuptools - it didn&#8217;t include files properly in a source dist)</li>
+<li>Fixed problem on very fast computers that meant error messages weren&#8217;t always displayed in the IDE</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-92-2">
+<h3>PsychoPy 0.92.2:<a class="headerlink" href="#psychopy-0-92-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>have been trying (and failing) to make scripts run faster from the IDE under Mac OS X. Have tried using threads and debug modules (which would mean you didn&#8217;t need to import all the libs every time). All these work fine under win32 but not under OS X every time :-( If anyone has a new idea for how to run a pygame window in the same process as the IDE thread I&#8217;d love hear it</li>
+<li>removed the messages from the new TextStim stimuli</li>
+<li>fixed bug in IDE that caused it to crash before starting if pythonw.exe was run rather than python.exe on first run(!)</li>
+<li>improvements to the source assistant window (better help and now fetches function arguments)</li>
+</ul>
+<p>Known Problems:
+* The IDE isn&#8217;t collecting all errors that are returned - a problem with the process redirection mechanism? FIXED in 0.92.3</p>
+</div>
+<div class="section" id="psychopy-0-92-1">
+<h3>PsychoPy 0.92.1<a class="headerlink" href="#psychopy-0-92-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed minor bug in IDE - wouldn&#8217;t open if it had been closed with no open docs.</li>
+<li>fixed problem with pushing/popping matrix that caused the stimuli to disappear (only if a TextStim was rendered repeatedly)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-92-0">
+<h3>PsychoPy 0.92.0:<a class="headerlink" href="#psychopy-0-92-0" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>&#8216;sequential&#8217; ordering now implemented for data.TrialHandler (thx Ben Webb)</li>
+<li>moved to pygame fonts (with unicode support and any TT font onthe system). The switch will break any code that was using TextStim with lineWidth or letterWidth as args. Users wanting to continue using the previous TextStim can call textStimGLUT instead (although I think the new pygame fonts are superior in every way).</li>
+<li>improved IDE handling of previous size (to cope with being closed in the maximised or minimised state, which previously caused the window not to return)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-91-5">
+<h3>PsychoPy 0.91.5:<a class="headerlink" href="#psychopy-0-91-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed minor bug in using numpy.array as a mask (was only working if array was 128x128)</li>
+<li>faster startup for IDE (added threading class for importing modules)</li>
+<li>fixed very minor bug in IDE when searching for attributes that dont exist</li>
+<li>fixed minor bug where scripts with syntax errors didn&#8217;t run but didn&#8217;t complain either</li>
+<li>IDE FileOpen now tries the folder that the current file is in first</li>
+<li>IDE removed threading class for running scripts</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-91-4">
+<h3>PsychoPy 0.91.4<a class="headerlink" href="#psychopy-0-91-4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed the problem of stimulus order/depth. Now the default depth is set (more intuitively) by the order of drawing not creating.</li>
+<li>IDE added recent files to file menu</li>
+<li>IDE minor bug fixes</li>
+<li>IDE rewrite of code inspection using wx.py.instrospect</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-91-3">
+<h3>PsychoPy 0.91.3<a class="headerlink" href="#psychopy-0-91-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>added find dialog to IDE</li>
+<li>added ability of data.FunctionFromStaircase to create unique bins rather than averaging several x values. Give bins=&#8217;unique&#8217; (rather than bins=someInteger). Also fixed very minor issue where this func would only take a list of lists, rather than a single list.</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-91-2">
+<h3>PsychoPy 0.91.2<a class="headerlink" href="#psychopy-0-91-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed IDE problem running filenames containing spaces (only necessary on win32)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-91-1">
+<h3>PsychoPy 0.91.1<a class="headerlink" href="#psychopy-0-91-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>added reasonable SourceAssistant to IDE</li>
+<li>added a stop button to abort scripts in IDE</li>
+<li>IDE scripts now run as sub process rather than within the main process: slower but safer</li>
+<li>added an autoflushing stdout to psychopy.__init__. Where lots of text is written to stdout this may be a problem, but turing it off means that stdout doesn&#8217;t get properly picked up by the IDE :-(</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-91-0">
+<h3>PsychoPy 0.91.0<a class="headerlink" href="#psychopy-0-91-0" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>PsychoPy now has its own IDE!! With syntax-highlighting, code-folding and auto-complete!! :-)</li>
+<li>gui.py had to be refactored a little but (I think) should not be noticed by the end user (gui.Dlg is now a subclass of wx.Dialog rather than a modified instance)</li>
+<li>gui.Dlg and DlgFromDict now end up with an attribute .OK that is either True or False</li>
+<li>fixed bug in data.StairHandler that could result in too many trials being run (since v0.89)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-90-4">
+<h3>PsychoPy 0.90.4<a class="headerlink" href="#psychopy-0-90-4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>resolved deprecation warning with wxPython (now using &#8220;import wx&#8221;)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-90-3">
+<h3>PsychoPy 0.90.3<a class="headerlink" href="#psychopy-0-90-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>used the new numpy.mgrid commands throughout filters and visual modules</li>
+<li>sorted out the rounding probs on RadialStim</li>
+<li>fixed import bug in calibtools.py</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-90-2">
+<h3>PsychoPy 0.90.2<a class="headerlink" href="#psychopy-0-90-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed new bug in the minVal/maxVal handling of StairHandler (where these have not been specified)</li>
+<li>changed the default console log level to be ERROR, due to too much log output!</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-90-1">
+<h3>PsychoPy 0.90.1<a class="headerlink" href="#psychopy-0-90-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed new bug in Sound object</li>
+<li>changed the default log file to go to the script directory rather than site-packages/psychopy</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-90">
+<h3>PsychoPy 0.90<a class="headerlink" href="#psychopy-0-90" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">sounds now in stereo and a new function to allow you to choose the settings for the sound system.</p>
+</li>
+<li><p class="first">LMS colors (cone-isolating stimuli) are now tested and accurate (when calibrated)</p>
+</li>
+<li><dl class="first docutils">
+<dt>added logging module (erros, warnings, info). And removed other messages:</dt>
+<dd><ul class="first last simple">
+<li>&#64;Verbose&#64; flags have become log.info messages</li>
+<li>&#64;Warn&#64; commands have become log.warning messages</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">added minVal and maxVal arguments to data.StairHandler so that range can be bounded</p>
+</li>
+<li><p class="first">&#64;import psychopy&#64; no longer imports anything other than core</p>
+</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-89-1">
+<h3>Psychopy 0.89.1<a class="headerlink" href="#psychopy-0-89-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed bug in new numpy&#8217;s handling of bits++ header</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-89">
+<h3>Psychopy 0.89<a class="headerlink" href="#psychopy-0-89" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>optimised DotStim to use vertex arrays (can now draw several thousand dots)</li>
+<li>optimised RadialStim to use vertex arrays (can increase radial resolution without much loss)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-88">
+<h3>Psychopy 0.88<a class="headerlink" href="#psychopy-0-88" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>fixed problem with MonitorCenter on OSX (buttons not working on recent version of wxPython)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-87">
+<h3>Psychopy 0.87<a class="headerlink" href="#psychopy-0-87" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>added sqrXsqr to RadialStim and made it default texture</li>
+<li>fixed a minor bug in RadialStim rendering (stimuli failed to appear under certain stimulus orderings)</li>
+<li>changed RadialStim size parameter to be diameter rather than radius (to be like AlphaStim)</li>
+<li>namechange: introduced PatchStim (currently identical to AlphaStim which may one day become deprecated)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-86">
+<h3>Psychopy 0.86<a class="headerlink" href="#psychopy-0-86" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>distributed as an .egg</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-85">
+<h3>Psychopy 0.85<a class="headerlink" href="#psychopy-0-85" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>upgraded for numpy1.0b and scipy0.50. Hopefully those packages are now stable enough that they won&#8217;t need further PsychoPy compatibility changes</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-84">
+<h3>Psychopy 0.84<a class="headerlink" href="#psychopy-0-84" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>NEW (alpha) support for radial patterns rather than linear ones</li>
+<li>changed Clock behaviour to use time.clock() on win32 rather than time.time()</li>
+<li>fixed a bug in the shuffle seeding behaviour</li>
+<li>added a noise pattern to bacground in monitor calibration</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-83">
+<h3>Psychopy 0.83<a class="headerlink" href="#psychopy-0-83" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">NEW post-install script for Win32 installs shortcuts to your &gt;&gt;Start&gt;Programs menu</p>
+</li>
+<li><p class="first">NEW parallel port code (temporary form) using DLportIO.dll can be found under _parallel</p>
+</li>
+<li><p class="first">NEW hardware module with support for fORP response box (for MRI) using serial port</p>
+</li>
+<li><dl class="first docutils">
+<dt>added iterator functionality to data.TrialHandler and data.StairHandler you can now use ::</dt>
+<dd><p class="first last">for thisTrial in allTrials:</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>but a consequence was that .nextTrial() will be deprecated in favour of .next().
+Also, when the end of the trials is reached a StopIteration is raised.
+* added the ability to seed the shuffle mechanism (and trial handler) so you can repeat experiments with the same trial sequence</p>
+</div>
+<div class="section" id="psychopy-0-82">
+<h3>Psychopy 0.82<a class="headerlink" href="#psychopy-0-82" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>rewritten code for bits++ LUT drawing, raised by changes in pyOpenGL(2.0.1.09) call to drawpixels</li>
+<li>minor change to exit behaviour. pyGame.quit() is now called and then sys.exit(0) rather than sys.exit(1)</li>
+<li>bug fixes in type handling (from Numeric to numpy)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-81">
+<h3>Psychopy 0.81<a class="headerlink" href="#psychopy-0-81" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>changes to gui caused by new threading behaviour of wxPython and PyGame (DlgFromDict must now be a class not a function).</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-80">
+<h3>Psychopy 0.80<a class="headerlink" href="#psychopy-0-80" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>switching numeric code to new python24 and new scipy/numpy. MUCH nicer</li>
+<li>new (reduced requirements):
+* numpy 0.9 or newer (the replacement for Numeric/numarray)
+* numpy 0.4.4 or newer
+* pyOpenGL
+* pygame
+* PIL
+* matplotlib (for data plotting)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-72">
+<h3>PsychoPy 0.72<a class="headerlink" href="#psychopy-0-72" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>tested (and fixed) compatibility with wxPython 2.6. Will now be using this as my primary handler for GUIs</li>
+<li>ADDED ability to quit during run of getLumSeries</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-71">
+<h3>PsychoPy 0.71<a class="headerlink" href="#psychopy-0-71" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED filename bug in makeMovies.makeAnimatedGIF</li>
+<li>slight change to monitors that it uses testMonitor.calib as a default rather than default.calib (testMonitor.calib is packaged with the installation)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-70">
+<h3>PsychoPy 0.70<a class="headerlink" href="#psychopy-0-70" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED bug in setSize. Wasn&#8217;t updating correctly</li>
+<li>ADDED ability to append to a data file rather than create new</li>
+<li>bits.lib (from CRS) is now distributed directly with psychopy rather than needing separate install)</li>
+<li>ADDED db/log/linear step methods to StairHandler</li>
+<li>ADDED logistic equation to data.FitFunction</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-69">
+<h3>PsychoPy 0.69<a class="headerlink" href="#psychopy-0-69" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED a testMonitor to the monitors package so that demos can use it for pseudo*calibrated stimuli.</li>
+<li>REDUCED the attempt to use _bits.pyd. Was only necessary for machines that had bits++ monitor center</li>
+<li>ADDED basic staircase method</li>
+<li><span class="blue">CHANGED dlgFromDict to return None on cancel rather than 0</span></li>
+<li><span class="blue">CHANGED the description of sin textures so that the centre of the patch had the color of dkl or rgb rather</span>
+than the edge. (Effectively all sin textures are now shifted in phase by pi radians).
+-Demos removed from the main package - now ONLY distributed as a separate library</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-68">
+<h3>PsychoPy 0.68<a class="headerlink" href="#psychopy-0-68" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED toFile and fromFile so they work!?</li>
+<li>Demos being distributed as a separate .zip file (may be removed from the main package someday)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-67">
+<h3>PsychoPy 0.67<a class="headerlink" href="#psychopy-0-67" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED toFile, fromFile, pol2cart functions to psychopy.misc</li>
+<li><span class="blue">CHANGED waitKeys to return a list of keys (usually of length one) so that it&#8217;s compatible with getKeys</span></li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-66">
+<h3>PsychoPy 0.66<a class="headerlink" href="#psychopy-0-66" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>serial is now a subpackage of psychopy and so doesn&#8217;t need additional installation</li>
+<li>REMOVED the code to try and query the graphics card about the scr dimensions. From now on, if yo uwish to use real world units, you MUST specify scrWidthPIX and scrWidthCM when you make your visual.Window</li>
+<li>ADDED flag to data output to output matrixOnly (useful for matlab imports)</li>
+<li>REVERTED the default numeric handler to be Numeric rather than numarray (because it looks like numarray hasn&#8217;t taken off as much as thought)</li>
+<li>FIXED minor bug in text formatting for TrialHandler.saveAsText()</li>
+<li><span class="blue">CHANGED visual.Window so that the monitor argument prefers to receive a Monitor object (rather than just a dictionary) or just the name of one. MonitorCenter makes it so easy to create these now that they should be the default.</span></li>
+<li><span class="blue">CHANGED Photometer initialisation behaviour - used to raise an error on a fail but now sets an internal attribute .OK to False rather than True</span></li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-65">
+<h3>PsychoPy 0.65<a class="headerlink" href="#psychopy-0-65" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>MonitorCenter now complete. Plots and checks gamma correction.</li>
+<li>can write movies out to animated gifs(any platform) or mpg/avi (both windows only)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-64">
+<h3>PsychoPy 0.64<a class="headerlink" href="#psychopy-0-64" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ChANGED monitor key dkl_rgb_matrix to dkl_rgb (also for lms)</li>
+<li>ADDED code for PR650 to get the monitor color calibration and calculate the color conversion matrices automatically. Will be implemented via the MonitorCenter application.</li>
+<li>ADDED pyserial2.0 as a subpackage of psychopy so that it needn&#8217;t be separately installed</li>
+<li>Much improved MonitorCenter with DKL and LMS calibration buttons and matrix output</li>
+<li>Double-click installer for Mac now available</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-63">
+<h3>PsychoPy 0.63<a class="headerlink" href="#psychopy-0-63" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED ability to capture frames from the window as images (tif, jpg...) or as animated GIF files :) see demo</li>
+<li>ADDED ability for elements in DotStim to be any arbitrary stimulus with a methods for .setPos(), .draw()</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-62">
+<h3>PsychoPy 0.62<a class="headerlink" href="#psychopy-0-62" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED the circular mask for DotStim</li>
+<li>FIXED bug in the new text alignment method (was being aligned but not positioned?!)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-61">
+<h3>PsychoPy 0.61<a class="headerlink" href="#psychopy-0-61" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>FIXED minor bug in MonitorCenter (OS X only)</li>
+</ul>
+</div>
+<div class="section" id="psychopy-0-60">
+<h3>PsychoPy 0.60<a class="headerlink" href="#psychopy-0-60" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADDED a GUI application for looking after monitors and calibrations. SEE MonitorCenter.py in the new package monitors</li>
+<li>MOVED &#8220;psychopy.calib&#8221; subpackage to a whole separate package &#8220;monitors&#8221;. Calibration files will now be stored alongside the calibration code. This makes it easier to develop the new calibration GUI application that I&#8217;m working on. Also means that if you delete the psychopy folder for a new installation you won&#8217;t lose your calibration files.</li>
+<li>ADDED optional maxWait argument to event.waitKeys()</li>
+<li><span class="blue">CHANGED TextStim to take the font as a name rather than font number</span></li>
+<li>ADDED alignment to text stimuli (alignVert, alignHoriz)</li>
+<li><span class="blue">CHANGED waitKeys to implicitly clear keys from the event queue so that it only finds the first keypress after its called. As result it now returns a single character rather than list of them</span></li>
+<li><span class="blue">CHANGED visual.Window so that it no longer overrides monitor settings if arguments are specified. Easy now to create a monitor in the monitors GUI and use that instead</span></li>
+<li>ADDED the circular mask for DotStimulus</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="resources/resources.html" title="Resources (e.g. for teaching)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="api/web.html" title="psychopy.web - Web methods"
+             >previous</a> |</li>
+        <li><a href="index.html">PsychoPy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2015, Jonathan Peirce.
+      Last updated on Mar 30, 2016.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.3.
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4089651-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+    <script type="text/javascript" src="http://www.ohloh.net/p/17081/widgets/project_partner_badge.js"></script>
+    </div>
+  </body>
+</html>
