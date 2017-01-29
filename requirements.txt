@@ -17,6 +17,9 @@ tables
 python-bidi
 cffi
 
+# optional
+evdev
+
 # for developers
 pytest 
 sphinx 
